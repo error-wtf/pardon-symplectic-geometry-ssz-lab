@@ -10,6 +10,13 @@ Checked on 2026-07-24.
 - Princeton University, Princeton alumni awarded three of four 2026 Fields Medals: https://www.princeton.edu/news/2026/07/23/princeton-alumni-awarded-three-four-2026-fields-medals-math
 - Clay Mathematics Institute, John Pardon profile: https://www.claymath.org/people/john-pardon/
 
+
+- Stanford Mathematics, John Pardon PhD '15 awarded Fields Medal at 2026 ICM: https://mathematics.stanford.edu/news/john-pardon-phd-15-awarded-fields-medal-2026-icm
+- Princeton Research, Pardon 2016 VFC publication record: https://collaborate.princeton.edu/en/publications/an-algebraic-approach-to-virtual-fundamental-cycles-on-moduli-spa/
+- DOI, Pardon 2016 Geometry & Topology paper: https://doi.org/10.2140/gt.2016.20.779
+- AMS, Virtual Fundamental Cycles in Symplectic Topology: https://bookstore.ams.org/SURV/237
+- Carmin/IHES video course, Contact homology and virtual fundamental cycles: https://www.carmin.tv/en/collections/john-pardon-contact-homology-and-virtual-fundamental-cycles/video/1-5-contact-homology-and-virtual-fundamental-cycles
+
 ## Explanatory Coverage
 
 - Spektrum der Wissenschaft, John Pardon Fields Medal article: https://www.spektrum.de/news/john-pardon-erhaelt-fields-medaille-fuer-durchbrueche-in-der-geometrie/2334339

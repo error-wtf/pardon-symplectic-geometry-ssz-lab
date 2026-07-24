@@ -1,7 +1,68 @@
 [
-  {"title":"Fields Medals 2026","publisher":"International Mathematical Union","url":"https://www.mathunion.org/imu-awards/fields-medal/fields-medals-2026","type":"official"},
-  {"title":"John Pardon publication page","publisher":"Stony Brook Mathematics","url":"https://www.math.stonybrook.edu/~jpardon/","type":"personal_publication_page"},
-  {"title":"John Pardon biography","publisher":"Simons Center for Geometry and Physics","url":"https://scgp.stonybrook.edu/people/faculty/bios/john-pardon","type":"institutional_bio"},
-  {"title":"John Pardon Fields Medal article","publisher":"Spektrum der Wissenschaft","url":"https://www.spektrum.de/news/john-pardon-erhaelt-fields-medaille-fuer-durchbrueche-in-der-geometrie/2334339","type":"article"},
-  {"title":"John Pardon wins the 2026 Fields Medal","publisher":"Quanta Magazine","url":"https://www.quantamagazine.org/john-pardon-wins-the-2026-fields-medal-for-work-in-symplectic-geometry-20260723/","type":"article"}
+  {
+    "title": "Fields Medals 2026",
+    "publisher": "International Mathematical Union",
+    "url": "https://www.mathunion.org/imu-awards/fields-medal/fields-medals-2026",
+    "type": "official"
+  },
+  {
+    "title": "John Pardon publication page",
+    "publisher": "Stony Brook Mathematics",
+    "url": "https://www.math.stonybrook.edu/~jpardon/",
+    "type": "personal_publication_page"
+  },
+  {
+    "title": "John Pardon biography",
+    "publisher": "Simons Center for Geometry and Physics",
+    "url": "https://scgp.stonybrook.edu/people/faculty/bios/john-pardon",
+    "type": "institutional_bio"
+  },
+  {
+    "title": "John Pardon Fields Medal article",
+    "publisher": "Spektrum der Wissenschaft",
+    "url": "https://www.spektrum.de/news/john-pardon-erhaelt-fields-medaille-fuer-durchbrueche-in-der-geometrie/2334339",
+    "type": "article"
+  },
+  {
+    "title": "John Pardon wins the 2026 Fields Medal",
+    "publisher": "Quanta Magazine",
+    "url": "https://www.quantamagazine.org/john-pardon-wins-the-2026-fields-medal-for-work-in-symplectic-geometry-20260723/",
+    "type": "article"
+  },
+  {
+    "title": "John Pardon PhD '15 awarded Fields Medal at 2026 ICM",
+    "publisher": "Stanford Mathematics",
+    "url": "https://mathematics.stanford.edu/news/john-pardon-phd-15-awarded-fields-medal-2026-icm",
+    "type": "institutional_announcement"
+  },
+  {
+    "title": "An algebraic approach to virtual fundamental cycles on moduli spaces of pseudo-holomorphic curves",
+    "publisher": "Princeton Research",
+    "url": "https://collaborate.princeton.edu/en/publications/an-algebraic-approach-to-virtual-fundamental-cycles-on-moduli-spa/",
+    "type": "publication_record"
+  },
+  {
+    "title": "Pardon 2016 Geometry & Topology DOI",
+    "publisher": "Mathematical Sciences Publishers / DOI",
+    "url": "https://doi.org/10.2140/gt.2016.20.779",
+    "type": "paper_doi"
+  },
+  {
+    "title": "Virtual Fundamental Cycles in Symplectic Topology",
+    "publisher": "American Mathematical Society",
+    "url": "https://bookstore.ams.org/SURV/237",
+    "type": "reference_volume"
+  },
+  {
+    "title": "Contact homology and virtual fundamental cycles video course",
+    "publisher": "Carmin / IHES",
+    "url": "https://www.carmin.tv/en/collections/john-pardon-contact-homology-and-virtual-fundamental-cycles/video/1-5-contact-homology-and-virtual-fundamental-cycles",
+    "type": "lecture_video"
+  },
+  {
+    "title": "Rising stars of mathematics awarded prestigious 2026 Fields Medal",
+    "publisher": "Nature",
+    "url": "https://www.nature.com/articles/d41586-026-02169-1",
+    "type": "article"
+  }
 ]

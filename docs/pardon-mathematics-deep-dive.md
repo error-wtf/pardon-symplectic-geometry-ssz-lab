@@ -20,6 +20,19 @@ geometric equation -> solution/moduli space -> degeneracy -> virtual count machi
 
 The `moduli_space_toy.py` script illustrates only the first visual intuition: a solution space can change dimension or become singular as a parameter changes.
 
+## 2.1 Source-Audited VFC Details
+
+The Princeton publication record for Pardon's 2016 paper sharpens the educational target of this repo. The paper is not merely about drawing moduli spaces; it develops an algebraic framework for virtual fundamental cycles on pseudo-holomorphic-curve moduli spaces that need not be transverse. The record emphasizes implicit atlases, local finite-dimensional reductions, topological gluing input, sheaf-theoretic organization, and applications to Gromov-Witten invariants and Hamiltonian Floer homology.
+
+The repo therefore keeps the visualization boundary strict:
+
+- `holomorphic_curve_residual.py` shows what it means for a map to fail a Cauchy-Riemann-type condition.
+- `moduli_space_toy.py` shows why solution spaces can become singular, empty, or dimension-changing.
+- `lagrangian_intersections.py` only gives the intersection-level intuition that later enters Floer/Fukaya theories.
+- None of these scripts implements implicit atlases, VFC packages, contact homology, or Fukaya categories.
+
+That boundary is part of the scientific honesty of the repository. It lets the SSZ side borrow structural lessons from symplectic thinking without pretending to import Pardon's theorems.
+
 ## 3. Contact Homology
 
 In his JAMS paper on contact homology and virtual fundamental cycles, Pardon constructs coherent virtual fundamental cycles on compactified moduli spaces of pseudo-holomorphic curves. Contact homology comes from counting curves in the symplectization of a contact manifold.
