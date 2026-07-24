@@ -1,0 +1,15 @@
+artifact,script,claim_scope,test_anchor,limitation
+symplectic_area_preservation.gif,python/symplectic_lab.py,educational_toy_model,SymplecticTests,Harmonic oscillator only
+phase_space_energy.gif,python/phase_space_energy.py,educational_toy_model,IntegratorTests,Not an SSZ geodesic
+symplectic_vs_euler.gif,python/symplectic_integrator_comparison.py,methodological_bridge,IntegratorTests,Shows integrator behavior on oscillator
+holomorphic_curve_residual.gif,python/holomorphic_curve_residual.py,educational_toy_model,CauchyRiemannTests,Not pseudo-holomorphic curve theory
+lagrangian_intersections.gif,python/lagrangian_intersections.py,educational_toy_model,LagrangianTests,Not a Fukaya category
+moduli_space_toy.gif,python/moduli_space_toy.py,educational_toy_model,ModuliTests,Only a toy singular family
+knot_distortion.gif,python/knot_distortion.py,educational_toy_model,KnotTests,Finite sampled approximation only
+repo_interplay_map.gif,python/repo_interplay_map.py,methodological_bridge,RepoGraphTests,Concept map only
+ssz_symplectic_bridge.gif,python/ssz_symplectic_bridge.py,methodological_bridge,SSZBridgeTests,Toy radial Hamiltonian only
+ssz_doc_audit.gif,python/ssz_doc_audit_visualization.py,external_source_summary,SSZDocIndexTests,Keyword index not semantic proof
+phi_ladder_state.gif,python/phi_ladder_state_visualization.py,derived_identity,SSZStateTests,Uses simplified operative bridge module
+method_assignment_flow.gif,python/method_assignment_flow.py,derived_identity,MethodAssignmentTests,Decision chart only
+holonomy_loop.gif,python/holonomy_loop_visualization.py,educational_toy_model,HolonomyTests,Dynamic curve is illustrative only
+regime_blend_map.gif,python/regime_blend_map.py,derived_identity,SSZBridgeTests,Simplified blend implementation

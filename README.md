@@ -91,19 +91,110 @@ python -m unittest discover -s tests
 
 Generated PNG/GIF files appear in `outputs/`.
 
-## Visualizations Generated
+## Visualization Gallery
 
-| Script | Output | Mathematical intuition |
-|---|---|---|
-| `symplectic_lab.py` | `symplectic_area_preservation.gif` | Hamiltonian flow preserves area/symplectic form |
-| `phase_space_energy.py` | `phase_space_energy.gif` | energy contours and orbit in phase space |
-| `symplectic_integrator_comparison.py` | `symplectic_vs_euler.gif` | structure-preserving vs naive integration |
-| `holomorphic_curve_residual.py` | `holomorphic_curve_residual.gif` | Cauchy-Riemann residual |
-| `lagrangian_intersections.py` | `lagrangian_intersections.gif` | intersection intuition behind Floer/Fukaya ideas |
-| `moduli_space_toy.py` | `moduli_space_toy.gif` | degenerating solution spaces and why virtual methods exist |
-| `knot_distortion.py` | `knot_distortion.gif` | finite sampled knot distortion |
-| `repo_interplay_map.py` | `repo_interplay_map.gif` | cross-repo methodology map |
-| `ssz_symplectic_bridge.py` | `ssz_symplectic_bridge.gif` | SSZ Xi/D/effective-potential bridge |
+Every visualization is generated locally by `python python/run_all.py`. GIFs show the animated behavior; PNG links provide static snapshots for quick inspection.
+
+| Script | Animation | Static PNG | Mathematical intuition |
+|---|---|---|---|
+| `symplectic_lab.py` | `outputs/symplectic_area_preservation.gif` | `outputs/symplectic_area_preservation.png` | Hamiltonian flow preserves area/symplectic form. |
+| `phase_space_energy.py` | `outputs/phase_space_energy.gif` | `outputs/phase_space_energy.png` | Energy contours and orbit in phase space. |
+| `symplectic_integrator_comparison.py` | `outputs/symplectic_vs_euler.gif` | `outputs/symplectic_vs_euler.png` | Structure-preserving vs naive integration. |
+| `holomorphic_curve_residual.py` | `outputs/holomorphic_curve_residual.gif` | `outputs/holomorphic_curve_residual.png` | Cauchy-Riemann residual under non-holomorphic perturbation. |
+| `lagrangian_intersections.py` | `outputs/lagrangian_intersections.gif` | `outputs/lagrangian_intersections.png` | Intersection intuition behind Floer/Fukaya ideas. |
+| `moduli_space_toy.py` | `outputs/moduli_space_toy.gif` | `outputs/moduli_space_toy.png` | Degenerating solution spaces and why virtual methods exist. |
+| `knot_distortion.py` | `outputs/knot_distortion.gif` | `outputs/knot_distortion.png` | Finite sampled knot distortion. |
+| `repo_interplay_map.py` | `outputs/repo_interplay_map.gif` | `outputs/repo_interplay_map.png` | Cross-repo methodology map. |
+| `ssz_symplectic_bridge.py` | `outputs/ssz_symplectic_bridge.gif` | `outputs/ssz_symplectic_bridge.png` | SSZ Xi/D/effective-potential bridge. |
+| `regime_blend_map.py` | `outputs/regime_blend_map.gif` | `outputs/regime_blend_map.png` | Formula domains vs physical regimes. |
+| `holonomy_loop_visualization.py` | `outputs/holonomy_loop.gif` | `outputs/holonomy_loop.png` | Closed-loop frequency-ratio/holonomy toy model. |
+| `method_assignment_flow.py` | `outputs/method_assignment_flow.gif` | `outputs/method_assignment_flow.png` | Prime Directive observable routing. |
+| `phi_ladder_state_visualization.py` | `outputs/phi_ladder_state.gif` | `outputs/phi_ladder_state.png` | Full phi-ladder state vector details. |
+| `ssz_doc_audit_visualization.py` | `outputs/ssz_doc_audit.gif` | `outputs/ssz_doc_audit.png` | Full SSZ documentation audit overview. |
+
+### Symplectic Area Preservation
+
+![Symplectic area preservation](outputs/symplectic_area_preservation.gif)
+
+[Static PNG](outputs/symplectic_area_preservation.png)
+
+### Phase-Space Energy
+
+![Phase-space energy](outputs/phase_space_energy.gif)
+
+[Static PNG](outputs/phase_space_energy.png)
+
+### Symplectic Integrator Comparison
+
+![Symplectic versus Euler integration](outputs/symplectic_vs_euler.gif)
+
+[Static PNG](outputs/symplectic_vs_euler.png)
+
+### Cauchy-Riemann Residual
+
+![Holomorphic curve residual](outputs/holomorphic_curve_residual.gif)
+
+[Static PNG](outputs/holomorphic_curve_residual.png)
+
+### Lagrangian Intersections
+
+![Lagrangian intersections](outputs/lagrangian_intersections.gif)
+
+[Static PNG](outputs/lagrangian_intersections.png)
+
+### Moduli Space Toy Model
+
+![Moduli space toy model](outputs/moduli_space_toy.gif)
+
+[Static PNG](outputs/moduli_space_toy.png)
+
+### Knot Distortion
+
+![Knot distortion](outputs/knot_distortion.gif)
+
+[Static PNG](outputs/knot_distortion.png)
+
+### Repository Interplay Map
+
+![Repository interplay map](outputs/repo_interplay_map.gif)
+
+[Static PNG](outputs/repo_interplay_map.png)
+
+### SSZ Symplectic Bridge
+
+![SSZ symplectic bridge](outputs/ssz_symplectic_bridge.gif)
+
+[Static PNG](outputs/ssz_symplectic_bridge.png)
+
+### Regime Blend Map
+
+![Regime blend map](outputs/regime_blend_map.gif)
+
+[Static PNG](outputs/regime_blend_map.png)
+
+### Holonomy Loop
+
+![Holonomy loop](outputs/holonomy_loop.gif)
+
+[Static PNG](outputs/holonomy_loop.png)
+
+### Method Assignment Flow
+
+![Method assignment flow](outputs/method_assignment_flow.gif)
+
+[Static PNG](outputs/method_assignment_flow.png)
+
+### Phi-Ladder State
+
+![Phi-ladder state](outputs/phi_ladder_state.gif)
+
+[Static PNG](outputs/phi_ladder_state.png)
+
+### SSZ Documentation Audit
+
+![SSZ documentation audit](outputs/ssz_doc_audit.gif)
+
+[Static PNG](outputs/ssz_doc_audit.png)
 
 ## Scientific Status
 

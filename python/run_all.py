@@ -16,6 +16,11 @@ SCRIPTS = [
     ROOT / "python" / "knot_distortion.py",
     ROOT / "python" / "repo_interplay_map.py",
     ROOT / "python" / "ssz_symplectic_bridge.py",
+    ROOT / "python" / "ssz_doc_audit_visualization.py",
+    ROOT / "python" / "phi_ladder_state_visualization.py",
+    ROOT / "python" / "method_assignment_flow.py",
+    ROOT / "python" / "holonomy_loop_visualization.py",
+    ROOT / "python" / "regime_blend_map.py",
 ]
 
 

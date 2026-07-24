@@ -1,0 +1,3815 @@
+{
+  "source": "/home/error/physics/ssz-complete-documentation",
+  "file_count": 170,
+  "section_counts": {
+    "00_INDEX": 2,
+    "01_OVERVIEW": 4,
+    "02_FOUNDATIONS": 16,
+    "03_FORMULAS": 11,
+    "04_KINEMATICS": 6,
+    "05_ELECTROMAGNETISM": 8,
+    "06_STRONG_FIELD": 16,
+    "07_VALIDATION": 18,
+    "08_FALSIFICATION": 6,
+    "09_PAPERS": 67,
+    "10_REPOSITORIES": 4,
+    "11_GUARDRAILS": 4,
+    "12_GLOSSARY": 2,
+    "13_FREQUENCY_FRAMEWORK": 3,
+    "LICENSE.md": 1,
+    "README.md": 1,
+    "full-segmented-memory.md": 1
+  },
+  "keyword_totals": {
+    "Ξ": 747,
+    "lensing": 94,
+    "Shapiro": 96,
+    "phi": 225,
+    "φ": 1123,
+    "test": 563,
+    "validation": 93,
+    "falsification": 21,
+    "Xi": 347,
+    "D(r)": 81,
+    "PPN": 202,
+    "blend": 67,
+    "C²": 57,
+    "singular": 170,
+    "coherence": 52,
+    "orbit": 94,
+    "geodesic": 44,
+    "Geodesic": 17,
+    "phase": 87,
+    "trajectory": 15,
+    "Lagrange": 7,
+    "Hamilton": 1
+  },
+  "files": [
+    {
+      "path": "00_INDEX/BOOK_TO_DOC_GAP_ANALYSIS.md",
+      "lines": 4,
+      "headings": [
+        "Deprecated"
+      ],
+      "keyword_hits": {}
+    },
+    {
+      "path": "00_INDEX/DOCUMENTATION_COMPLETENESS.md",
+      "lines": 229,
+      "headings": [
+        "Documentation Completeness Assessment",
+        "Summary",
+        "1. Major Content Areas",
+        "1.1 Foundations",
+        "1.2 Kinematics",
+        "1.3 Electromagnetism",
+        "1.4 Frequency Framework",
+        "1.5 Strong Field",
+        "1.6 Astrophysics",
+        "1.7 Validation",
+        "2. Missing Appendices",
+        "3. Critical Missing Concepts",
+        "Highest Priority for Documentation",
+        "4. Repository Documentation Status",
+        "Fully Documented ✅",
+        "Partially Documented ⚠️",
+        "Missing Documentation ❌",
+        "5. Recommendations",
+        "High Priority (Add Next)",
+        "Medium Priority"
+      ],
+      "keyword_hits": {
+        "Ξ": 1,
+        "lensing": 2,
+        "Shapiro": 2,
+        "phi": 1,
+        "φ": 1,
+        "test": 13,
+        "validation": 2
+      }
+    },
+    {
+      "path": "01_OVERVIEW/authors.md",
+      "lines": 44,
+      "headings": [
+        "Authors & Contributors",
+        "Human Authors",
+        "Carmen N. Wrede",
+        "Lino P. Casu",
+        "AI Assistants",
+        "Bingsi (Hermes Based AI Agent)",
+        "Akira (Openclaw Based AI Agent)",
+        "Contact",
+        "License"
+      ],
+      "keyword_hits": {
+        "φ": 1,
+        "test": 1,
+        "validation": 3,
+        "falsification": 1
+      }
+    },
+    {
+      "path": "01_OVERVIEW/core_postulates.md",
+      "lines": 130,
+      "headings": [
+        "Core Postulates of SSZ",
+        "Postulate 1: Segment Density Field",
+        "Postulate 2: Modified Time Dilation",
+        "Postulate 3: Two-Regime Structure",
+        "g1 — Weak Field (r/r_s > 2.2)",
+        "g2 — Strong Field (r_s/r < 1.8)",
+        "Transition (1.8 ≤ r/r_s ≤ 2.2)",
+        "Postulate 4: φ-Geometry Constraint",
+        "Postulate 5: Observable → Method Assignment",
+        "Postulate 6: No Free Parameters",
+        "Postulate 7: Irreversible Coherence-Collapse",
+        "Postulate 8: Anti-Circularity",
+        "Summary Table"
+      ],
+      "keyword_hits": {
+        "Xi": 1,
+        "Ξ": 22,
+        "D(r)": 1,
+        "PPN": 5,
+        "lensing": 1,
+        "Shapiro": 1,
+        "φ": 13,
+        "blend": 1,
+        "C²": 1,
+        "singular": 1
+      }
+    },
+    {
+      "path": "01_OVERVIEW/relation_to_gr.md",
+      "lines": 110,
+      "headings": [
+        "Relation to General Relativity",
+        "SSZ as GR Extension, Not Replacement",
+        "Weak-Field Identity",
+        "Strong-Field Differences",
+        "At the Schwarzschild Radius (r = r_s)",
+        "For Neutron Stars (r/r_s ≈ 2–3)",
+        "D-Intersection Comparisons",
+        "PPN Parameters",
+        "Philosophical Difference",
+        "In One Sentence"
+      ],
+      "keyword_hits": {
+        "Xi": 4,
+        "Ξ": 2,
+        "PPN": 2,
+        "lensing": 1,
+        "Shapiro": 1,
+        "phi": 3,
+        "blend": 1,
+        "test": 3,
+        "falsification": 1
+      }
+    },
+    {
+      "path": "01_OVERVIEW/ssz_overview.md",
+      "lines": 173,
+      "headings": [
+        "Segmented Spacetime (SSZ) — Overview",
+        "What is SSZ?",
+        "Core Postulate: A Minimal Time Dilation Law",
+        "Two Regimes: Weak-Field GR Limit and Strong-Field Saturation",
+        "g1 (Weak Field)",
+        "g2 (Strong Field)",
+        "Blend Zone (Hermite C²)",
+        "φ-Geometry and the Spiral Motif",
+        "What SSZ Explains, Concretely",
+        "Key Values",
+        "\"No Free Parameters\" Discipline",
+        "Cosmology as a Falsification Scaffold",
+        "How SSZ Relates to GR",
+        "Falsifiability Targets",
+        "What SSZ Is NOT Claiming",
+        "Compact Summary"
+      ],
+      "keyword_hits": {
+        "Xi": 1,
+        "Ξ": 29,
+        "lensing": 2,
+        "Shapiro": 1,
+        "φ": 7,
+        "blend": 2,
+        "C²": 3,
+        "test": 9,
+        "falsification": 3,
+        "singular": 2
+      }
+    },
+    {
+      "path": "02_FOUNDATIONS/coherence_collapse.md",
+      "lines": 82,
+      "headings": [
+        "Coherence Collapse: g1 -> g2 Transition",
+        "Overview",
+        "Regime Definitions",
+        "g1: Weak Field (PPN Regime)",
+        "g2: Strong Field (Structured Regime)",
+        "The Collapse Condition",
+        "Physical Interpretation",
+        "Observable Consequences",
+        "Irreversibility Proof Sketch",
+        "Anti-Patterns",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "Xi": 7,
+        "Ξ": 3,
+        "D(r)": 1,
+        "PPN": 5,
+        "lensing": 1,
+        "Shapiro": 1,
+        "phi": 5,
+        "φ": 1,
+        "blend": 2,
+        "test": 2,
+        "coherence": 2,
+        "singular": 1
+      }
+    },
+    {
+      "path": "02_FOUNDATIONS/emergent_axes.md",
+      "lines": 50,
+      "headings": [
+        "Emergent Spatial Axes",
+        "Concept",
+        "Key Results",
+        "Physical Interpretation",
+        "Connection to Other Papers",
+        "Repository"
+      ],
+      "keyword_hits": {
+        "φ": 2
+      }
+    },
+    {
+      "path": "02_FOUNDATIONS/energy_conditions.md",
+      "lines": 83,
+      "headings": [
+        "Energy Conditions in SSZ",
+        "Overview",
+        "Standard Energy Conditions",
+        "SEC Violation is a Prediction",
+        "Effective Stress-Energy in SSZ",
+        "NEC Always Satisfied",
+        "Penrose-Hawking Theorems",
+        "Observable Test",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "Xi": 3,
+        "test": 2,
+        "falsification": 1,
+        "singular": 6
+      }
+    },
+    {
+      "path": "02_FOUNDATIONS/euler_derivation.md",
+      "lines": 32,
+      "headings": [
+        "Von Φ-Segmentierung zu Euler",
+        "Concept",
+        "Key Results",
+        "Connection to Other Papers"
+      ],
+      "keyword_hits": {
+        "φ": 6
+      }
+    },
+    {
+      "path": "02_FOUNDATIONS/fine_structure.md",
+      "lines": 53,
+      "headings": [
+        "Fine-Structure Constant as Geometric Projection",
+        "Concept",
+        "Key Formula",
+        "Key Results",
+        "Physical Interpretation",
+        "Connection to Other Papers"
+      ],
+      "keyword_hits": {
+        "Ξ": 2,
+        "φ": 3
+      }
+    },
+    {
+      "path": "02_FOUNDATIONS/intersection_invariance.md",
+      "lines": 92,
+      "headings": [
+        "Intersection Invariance: two r* values, two formula contexts",
+        "Definition",
+        "Canonical comparison table",
+        "What is not correct",
+        "Horizon agreement",
+        "Bracket theorem",
+        "Relation to regime boundaries",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "Xi": 14,
+        "phi": 5,
+        "blend": 3,
+        "test": 3
+      }
+    },
+    {
+      "path": "02_FOUNDATIONS/phi_geometry.md",
+      "lines": 113,
+      "headings": [
+        "φ-Geometry in SSZ",
+        "The Golden Ratio as Structural Constant",
+        "Where φ Appears",
+        "1. Strong-Field Segment Density",
+        "2. Horizon Value",
+        "3. Coupling Radius",
+        "4. Frequency Grid (φ-Gitter)",
+        "5. Euler Embedding",
+        "6. Fine-Structure Constant",
+        "7. Electron Radius",
+        "The Spiral Motif",
+        "Why φ and Not Some Other Constant?",
+        "Key φ-Derived Values"
+      ],
+      "keyword_hits": {
+        "Ξ": 8,
+        "PPN": 1,
+        "φ": 36,
+        "test": 1
+      }
+    },
+    {
+      "path": "02_FOUNDATIONS/phi_lattice_discretization.md",
+      "lines": 100,
+      "headings": [
+        "phi-Lattice Discretization (Canonical Reference)",
+        "Definition",
+        "Canonical Table",
+        "Bracket Theorem",
+        "Algebraic Identity",
+        "QNM Connection",
+        "Why phi?",
+        "Derivation Sketch",
+        "Key Values at Lattice Points",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "Xi": 9,
+        "D(r)": 1,
+        "phi": 34,
+        "blend": 1,
+        "test": 2
+      }
+    },
+    {
+      "path": "02_FOUNDATIONS/regime_and_formula_domain_clarification.md",
+      "lines": 146,
+      "headings": [
+        "Regime Boundaries vs. Formula Domains — Canonical Clarification",
+        "The Two Boundary Systems",
+        "System 1: Formula Domains (Operative N-Segmentation Mapping)",
+        "System 2: Physical Regimes (Interpretive Classification)",
+        "The Key Difference",
+        "Numerical Evidence",
+        "Saturation Form vs. Decay Form",
+        "Two-Layer Coherence Collapse Clarification",
+        "Common Misunderstandings",
+        "Cross-References",
+        "Within this repository",
+        "Repositories"
+      ],
+      "keyword_hits": {
+        "Ξ": 31,
+        "D(r)": 1,
+        "PPN": 2,
+        "orbit": 1,
+        "lensing": 2,
+        "Shapiro": 3,
+        "phi": 2,
+        "φ": 3,
+        "blend": 7,
+        "C²": 4,
+        "test": 1,
+        "coherence": 6
+      }
+    },
+    {
+      "path": "02_FOUNDATIONS/regime_definitions.md",
+      "lines": 129,
+      "headings": [
+        "Regime Definitions",
+        "Overview",
+        "Regime Check (MANDATORY)",
+        "Regime Transition: The Blend Zone",
+        "Irreversible Coherence-Collapse: g₁ → g₂",
+        "Important Clarification: Two Layers of Transition",
+        "IMPORTANT: 90/110 vs 1.8/2.2",
+        "Typical Ξ Values per Regime",
+        "Cross-References"
+      ],
+      "keyword_hits": {
+        "Xi": 3,
+        "Ξ": 14,
+        "D(r)": 1,
+        "orbit": 2,
+        "blend": 6,
+        "C²": 5,
+        "test": 2,
+        "validation": 1,
+        "coherence": 4
+      }
+    },
+    {
+      "path": "02_FOUNDATIONS/scaling_factor.md",
+      "lines": 78,
+      "headings": [
+        "Scaling Factor s(r)",
+        "Definition",
+        "Physical Meaning",
+        "Application to Electromagnetic Fields",
+        "Connection to Wave Propagation",
+        "DO NOT confuse",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "Xi": 11,
+        "D(r)": 5,
+        "orbit": 1,
+        "test": 1
+      }
+    },
+    {
+      "path": "02_FOUNDATIONS/segment_density.md",
+      "lines": 145,
+      "headings": [
+        "Segment Density Ξ(r)",
+        "Definition",
+        "Weak-Field Formula (g1)",
+        "Inner Exponential Formula (g2 / decay form)",
+        "Blend Zone (Hermite C² Interpolation)",
+        "Regime Boundaries Summary",
+        "Key Values",
+        "The Intersection Points r*",
+        "DEPRECATED Formula (FORBIDDEN)",
+        "Cross-References"
+      ],
+      "keyword_hits": {
+        "Xi": 8,
+        "Ξ": 24,
+        "D(r)": 1,
+        "orbit": 1,
+        "phi": 4,
+        "φ": 6,
+        "blend": 3,
+        "C²": 3,
+        "test": 3
+      }
+    },
+    {
+      "path": "02_FOUNDATIONS/space_and_path.md",
+      "lines": 315,
+      "headings": [
+        "Space, Path, and Emergence in Segmented Spacetime Theory",
+        "Summary",
+        "1. The Classical Assumption: Space as Container",
+        "The Newtonian Legacy",
+        "The Problem of the \"Empty\" Environment",
+        "2. The SSZ Perspective: Space as Emergent Structure",
+        "The Inversion of Ontological Priority",
+        "The Emergence of Space",
+        "3. The Thought Experiment Reconsidered",
+        "The \"Lonely\" Object",
+        "The Classical Formulation",
+        "The SSZ Answer",
+        "The Phi-Controlled Expansion",
+        "4. Curvature Without Geometry",
+        "The Density Hypothesis",
+        "Resistance as Emergent Property",
+        "5. Path and Space: The Synthetic Perspective",
+        "The False Dichotomy",
+        "The Image of Emergent Geometry",
+        "6. Dimensions and Their Emergence"
+      ],
+      "keyword_hits": {
+        "geodesic": 1,
+        "Geodesic": 1,
+        "phase": 2,
+        "phi": 4,
+        "φ": 8,
+        "test": 2,
+        "coherence": 2,
+        "singular": 3
+      }
+    },
+    {
+      "path": "02_FOUNDATIONS/structural_constants.md",
+      "lines": 102,
+      "headings": [
+        "Structural Constants",
+        "Primary Constants",
+        "The Role of φ (Golden Ratio)",
+        "The Role of π",
+        "Key Derived Values",
+        "Mass-Dependent Correction Δ(M)",
+        "PPN Parameters (Exact)",
+        "Fundamental Physical Constants Used"
+      ],
+      "keyword_hits": {
+        "Xi": 8,
+        "Ξ": 4,
+        "PPN": 1,
+        "φ": 18
+      }
+    },
+    {
+      "path": "02_FOUNDATIONS/temporal_growth.md",
+      "lines": 42,
+      "headings": [
+        "φ as Temporal Growth Function",
+        "Concept",
+        "Key Results",
+        "Physical Mechanism",
+        "Connection to Other Papers"
+      ],
+      "keyword_hits": {
+        "φ": 10
+      }
+    },
+    {
+      "path": "02_FOUNDATIONS/time_dilation.md",
+      "lines": 144,
+      "headings": [
+        "Time Dilation D(r)",
+        "The SSZ Time-Dilation Factor",
+        "Comparison with GR",
+        "Values Across Object Classes",
+        "Gravitational Redshift from D",
+        "Scaling Factor",
+        "Weak-Field Expansion",
+        "Horizon Behavior (CRITICAL)",
+        "GR at r = r_s",
+        "SSZ at r = r_s",
+        "Tests",
+        "Cross-References"
+      ],
+      "keyword_hits": {
+        "Ξ": 18,
+        "D(r)": 4,
+        "PPN": 2,
+        "Shapiro": 1,
+        "φ": 1,
+        "test": 4,
+        "validation": 1,
+        "singular": 2
+      }
+    },
+    {
+      "path": "03_FORMULAS/DISCRETE_SSZ_STATE_FORMULATION.md",
+      "lines": 516,
+      "headings": [
+        "Discrete SSZ State Formulation: Canonical Technical Reference",
+        "Table of Contents",
+        "1. Overview and Concept",
+        "2. φ-Ladder and Dimensionless Coordinate",
+        "3. Discrete SSZ State Vector Y_k",
+        "4. Canonical Piecewise Regime Form",
+        "5. Natural Boundary Values at the Schwarzschild Radius",
+        "6. Weak-Field Recursion",
+        "7. Strong-Field Recursion",
+        "8. Conceptual Core",
+        "SSZ is continuous — the discreteness is structural",
+        "Both recursions are self-similar",
+        "The φ-level as a unified scale",
+        "9. Implementation Reference",
+        "Boundary state at x = 1 (Schwarzschild radius):",
+        "boundary_state = {'Xi': 0.80171, 's': 1.80171, 'D': 0.55503, \"N'\": 7.2068, 'nu': 1.22}",
+        "10. Cross-References",
+        "Book references (E:\\clone\\SSZ_BOOK_PROJECT)",
+        "Technical references",
+        "Formula cross-reference"
+      ],
+      "keyword_hits": {
+        "Xi": 6,
+        "Ξ": 94,
+        "D(r)": 1,
+        "phi": 5,
+        "φ": 146,
+        "blend": 3,
+        "C²": 3,
+        "singular": 2
+      }
+    },
+    {
+      "path": "03_FORMULAS/DISCRETE_SSZ_STATE_FORMULATION_DE.md",
+      "lines": 529,
+      "headings": [
+        "Diskrete SSZ-Zustandsformulierung: Kanonische technische Referenz",
+        "Inhaltsverzeichnis",
+        "1. Überblick und Konzept",
+        "2. φ-Gitter und dimensionslose Koordinate",
+        "3. Diskreter SSZ-Zustandsvektor Y_k",
+        "4. Kanonische stückweise Regimeform",
+        "5. Natürliche Randwerte am Schwarzschild-Radius",
+        "6. Schwachfeld-Rekursion",
+        "7. Starkfeld-Rekursion",
+        "8. Konzeptioneller Kern",
+        "SSZ ist kontinuierlich — die Diskretheit ist strukturell",
+        "Beide Rekursionen sind selbstähnlich",
+        "Das φ-Level als gemeinsame Skala",
+        "9. Implementierungsreferenz",
+        "Randwerte bei x = 1 (Schwarzschild-Radius):",
+        "boundary_state = {'Xi': 0.80171, 's': 1.80171, 'D': 0.55503, \"N'\": 7.2068, 'nu': 1.22}",
+        "10. Kreuzreferenzen",
+        "Buch-Referenzen (E:\\clone\\SSZ_BOOK_PROJECT)",
+        "Technische Referenzen",
+        "Formel-Kreuzreferenz"
+      ],
+      "keyword_hits": {
+        "Xi": 2,
+        "Ξ": 99,
+        "D(r)": 1,
+        "φ": 151,
+        "blend": 1,
+        "C²": 3,
+        "singular": 1
+      }
+    },
+    {
+      "path": "03_FORMULAS/forbidden_formulas.md",
+      "lines": 102,
+      "headings": [
+        "Forbidden Formulas (Anti-Patterns)",
+        "1. Old Strong-Field Formula (DEPRECATED)",
+        "BANNED — do not use:",
+        "CORRECT:",
+        "2. Ξ-Inversion Trap",
+        "MISLEADING — this is an identity, not a calculation:",
+        "CORRECT understanding:",
+        "3. Δ(M) in Weak Field (FORBIDDEN)",
+        "WRONG:",
+        "CORRECT:",
+        "4. PPN for Time Dilation (WRONG METHOD)",
+        "WRONG:",
+        "CORRECT:",
+        "5. Wrong Schwarzschild Radius",
+        "WRONG (missing factor 2):",
+        "CORRECT:",
+        "6. Wrong D Definition",
+        "WRONG:",
+        "CORRECT:",
+        "7. Mixing Regimes Without Blend"
+      ],
+      "keyword_hits": {
+        "Xi": 5,
+        "Ξ": 6,
+        "D(r)": 2,
+        "PPN": 1,
+        "phi": 4,
+        "blend": 2,
+        "C²": 1,
+        "test": 1,
+        "validation": 1
+      }
+    },
+    {
+      "path": "03_FORMULAS/formula_compendium.md",
+      "lines": 247,
+      "headings": [
+        "Complete Formula Compendium",
+        "B.1 Fundamental Equations",
+        "Segment Density Ξ(r)",
+        "Time Dilation D(r)",
+        "Gravitational Redshift",
+        "Schwarzschild Radius",
+        "Scaling Factor",
+        "B.2 Regime Definitions",
+        "Hermite C² Interpolation",
+        "Irreversible Coherence-Collapse",
+        "B.3 Kinematics",
+        "Dual Velocities",
+        "Lorentz Indeterminacy at v=0",
+        "Kinematic Closure",
+        "B.4 Electromagnetism",
+        "Radial Scaling Gauge",
+        "Maxwell Wave Equation with Scaling",
+        "Segment-Based Group Velocity",
+        "Additive Light-Travel Time",
+        "B.5 PPN Formulas"
+      ],
+      "keyword_hits": {
+        "Xi": 4,
+        "Ξ": 19,
+        "D(r)": 4,
+        "PPN": 7,
+        "orbit": 1,
+        "lensing": 1,
+        "Shapiro": 4,
+        "phi": 3,
+        "φ": 8,
+        "blend": 3,
+        "C²": 2,
+        "test": 12
+      }
+    },
+    {
+      "path": "03_FORMULAS/phi_beta_calibration.md",
+      "lines": 48,
+      "headings": [
+        "φ/2 and β Calibration",
+        "Concept",
+        "Key Parameters",
+        "Calibration Method",
+        "Connection to Other Papers"
+      ],
+      "keyword_hits": {
+        "φ": 10,
+        "C²": 1
+      }
+    },
+    {
+      "path": "03_FORMULAS/ppn_formulas.md",
+      "lines": 111,
+      "headings": [
+        "PPN Formulas (Parametrized Post-Newtonian)",
+        "CRITICAL RULE",
+        "PPN Parameters in SSZ",
+        "Gravitational Lensing",
+        "Shapiro Delay",
+        "Perihelion Precession",
+        "Gravitomagnetic (Frame Dragging) PPN",
+        "Why PPN for Lensing but Xi for Redshift?",
+        "Test Verification",
+        "test_ppn_exact.py",
+        "test_lensing_deflection.py",
+        "test_shapiro_delay.py",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "Xi": 9,
+        "PPN": 11,
+        "orbit": 1,
+        "lensing": 6,
+        "Shapiro": 4,
+        "test": 8
+      }
+    },
+    {
+      "path": "03_FORMULAS/quick_reference.md",
+      "lines": 71,
+      "headings": [
+        "SSZ Quick Reference Card",
+        "Core Formulas",
+        "Key Values",
+        "Method Assignment",
+        "Regime Boundaries",
+        "PPN Formulas",
+        "Kinematic Closure",
+        "FORBIDDEN"
+      ],
+      "keyword_hits": {
+        "Ξ": 10,
+        "D(r)": 2,
+        "PPN": 3,
+        "orbit": 1,
+        "Shapiro": 1,
+        "φ": 5,
+        "blend": 1,
+        "C²": 1
+      }
+    },
+    {
+      "path": "03_FORMULAS/special_values.md",
+      "lines": 98,
+      "headings": [
+        "Special Values and Invariants",
+        "Critical Values at r = r_s (Schwarzschild Horizon)",
+        "Universal Intersections",
+        "phi-Related Values",
+        "Fine-Structure Constant",
+        "Intersection with phi-Lattice Points",
+        "Triple-Clock Holonomy Invariant",
+        "Regime Transition Values",
+        "Saturation Values (Asymptotic Limits)",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "Xi": 8,
+        "phi": 32,
+        "φ": 3,
+        "blend": 3,
+        "test": 3,
+        "singular": 2
+      }
+    },
+    {
+      "path": "03_FORMULAS/symbol_table.md",
+      "lines": 89,
+      "headings": [
+        "Complete Symbol Table & Notation Key",
+        "Greek Symbols",
+        "Latin Symbols",
+        "Velocities",
+        "Canonical Key Values",
+        "Method Assignment",
+        "Forbidden Symbols & Formulas"
+      ],
+      "keyword_hits": {
+        "Xi": 3,
+        "Ξ": 14,
+        "D(r)": 1,
+        "PPN": 12,
+        "orbit": 1,
+        "Shapiro": 1,
+        "phi": 1,
+        "φ": 8,
+        "blend": 1
+      }
+    },
+    {
+      "path": "03_FORMULAS/unit_conversion_table.md",
+      "lines": 90,
+      "headings": [
+        "Unit Conversion Table",
+        "Key Point",
+        "Schwarzschild Radii",
+        "Xi Values (Dimensionless)",
+        "Physical Constants",
+        "r_s Formula in Different Units",
+        "Time Dilation Conversion",
+        "Angular Units for Lensing",
+        "Frequency Shift for NS",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "Xi": 13,
+        "D(r)": 1,
+        "orbit": 1,
+        "lensing": 1,
+        "phi": 2
+      }
+    },
+    {
+      "path": "03_FORMULAS/worked_examples.md",
+      "lines": 168,
+      "headings": [
+        "Worked Examples",
+        "1. Solar Shapiro Delay (Cassini)",
+        "2. Mercury Perihelion Precession",
+        "3. GPS Gravitational Frequency Shift",
+        "4. Neutron Star Surface Redshift (SSZ Prediction)",
+        "5. Light Deflection (Eddington)",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "Xi": 12,
+        "PPN": 2,
+        "orbit": 5,
+        "Shapiro": 2,
+        "phi": 1,
+        "blend": 1,
+        "test": 1,
+        "validation": 1,
+        "singular": 1
+      }
+    },
+    {
+      "path": "04_KINEMATICS/dual_velocities.md",
+      "lines": 95,
+      "headings": [
+        "Dual Velocities",
+        "The Dual Velocity Pair",
+        "Escape Velocity",
+        "Fall Velocity",
+        "The Kinematic Closure Invariant",
+        "Proof",
+        "Physical Interpretation",
+        "Connection to Time Dilation",
+        "Infalling Matter",
+        "Tests"
+      ],
+      "keyword_hits": {
+        "Ξ": 2,
+        "test": 2
+      }
+    },
+    {
+      "path": "04_KINEMATICS/frame_dragging.md",
+      "lines": 50,
+      "headings": [
+        "Frame Dragging",
+        "Frame Dragging in SSZ",
+        "SSZ Approach",
+        "Method Assignment",
+        "Local Lorentz Invariance",
+        "Observable Consequences"
+      ],
+      "keyword_hits": {
+        "Ξ": 5,
+        "PPN": 5,
+        "orbit": 2,
+        "φ": 2
+      }
+    },
+    {
+      "path": "04_KINEMATICS/geodesics.md",
+      "lines": 118,
+      "headings": [
+        "Geodesics in SSZ",
+        "SSZ Metric (Spherically Symmetric, Static)",
+        "Geodesic Equations",
+        "Effective Potential",
+        "Radial Free-Fall (L=0)",
+        "Null Geodesics (Light)",
+        "Geodesic Deviation (Tidal Forces)",
+        "Comparison with GR at Key Radii",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "Xi": 6,
+        "D(r)": 12,
+        "geodesic": 5,
+        "Geodesic": 6,
+        "orbit": 4,
+        "Shapiro": 1,
+        "phi": 2,
+        "test": 2
+      }
+    },
+    {
+      "path": "04_KINEMATICS/kinematic_closure.md",
+      "lines": 60,
+      "headings": [
+        "Kinematic Closure",
+        "The Closure Relation",
+        "Components",
+        "Significance",
+        "Connection to SSZ Observables",
+        "Test"
+      ],
+      "keyword_hits": {
+        "Ξ": 1,
+        "trajectory": 1,
+        "test": 1
+      }
+    },
+    {
+      "path": "04_KINEMATICS/lorentz_v0.md",
+      "lines": 61,
+      "headings": [
+        "Lorentz Indeterminacy at v=0",
+        "The Problem",
+        "SSZ Resolution",
+        "Why This Matters",
+        "Test"
+      ],
+      "keyword_hits": {
+        "Ξ": 6,
+        "test": 1,
+        "singular": 1
+      }
+    },
+    {
+      "path": "04_KINEMATICS/orbital_mechanics.md",
+      "lines": 113,
+      "headings": [
+        "Orbital Mechanics in SSZ",
+        "Circular Orbit Condition",
+        "Photon Sphere",
+        "ISCO (Innermost Stable Circular Orbit)",
+        "Orbital Energy and Angular Momentum at ISCO",
+        "Effective Potential Comparison",
+        "Perihelion Precession",
+        "Angular Momentum Barrier",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "Xi": 1,
+        "D(r)": 2,
+        "geodesic": 1,
+        "Geodesic": 1,
+        "orbit": 9,
+        "phi": 1,
+        "test": 2
+      }
+    },
+    {
+      "path": "05_ELECTROMAGNETISM/energy_em_field.md",
+      "lines": 103,
+      "headings": [
+        "Energy in Segmented Spacetime (EM Fields)",
+        "Standard EM Energy Density",
+        "SSZ Modification",
+        "Total Field Energy",
+        "Poynting Vector Modification",
+        "Connection to Wave Propagation",
+        "Effective Dielectric Properties",
+        "Energy in Segment Lattice vs Continuum",
+        "Do Not Confuse",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "Xi": 13,
+        "orbit": 1,
+        "phi": 1,
+        "test": 1
+      }
+    },
+    {
+      "path": "05_ELECTROMAGNETISM/gravitational_lensing.md",
+      "lines": 115,
+      "headings": [
+        "Gravitational Lensing in SSZ",
+        "CRITICAL: Use PPN Formula",
+        "Variables",
+        "Eddington 1919 Solar Eclipse",
+        "Why Factor of 2 (not 1)?",
+        "Strong Lensing",
+        "Einstein Ring",
+        "Microlensing",
+        "VLBI Tests",
+        "When Would SSZ Deviate from GR in Lensing?",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "Xi": 1,
+        "PPN": 7,
+        "lensing": 9,
+        "Shapiro": 1,
+        "test": 2
+      }
+    },
+    {
+      "path": "05_ELECTROMAGNETISM/group_velocity.md",
+      "lines": 60,
+      "headings": [
+        "Segment-Based Group Velocity",
+        "Definition",
+        "Physical Interpretation",
+        "Connection to Light Travel Time",
+        "Tests"
+      ],
+      "keyword_hits": {
+        "Ξ": 5,
+        "Shapiro": 1,
+        "test": 1,
+        "validation": 1
+      }
+    },
+    {
+      "path": "05_ELECTROMAGNETISM/light_travel_time.md",
+      "lines": 78,
+      "headings": [
+        "Additive Light-Travel Time Decomposition",
+        "Core Idea",
+        "Gravitational Delay",
+        "Shapiro Delay",
+        "Shapiro Delay Formula",
+        "Cassini Measurement (2003)",
+        "Tests"
+      ],
+      "keyword_hits": {
+        "Ξ": 6,
+        "PPN": 3,
+        "Shapiro": 6,
+        "test": 2,
+        "validation": 2
+      }
+    },
+    {
+      "path": "05_ELECTROMAGNETISM/maxwell_rotating.md",
+      "lines": 57,
+      "headings": [
+        "Maxwell Waves as Rotating Space",
+        "Core Concept",
+        "The Wave Equation",
+        "Technical Warning",
+        "Connection to Radial Scaling"
+      ],
+      "keyword_hits": {
+        "Ξ": 1,
+        "phase": 1
+      }
+    },
+    {
+      "path": "05_ELECTROMAGNETISM/radial_scaling.md",
+      "lines": 98,
+      "headings": [
+        "Radial Scaling Gauge",
+        "The Scaling Factor",
+        "Electromagnetic Field Scaling",
+        "Effective Refractive Index",
+        "Maxwell Equations with Scaling",
+        "Wave Equation",
+        "Key Values",
+        "Validation",
+        "Tests"
+      ],
+      "keyword_hits": {
+        "Ξ": 2,
+        "D(r)": 1,
+        "PPN": 1,
+        "Shapiro": 2,
+        "test": 3,
+        "validation": 1
+      }
+    },
+    {
+      "path": "05_ELECTROMAGNETISM/redshift.md",
+      "lines": 94,
+      "headings": [
+        "Gravitational Redshift",
+        "SSZ Redshift Formula",
+        "Comparison with GR",
+        "Weak Field (identical)",
+        "Strong Field (different)",
+        "Neutron Star Redshifts (TESTABLE)",
+        "φ-Frequency Grid",
+        "Curvature Detection via Frequency Comparison",
+        "Tests"
+      ],
+      "keyword_hits": {
+        "Ξ": 6,
+        "D(r)": 1,
+        "φ": 3,
+        "test": 3,
+        "validation": 1
+      }
+    },
+    {
+      "path": "05_ELECTROMAGNETISM/shapiro_delay.md",
+      "lines": 106,
+      "headings": [
+        "Shapiro Delay in SSZ",
+        "CRITICAL: Use PPN Formula",
+        "Setup",
+        "Derivation from Null Geodesics",
+        "Cassini Measurement (2003)",
+        "One-Way vs Two-Way",
+        "Gravitational vs SSZ Additive Delay",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "Xi": 5,
+        "geodesic": 1,
+        "Geodesic": 1,
+        "PPN": 7,
+        "lensing": 1,
+        "Shapiro": 6,
+        "test": 3
+      }
+    },
+    {
+      "path": "06_STRONG_FIELD/GR_SSZ_INTERSECTION_PHI_DISCRETIZATION.md",
+      "lines": 856,
+      "headings": [
+        "GR-SSZ Intersection: Ableitung auf dem φ-Gitter",
+        "Zusammenfassung",
+        "Inhaltsverzeichnis",
+        "1. Ausgangsproblem",
+        "1.1 Zwei Formeln für Xi(r)",
+        "1.2 GR-Zeitdilatation",
+        "1.3 Die beiden Schnittpunkte",
+        "2. Das φ-Gitter als natürliche Diskretisierung",
+        "2.1 Definition",
+        "2.2 Gitterpunkte und ihr physikalischer Kontext",
+        "3. Ableitung: D_GR am φ-Gitter",
+        "3.1 Allgemeine Formel",
+        "3.2 Satz 1: Algebraische Identität D_GR(φ) = 1/φ",
+        "3.3 Satz 2: Rekursionsformel für D_GR",
+        "4. Ableitung: D_SSZ am φ-Gitter — Abklingform",
+        "4.1 Substitution",
+        "4.2 Tabelle der Gitterwerte",
+        "4.3 Satz 3: Rekursionsformel für q_k (Abklingform)",
+        "5. Ableitung: D_SSZ am φ-Gitter — Sättigungsform",
+        "5.1 Substitution"
+      ],
+      "keyword_hits": {
+        "Xi": 30,
+        "phi": 17,
+        "φ": 285,
+        "C²": 1,
+        "test": 17,
+        "singular": 2
+      }
+    },
+    {
+      "path": "06_STRONG_FIELD/black_hole_metric.md",
+      "lines": 108,
+      "headings": [
+        "SSZ Black Hole Metric",
+        "The SSZ Metric Tensor",
+        "Standard Schwarzschild (GR)",
+        "SSZ Metric",
+        "Metric Components",
+        "Comparison with GR",
+        "Key Properties",
+        "No Coordinate Singularity at r_s",
+        "Finite Curvature",
+        "Asymptotic Flatness",
+        "Einstein Tensor",
+        "4D Tensor Package",
+        "Tests"
+      ],
+      "keyword_hits": {
+        "Ξ": 7,
+        "D(r)": 2,
+        "φ": 5,
+        "test": 4,
+        "singular": 2
+      }
+    },
+    {
+      "path": "06_STRONG_FIELD/cosmic_censorship.md",
+      "lines": 70,
+      "headings": [
+        "Cosmic Censorship in SSZ",
+        "The Cosmic Censorship Conjecture",
+        "SSZ Resolution",
+        "The Natural Boundary",
+        "Energy Conditions",
+        "Tests"
+      ],
+      "keyword_hits": {
+        "Ξ": 3,
+        "φ": 2,
+        "test": 1,
+        "singular": 6
+      }
+    },
+    {
+      "path": "06_STRONG_FIELD/dark_star.md",
+      "lines": 75,
+      "headings": [
+        "The Dark Star",
+        "Concept",
+        "Properties",
+        "Observational Signatures",
+        "BH Shadow",
+        "Photon Sphere",
+        "Ringdown Frequencies",
+        "The Natural Boundary",
+        "Infalling Matter"
+      ],
+      "keyword_hits": {
+        "Ξ": 2,
+        "lensing": 1,
+        "φ": 2,
+        "test": 1,
+        "singular": 1
+      }
+    },
+    {
+      "path": "06_STRONG_FIELD/delta_a_derivation.md",
+      "lines": 70,
+      "headings": [
+        "deltaA_SSZ(f) — Derivation Document",
+        "Source Equations",
+        "Derivation",
+        "Physical Bounds",
+        "Status",
+        "Assumptions",
+        "To Reach LOCKED_FINAL"
+      ],
+      "keyword_hits": {
+        "Xi": 2,
+        "D(r)": 4,
+        "test": 3
+      }
+    },
+    {
+      "path": "06_STRONG_FIELD/delta_psi_derivation.md",
+      "lines": 98,
+      "headings": [
+        "deltaPsi_SSZ(f) — Derivation Document",
+        "Source Equations",
+        "Derivation Steps",
+        "Step 1 — Orbital Phase Accumulation Rate (GR)",
+        "Step 2 — SSZ Radial Decay Rate",
+        "Step 3 — Phase Accumulation Ratio",
+        "Step 4 — Phase Difference",
+        "Step 5 — Frequency-Domain Formula",
+        "Dimensional Analysis",
+        "Weak-Field Limit (LIGO band)",
+        "Status",
+        "Assumptions",
+        "To Reach LOCKED_FINAL"
+      ],
+      "keyword_hits": {
+        "Xi": 11,
+        "D(r)": 4,
+        "phase": 3,
+        "orbit": 1,
+        "phi": 6,
+        "C²": 1,
+        "test": 3
+      }
+    },
+    {
+      "path": "06_STRONG_FIELD/epsilon_220_derivation_status.md",
+      "lines": 75,
+      "headings": [
+        "epsilon_220 — Derivation Status",
+        "Definition",
+        "Branch Classification",
+        "Key Clarification: Why 3 Values ≠ 3 Contradictions",
+        "Why Pipeline Sees delta_lnL ~ 0",
+        "Final Status",
+        "To Unblock"
+      ],
+      "keyword_hits": {
+        "test": 3,
+        "falsification": 1
+      }
+    },
+    {
+      "path": "06_STRONG_FIELD/h_ssz_v0_derivation.md",
+      "lines": 69,
+      "headings": [
+        "h_SSZ(f) V0 — Derivation Document",
+        "Formula",
+        "Properties",
+        "Pipeline Result (GW240925 H1, 2026-05-18)",
+        "Status",
+        "To Reach LOCKED_FINAL"
+      ],
+      "keyword_hits": {
+        "Xi": 1,
+        "phase": 1,
+        "phi": 1,
+        "test": 4,
+        "falsification": 1
+      }
+    },
+    {
+      "path": "06_STRONG_FIELD/infalling_matter.md",
+      "lines": 56,
+      "headings": [
+        "Infalling Matter and Radio Waves",
+        "Concept",
+        "Key Predictions",
+        "Dual Velocity Framework",
+        "Observational Tests",
+        "Connection to Other Papers"
+      ],
+      "keyword_hits": {
+        "singular": 1
+      }
+    },
+    {
+      "path": "06_STRONG_FIELD/isco_comparison.md",
+      "lines": 108,
+      "headings": [
+        "ISCO Comparison: SSZ vs GR",
+        "Definition",
+        "GR (Schwarzschild) ISCO",
+        "SSZ ISCO Calculation",
+        "ISCO Table",
+        "Accretion Efficiency",
+        "Physical Origin of the Shift",
+        "Kerr ISCO",
+        "X-Ray Binary Test",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "D(r)": 1,
+        "orbit": 5,
+        "test": 2
+      }
+    },
+    {
+      "path": "06_STRONG_FIELD/lagrangian_mechanics.md",
+      "lines": 110,
+      "headings": [
+        "Lagrangian Mechanics in SSZ",
+        "Effective Lagrangian",
+        "Euler-Lagrange Equations",
+        "First Integral (Energy Equation)",
+        "Effective Potential from Lagrangian",
+        "Circular Orbit Conditions",
+        "Segment-Based Lagrangian Interpretation",
+        "Comparison of Kinetic Terms",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "Xi": 1,
+        "D(r)": 3,
+        "Lagrange": 1,
+        "geodesic": 2,
+        "Geodesic": 1,
+        "orbit": 8,
+        "phi": 6,
+        "test": 2
+      }
+    },
+    {
+      "path": "06_STRONG_FIELD/penrose_process.md",
+      "lines": 92,
+      "headings": [
+        "Penrose Process in SSZ",
+        "Definition",
+        "Maximum Efficiency",
+        "Energy Extraction Formula",
+        "Superradiance Connection",
+        "Penrose Process Table",
+        "Blandford-Znajek Mechanism",
+        "Observational Signature",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "Xi": 2,
+        "orbit": 1,
+        "test": 2
+      }
+    },
+    {
+      "path": "06_STRONG_FIELD/qnm_spectrum.md",
+      "lines": 115,
+      "headings": [
+        "Quasi-Normal Mode Spectrum in SSZ",
+        "Definition",
+        "SSZ QNM Frequency Shift",
+        "phi-Lattice Connection",
+        "GR QNM Reference Formulas",
+        "QNM Table for Different Black Hole Masses",
+        "Damping Time",
+        "Observable Consequences",
+        "Schwarzschild vs Kerr QNMs in SSZ",
+        "Falsification Conditions",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "Xi": 1,
+        "PPN": 1,
+        "phi": 6,
+        "test": 4
+      }
+    },
+    {
+      "path": "06_STRONG_FIELD/rotating_black_holes.md",
+      "lines": 109,
+      "headings": [
+        "Rotating Black Holes in SSZ (Kerr-SSZ)",
+        "Kerr-SSZ Metric",
+        "Ergosphere",
+        "Frame Dragging Rate",
+        "Gravitomagnetic Effects",
+        "Spin-Orbit Coupling",
+        "Innermost Stable Circular Orbit (Kerr)",
+        "SSZ-Specific Prediction",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "Xi": 3,
+        "D(r)": 1,
+        "orbit": 2,
+        "phi": 2,
+        "test": 5,
+        "singular": 1
+      }
+    },
+    {
+      "path": "06_STRONG_FIELD/singularities.md",
+      "lines": 87,
+      "headings": [
+        "Singularity Resolution",
+        "The Problem in GR",
+        "SSZ Resolution",
+        "At r = r_s (Horizon)",
+        "At r → 0 (Center)",
+        "Physical Consequences",
+        "The Dark Star Interpretation",
+        "Tests"
+      ],
+      "keyword_hits": {
+        "Ξ": 7,
+        "φ": 2,
+        "test": 2,
+        "singular": 4
+      }
+    },
+    {
+      "path": "06_STRONG_FIELD/superradiance.md",
+      "lines": 42,
+      "headings": [
+        "Superradiance Stabilization",
+        "The Problem",
+        "SSZ Stabilization",
+        "SSZ Superradiance Formula",
+        "Physical Consequence"
+      ],
+      "keyword_hits": {
+        "Ξ": 2,
+        "singular": 1
+      }
+    },
+    {
+      "path": "07_VALIDATION/all_tests_2026-05-07.md",
+      "lines": 63,
+      "headings": [
+        "SSZ All-Tests Validation Snapshot",
+        "Summary",
+        "Per-Target Results",
+        "Interpretation",
+        "Output interpretation guardrails"
+      ],
+      "keyword_hits": {
+        "Xi": 1,
+        "phase": 1,
+        "lensing": 3,
+        "test": 13,
+        "validation": 4
+      }
+    },
+    {
+      "path": "07_VALIDATION/cassini_test.md",
+      "lines": 100,
+      "headings": [
+        "Cassini Shapiro Delay Validation",
+        "Experiment Overview",
+        "Experimental Setup",
+        "SSZ Calculation",
+        "Why This Test is Critical",
+        "Historical Context",
+        "Frequency Shift in the Signal",
+        "Implications for SSZ",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "PPN": 7,
+        "lensing": 1,
+        "Shapiro": 3,
+        "test": 4
+      }
+    },
+    {
+      "path": "07_VALIDATION/consistency_checks.md",
+      "lines": 99,
+      "headings": [
+        "Consistency Checks",
+        "Cross-Repository Consistency",
+        "1. Ξ Value Consistency",
+        "2. D Value Consistency",
+        "3. PPN Consistency",
+        "4. Regime Boundary Consistency",
+        "Repo Scope Index",
+        "Common \"False Alarm\" Patterns",
+        "1. Factor-2 Discrepancy",
+        "2. r*/r_s Mismatch (1.387 vs 1.595)",
+        "3. Regime Formula Mismatch",
+        "Guardrails ≠ \"Repos are wrong\""
+      ],
+      "keyword_hits": {
+        "Xi": 2,
+        "Ξ": 10,
+        "PPN": 4,
+        "lensing": 2,
+        "Shapiro": 2,
+        "phi": 2,
+        "φ": 1,
+        "blend": 1,
+        "C²": 2,
+        "test": 1,
+        "validation": 1
+      }
+    },
+    {
+      "path": "07_VALIDATION/curvature_detection.md",
+      "lines": 50,
+      "headings": [
+        "Frequency-Based Curvature Detection",
+        "Concept",
+        "Method",
+        "Key Formula",
+        "Applications",
+        "Connection to Other Papers"
+      ],
+      "keyword_hits": {
+        "Ξ": 3,
+        "D(r)": 1,
+        "geodesic": 1,
+        "validation": 1
+      }
+    },
+    {
+      "path": "07_VALIDATION/gps_validation.md",
+      "lines": 121,
+      "headings": [
+        "GPS Gravitational Frequency Shift Validation",
+        "Setup",
+        "SSZ Calculation",
+        "Comparison",
+        "Why SSZ = GR Here",
+        "Physical Interpretation",
+        "Test Code (ssz-qubits)",
+        "From test_validation.py",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "Xi": 13,
+        "PPN": 3,
+        "orbit": 7,
+        "phi": 1,
+        "test": 4,
+        "validation": 2
+      }
+    },
+    {
+      "path": "07_VALIDATION/gr_vs_ssz_tables.md",
+      "lines": 78,
+      "headings": [
+        "GR vs SSZ Comparison Tables",
+        "Time Dilation D(r) Across Object Classes",
+        "Neutron Star Redshifts",
+        "Horizon Values",
+        "PPN Parameters",
+        "Where SSZ Differs from GR"
+      ],
+      "keyword_hits": {
+        "Ξ": 1,
+        "D(r)": 1,
+        "PPN": 4,
+        "Shapiro": 2,
+        "test": 1
+      }
+    },
+    {
+      "path": "07_VALIDATION/ligo_artifact_gate_gw240925.md",
+      "lines": 64,
+      "headings": [
+        "LIGO Artifact Gate — GW240925 L1 Anomaly",
+        "Final Gate",
+        "Diagnostic Chain",
+        "Sub-band Gaussianity (key finding)",
+        "DQ Bit Provenance",
+        "Line/Notch Test",
+        "Stationarity",
+        "STFT Omicron-Lite",
+        "What Cannot Be Said"
+      ],
+      "keyword_hits": {
+        "test": 2
+      }
+    },
+    {
+      "path": "07_VALIDATION/ligo_final_interpretation_lock.md",
+      "lines": 85,
+      "headings": [
+        "LIGO Final Interpretation Lock — 2026-05-18",
+        "Präzisions-Trennung",
+        "Was technisch gezeigt wurde (GW240925 H1, 2026-05-18)",
+        "Was NICHT gezeigt wurde",
+        "Numerische Kernwerte",
+        "Drei offene Interpretationen für delta_lnL ~ 0",
+        "Finales Gate",
+        "Verweis: Nächste Schritte"
+      ],
+      "keyword_hits": {
+        "test": 2
+      }
+    },
+    {
+      "path": "07_VALIDATION/ligo_gw240925_v0_pipeline.md",
+      "lines": 121,
+      "headings": [
+        "LIGO GW240925 — SSZ V0-Proxy Pipeline Validation",
+        "Purpose",
+        "Data Sources",
+        "Derived Formula Application",
+        "Numerical Results",
+        "Phase Correction (deltaPsi), band 20–800 Hz",
+        "Amplitude Correction (deltaA), band 20–800 Hz",
+        "Log-Likelihood Comparison",
+        "Epistemological Status",
+        "Blockers Before Real SSZ LIGO Test",
+        "Relation to All-Tests Snapshot"
+      ],
+      "keyword_hits": {
+        "Xi": 3,
+        "D(r)": 2,
+        "phase": 1,
+        "test": 8,
+        "validation": 2,
+        "falsification": 1
+      }
+    },
+    {
+      "path": "07_VALIDATION/ligo_h1l1_mini_pipeline_test_plan.md",
+      "lines": 311,
+      "headings": [
+        "LIGO H1/L1 Mini-Pipeline: Test Plan",
+        "Objective",
+        "Phase 0 — Dataset Documentation",
+        "Phase 1 — Baseline: Identical H1/L1 Processing",
+        "Phase 2 — Bandpower Test",
+        "Phase 3 — Gaussianity Test",
+        "Phase 4 — Frequency Resolution",
+        "Phase 5 — Harmonic Oscillator Test",
+        "Phase 6 — H1/L1 Time-Delay Check",
+        "Phase 7 — Phase and Coherence",
+        "Phase 8 — Sonification",
+        "Phase 9 — Matched Filtering / Standard-Model Comparison",
+        "Phase 10 — SSZ Test: Last Step Only",
+        "Hard PASS/FAIL Gate",
+        "Current Status — GW240925 (2026-05-19)",
+        "Result Statement for Lino"
+      ],
+      "keyword_hits": {
+        "phase": 5,
+        "phi": 2,
+        "test": 3,
+        "coherence": 7
+      }
+    },
+    {
+      "path": "07_VALIDATION/ligo_h1l1_time_delay_replication.md",
+      "lines": 56,
+      "headings": [
+        "LIGO H1/L1 Time-Delay Replication — GW240925",
+        "Method",
+        "Results",
+        "Updated Classification (2026-05-19)",
+        "Classification",
+        "Next Step: Subband xcorr with |corr|"
+      ],
+      "keyword_hits": {
+        "test": 1,
+        "coherence": 1
+      }
+    },
+    {
+      "path": "07_VALIDATION/ligo_next_physics_derivation_tasks.md",
+      "lines": 56,
+      "headings": [
+        "LIGO Next Physics Derivation Tasks",
+        "Prioritätsliste",
+        "P1 — deltaPsi: Ker-Blocker",
+        "P5 — epsilon_220: Drei Werte, drei Observablen",
+        "Was dieser Report NICHT ist"
+      ],
+      "keyword_hits": {
+        "Xi": 1,
+        "test": 2
+      }
+    },
+    {
+      "path": "07_VALIDATION/mercury_precession.md",
+      "lines": 109,
+      "headings": [
+        "Mercury Perihelion Precession Validation",
+        "Observed Value",
+        "GR/SSZ Formula",
+        "Why SSZ = GR for Mercury",
+        "SSZ Strong-Field Correction",
+        "PPN Connection",
+        "Historical Significance",
+        "MESSENGER and BepiColombo",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "Xi": 6,
+        "geodesic": 1,
+        "Geodesic": 1,
+        "PPN": 7,
+        "orbit": 6,
+        "phi": 7,
+        "test": 1
+      }
+    },
+    {
+      "path": "07_VALIDATION/nebulae_validation.md",
+      "lines": 49,
+      "headings": [
+        "Molecular Zones in Expanding Nebulae",
+        "Concept",
+        "Key Predictions",
+        "Validation",
+        "Repository",
+        "Connection to Other Papers"
+      ],
+      "keyword_hits": {
+        "test": 6
+      }
+    },
+    {
+      "path": "07_VALIDATION/neutron_star_redshift.md",
+      "lines": 108,
+      "headings": [
+        "Neutron Star Surface Redshift (SSZ Prediction)",
+        "Why Neutron Stars Are Key",
+        "Standard Parameters",
+        "GR Prediction",
+        "SSZ Prediction",
+        "Redshift Table for Different NS Compactness",
+        "Observational Methods",
+        "Future Tests",
+        "Why This Matters",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "Xi": 5,
+        "blend": 4,
+        "test": 1,
+        "falsification": 1
+      }
+    },
+    {
+      "path": "07_VALIDATION/power_law_universal.md",
+      "lines": 117,
+      "headings": [
+        "Universal Power Law: E/E_rest",
+        "The Law",
+        "Numerical Coefficients",
+        "Derivation from SSZ",
+        "Validation Dataset",
+        "ESO Spectroscopy Verification",
+        "Comparison with GR",
+        "Power Law Limits",
+        "Connection to Intersection Value",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "Xi": 7,
+        "test": 2,
+        "validation": 1
+      }
+    },
+    {
+      "path": "07_VALIDATION/test_coverage_complete.md",
+      "lines": 266,
+      "headings": [
+        "SSZ Complete Test Coverage",
+        "Summary",
+        "Framework Structure",
+        "8 Parts, 30 Chapters",
+        "Live Test Results (2026-04-29)",
+        "Test Categories by Physics Domain",
+        "Weak Field (Solar System)",
+        "Strong Field (Black Holes, Neutron Stars)",
+        "ESO Spectroscopy (GRAVITY/XSHOOTER)",
+        "Universal Power Law",
+        "G79.29+0.46 Validation (6/6 Predictions Confirmed)",
+        "Key Test Invariants",
+        "From Foundation (Part I)",
+        "From Kinematics (Part II)",
+        "From Strong Field (Part V)",
+        "What Tests Prove",
+        "✅ Established by 1,125+ Tests",
+        "❌ Not Yet Proven (2025–2030 Window)",
+        "Falsifiability",
+        "Running All Tests"
+      ],
+      "keyword_hits": {
+        "Ξ": 11,
+        "D(r)": 1,
+        "Hamilton": 1,
+        "Lagrange": 1,
+        "Geodesic": 1,
+        "PPN": 3,
+        "trajectory": 1,
+        "orbit": 1,
+        "lensing": 4,
+        "Shapiro": 3,
+        "φ": 6,
+        "test": 29,
+        "validation": 5,
+        "coherence": 1,
+        "singular": 2
+      }
+    },
+    {
+      "path": "07_VALIDATION/test_methodology.md",
+      "lines": 133,
+      "headings": [
+        "Test Methodology",
+        "Validation Philosophy",
+        "Anti-Circularity Principle",
+        "Test Categories",
+        "1. Weak-Field Validation (SSZ ≡ GR)",
+        "2. Strong-Field Predictions (SSZ ≠ GR)",
+        "3. Internal Consistency",
+        "Test Infrastructure",
+        "Canonical All-Tests Snapshot",
+        "Repositories with Tests",
+        "Unified Validation",
+        "Reproducibility",
+        "Method Assignment in Tests"
+      ],
+      "keyword_hits": {
+        "Xi": 2,
+        "Ξ": 10,
+        "D(r)": 1,
+        "Lagrange": 1,
+        "Geodesic": 1,
+        "PPN": 6,
+        "trajectory": 1,
+        "lensing": 5,
+        "Shapiro": 4,
+        "phi": 1,
+        "φ": 2,
+        "blend": 1,
+        "C²": 1,
+        "test": 15,
+        "validation": 6
+      }
+    },
+    {
+      "path": "08_FALSIFICATION/falsification_criteria.md",
+      "lines": 75,
+      "headings": [
+        "Falsification Criteria",
+        "SSZ Would Be DEFINITIVELY FALSIFIED If:",
+        "1. Neutron Star Redshift",
+        "2. Pulsar Timing",
+        "3. Universal Intersection Point",
+        "4. Black Hole Shadow",
+        "SSZ Would Be SUPPORTED If:",
+        "Design Philosophy"
+      ],
+      "keyword_hits": {
+        "Xi": 2,
+        "Shapiro": 1,
+        "test": 2
+      }
+    },
+    {
+      "path": "08_FALSIFICATION/instruments.md",
+      "lines": 91,
+      "headings": [
+        "Instruments for Falsification",
+        "Instrument Overview",
+        "Detailed Instrument Profiles",
+        "NICER (Neutron Star Interior Composition Explorer)",
+        "NANOGrav (North American Nanohertz Observatory for Gravitational Waves)",
+        "Next-Generation EHT (ngEHT)",
+        "GRAVITY/VLTI",
+        "Experimental Data Sources",
+        "ESO S-Star Data (Sgr A*)",
+        "NICER Neutron Star Data",
+        "GPS Time Measurements",
+        "Pound-Rebka Experiment",
+        "EHT Black-Hole Shadow",
+        "Gaia Stellar Catalog",
+        "Schumann Resonance Data"
+      ],
+      "keyword_hits": {
+        "orbit": 1,
+        "Shapiro": 1,
+        "test": 1,
+        "validation": 4
+      }
+    },
+    {
+      "path": "08_FALSIFICATION/known_limitations.md",
+      "lines": 71,
+      "headings": [
+        "Known Limitations",
+        "What SSZ Does NOT Cover",
+        "1. Quantum Gravity",
+        "2. Full Cosmology",
+        "3. Gravitational Waves (Full Treatment)",
+        "4. Rotating Black Holes (Full Kerr)",
+        "Known Precision Limits",
+        "Blend Zone",
+        "Mass-Dependent Correction",
+        "Strong Lensing",
+        "What SSZ Claims It IS",
+        "What SSZ Does NOT Claim"
+      ],
+      "keyword_hits": {
+        "Ξ": 1,
+        "PPN": 1,
+        "lensing": 2,
+        "φ": 2,
+        "C²": 1,
+        "test": 4
+      }
+    },
+    {
+      "path": "08_FALSIFICATION/ligo_open_data_position.md",
+      "lines": 72,
+      "headings": [
+        "Critical Methodology and Open-Reproducibility Position",
+        "Summary",
+        "1. Strain vs. Posterior Products",
+        "2. Chirp Mass: Meaningful, Not Directly Measured",
+        "3. Open Data vs. Open Reproducibility",
+        "4. GW240925 Current Status"
+      ],
+      "keyword_hits": {
+        "test": 6,
+        "validation": 1,
+        "falsification": 1,
+        "coherence": 1
+      }
+    },
+    {
+      "path": "08_FALSIFICATION/ligo_physics_clarification.md",
+      "lines": 64,
+      "headings": [
+        "LIGO Physics Clarification — GW240925",
+        "Canonical Statement",
+        "Four Precise Statements",
+        "1. Chirp Mass",
+        "2. LIGO Posteriors",
+        "3. L1 Anomaly",
+        "4. SSZ Claim Status",
+        "Summary Table"
+      ],
+      "keyword_hits": {
+        "test": 3
+      }
+    },
+    {
+      "path": "08_FALSIFICATION/predictions.md",
+      "lines": 91,
+      "headings": [
+        "SSZ Predictions",
+        "Category 1: Confirmed Predictions (SSZ ≡ GR)",
+        "Category 2: Testable Predictions (SSZ ≠ GR)",
+        "Neutron Star Redshift (+13%)",
+        "Pulsar Timing Delay (+30%)",
+        "Black Hole Shadow (-1.3%)",
+        "Shapiro Delay Strong-Field (+12%)",
+        "Universal Intersection Point",
+        "Finite Horizon Values",
+        "Category 3: Specific Object Predictions",
+        "G79.29+0.46 LBV Nebula",
+        "Cygnus X-1",
+        "13 Astronomical Objects"
+      ],
+      "keyword_hits": {
+        "Xi": 1,
+        "lensing": 1,
+        "Shapiro": 3,
+        "test": 5
+      }
+    },
+    {
+      "path": "09_PAPERS/bibliography.md",
+      "lines": 48,
+      "headings": [
+        "Complete Bibliography",
+        "Standard Physics References",
+        "Recommended References by Topic",
+        "Cross-Reference: Data Source → Documentation Chapter"
+      ],
+      "keyword_hits": {
+        "PPN": 1,
+        "test": 1
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/1703.0095v1.md",
+      "lines": 2088,
+      "headings": [],
+      "keyword_hits": {
+        "phi": 2,
+        "test": 1
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/ANo-GoTheoremforIn-FlightPhotonRetuninginGravitationalRedshift.md",
+      "lines": 198,
+      "headings": [
+        "ANo-GoTheoremforIn-FlightPhotonRetuninginGravitationalRedshift",
+        "Page 1",
+        "Page 2",
+        "Page 3",
+        "Page 4",
+        "Page 5",
+        "Page 6"
+      ],
+      "keyword_hits": {
+        "Ξ": 3,
+        "geodesic": 2,
+        "phase": 5
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/ATransformation-BasedDefinitionofLocalLorentzInvarianceandItsConnectiontoFrameDragging.md",
+      "lines": 200,
+      "headings": [
+        "ATransformation-BasedDefinitionofLocalLorentzInvarianceandItsConnectiontoFrameDragging",
+        "Page 1",
+        "Page 2",
+        "Page 3",
+        "Page 4",
+        "Page 5",
+        "Page 6"
+      ],
+      "keyword_hits": {
+        "geodesic": 1,
+        "Geodesic": 1,
+        "phase": 2,
+        "orbit": 1,
+        "lensing": 1
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/AdditiveDecompositionoftheObservedLight-TravelTime.md",
+      "lines": 117,
+      "headings": [
+        "Additive Decomposition of the Observed Light-Travel Time",
+        "Visibility Threshold and Segment-Based Interpretation",
+        "Interpretation in the segmented-spacetime model",
+        "Implications for gravitational lensing analysis"
+      ],
+      "keyword_hits": {
+        "lensing": 5,
+        "Shapiro": 4,
+        "test": 2,
+        "coherence": 9
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/AddressingtheLimitationsofArbitraryPrecisionComputation-ACallforCollaborativeSolutions-byLinoCasuandAkiraAI.md",
+      "lines": 746,
+      "headings": [
+        "Perform high-precision calculations using Decimal"
+      ],
+      "keyword_hits": {
+        "test": 1,
+        "validation": 1
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/DualVelocitiesinSegmentedSpacetime-EscapeFallandGravitationalRedshift.md",
+      "lines": 491,
+      "headings": [],
+      "keyword_hits": {
+        "orbit": 2,
+        "lensing": 1,
+        "test": 6,
+        "singular": 2
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/EmergentSpatialAxesfromOrthogonalTemporalInterference.md",
+      "lines": 322,
+      "headings": [
+        "Create temporal grid",
+        "Define directional angles (e.g. 5-fold symmetry)",
+        "Setup figure",
+        "Animation update function",
+        "Animate"
+      ],
+      "keyword_hits": {
+        "geodesic": 1,
+        "phase": 4,
+        "trajectory": 1,
+        "lensing": 4,
+        "phi": 1,
+        "blend": 1,
+        "test": 1,
+        "coherence": 1,
+        "singular": 1
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/Euler-reduktion Der Φ‑segmentierung – Leitfaden Für Die Paper-einleitung.md",
+      "lines": 607,
+      "headings": [],
+      "keyword_hits": {
+        "PPN": 1,
+        "φ": 56,
+        "test": 2
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/Final Paper — Φ, Β & Euler (segmented Spacetime).md",
+      "lines": 596,
+      "headings": [],
+      "keyword_hits": {
+        "PPN": 11,
+        "phi": 2,
+        "φ": 24,
+        "test": 11,
+        "singular": 1
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/Frequency-BasedCurvatureDetectionviaDynamicComparisons.md",
+      "lines": 239,
+      "headings": [
+        "Frequency-Based Curvature Detection via Dynamic Comparisons",
+        "1. Introduction",
+        "2. Constant Frequency in Gravity-Free Systems",
+        "3. First-Order Frequency Shifts and Their Limits",
+        "4. Differences of Differences and Non-Integrability",
+        "Curvature is encoded in closed-loop residuals of frequency comparisons.",
+        "5. Relation to General Relativity",
+        "6. Integration with Segmented Spacetime (SSZ)",
+        "6.1. Validation Framework and Test Setup",
+        "6.2. Validation Notes and Clarifications",
+        "6.3. Validation of the Method via Numerical and Empirical Data",
+        "6.3.1. Removables: Test Cases with Expected Loop Closure ( 𝑵𝑺𝑹 )",
+        "Example:",
+        "Table 1.1: Removable Structures ( 𝑵𝑺𝑹 )",
+        "6.3.2 Non-Removables: Loops with Residuals ( 𝑵𝑮𝑹 )",
+        "Example:",
+        "6.3.3 Time-Dependent Loop Analysis",
+        "6.3.4 𝑵𝑺𝑹 / 𝑵𝑮𝑹 Separation Using Real Data",
+        "6.3.5 Statistical Significance",
+        "7. Conclusion"
+      ],
+      "keyword_hits": {
+        "Xi": 1,
+        "geodesic": 3,
+        "phase": 1,
+        "trajectory": 1,
+        "orbit": 3,
+        "Shapiro": 2,
+        "test": 26,
+        "validation": 10
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/Kinematische Schließung – Escape Vs.md",
+      "lines": 557,
+      "headings": [],
+      "keyword_hits": {
+        "PPN": 5,
+        "φ": 20,
+        "C²": 2,
+        "test": 1
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/README.md",
+      "lines": 87,
+      "headings": [
+        "SEGMENTED_SPACETIME",
+        "Exponential Triangle – Gravitation vs. Segmented Spacetime",
+        "🚀 What It Shows",
+        "🧠 What's the Idea?",
+        "🔍 What Do x, y and z Represent?",
+        "📦 Files Included",
+        "🧪 Formula Detail",
+        "License"
+      ],
+      "keyword_hits": {}
+    },
+    {
+      "path": "09_PAPERS/markdown/RadialScalingGaugeforMaxwellFields.md",
+      "lines": 268,
+      "headings": [
+        "Radial Scaling Gauge for Maxwell Fields - A geometric reparametrization with invariant local light speed",
+        "1. Motivation",
+        "2. Scope and interpretation",
+        "2. Radial scaling definition",
+        "3. Electromagnetic phase and wave propagation",
+        "4. Radial wave equation",
+        "5. Physical interpretation",
+        "6. Relation to quantum theory",
+        "7. Limiting case",
+        "8. Conclusion",
+        "A) Addendum: Shapiro delay and weak-field lensing in the radial gauge",
+        "A.1 Travel time and Shapiro-like delay as a path integral",
+        "A.2 Weak deflection (lensing) as a transverse gradient of the optical path",
+        "B) Quantum-connection page: phase, action, and WKB in the scaled-distance picture",
+        "B.1 Phase accumulation as the primary observable",
+        "B.2 WKB (Wentzel -Kramers -Brillouin) form: Effective local wave number without modifying 𝝎",
+        "B.3 Action-based view (path integral / semiclassical limit)",
+        "B.4 Practical consequence: Interferometry-friendly formulation",
+        "References",
+        "Appendix: Observer proper time and clock comparison"
+      ],
+      "keyword_hits": {
+        "Xi": 3,
+        "Ξ": 4,
+        "phase": 27,
+        "lensing": 3,
+        "Shapiro": 2,
+        "phi": 2,
+        "test": 3
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/SLIDER_CHANGELOG.md",
+      "lines": 164,
+      "headings": [
+        "Slider.html - Changelog: Integer → Reelle Zahlen",
+        "🎯 Hauptänderungen",
+        "1. **Reelle Zahlen statt Integer**",
+        "2. **Größerer ViewBox (Animation nicht abgeschnitten)**",
+        "3. **Theorie-Disclaimer hinzugefügt**",
+        "4. **φ-Quantisierungs-Erklärung**",
+        "5. **Verbessertes UI/UX**",
+        "📊 Technische Details",
+        "JavaScript-Änderungen",
+        "SVG-Koordinaten",
+        "🔬 Physikalische Interpretation",
+        "Kontinuierliche vs. Diskrete Segmentierung",
+        "φ-Segmentierung",
+        "🎨 UI-Verbesserungen",
+        "Farb-Schema",
+        "Typografie",
+        "🧪 Testen",
+        "📚 Referenzen",
+        "✅ Zusammenfassung"
+      ],
+      "keyword_hits": {
+        "phi": 2,
+        "φ": 13
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/SSZ_FINAL_KAPITEL_README.md",
+      "lines": 73,
+      "headings": [
+        "SSZ cosmology scaffold (CMB/BBN/Growth) — runnable prototype",
+        "Coupling modes",
+        "Current default numerical summary",
+        "Key files"
+      ],
+      "keyword_hits": {
+        "Xi": 2,
+        "test": 1
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/SSZ_Final_Combined_Paper_2026-02-11.md",
+      "lines": 165,
+      "headings": [
+        "Segmented Spacetime (SSZ)",
+        "1. Motivation and scope",
+        "2. SSZ axioms, definitions, and regimes",
+        "2.1 Segment-density field Xi",
+        "2.2 SSZ time dilation",
+        "D\\_SSZ(r) = 1 / (1 + Xi(r))",
+        "2.3 Saturation (no divergence)",
+        "3. Regime formulas and the g1/g2 bridge",
+        "3.1 Weak-field (g1): GR limit",
+        "3.2 Strong-field (g2): saturating segmentation",
+        "3.3 Fixing the regime transition r*",
+        "4. Anti-circularity and no-free-parameters rules",
+        "5. Cosmology extension as a minimal falsification scaffold",
+        "5.1 Principle",
+        "5.2 Two time conventions (A/B)",
+        "5.3 Minimal observables",
+        "6. Three next steps (roadmap) - from the 'Drei Ausblicke' working paper",
+        "7. Reproducibility and regression-test report (this release)",
+        "7.1 Files in this bundle",
+        "7.2 Deterministic reproduction"
+      ],
+      "keyword_hits": {
+        "Xi": 30,
+        "lensing": 2,
+        "phi": 8,
+        "blend": 1,
+        "test": 11,
+        "validation": 3,
+        "falsification": 1,
+        "singular": 1
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/SSZ_Final_Paper_Draft_Wrede_Casu_Akira.md",
+      "lines": 334,
+      "headings": [
+        "Segmented Spacetime (SSZ): A φ‑Geometric Extension of General Relativity with Segment Density Ξ(r), SSZ Time Dilation, and Testable Strong‑Field Predictions",
+        "Abstract",
+        "1. Motivation and Scope",
+        "1.1 Why SSZ?",
+        "2. SSZ Axioms, Definitions, and Regimes",
+        "2.1 Axiom A0: Segment density field Ξ(r)",
+        "2.2 Axiom A1: SSZ time dilation",
+        "2.3 Axiom A2: φ‑geometric saturation structure",
+        "2.4 Weak‑field regime and GR consistency",
+        "3. GR vs. SSZ Time Dilation: Two Correct Views and the Intersection Point",
+        "3.1 Standard GR (Schwarzschild) dilation",
+        "3.2 SSZ dilation",
+        "3.3 Why both “GR‑like” Ξ formulas can be correct",
+        "3.4 Intersection point \\(r^\\*\\): where SSZ and GR dilation coincide",
+        "4. Observable Layer: Redshift, Delay, and Energy Framework",
+        "4.1 Redshift",
+        "4.2 Energy scaling (strong‑field universal law)",
+        "5. Anti‑Circularity: How SSZ Avoids “Story Physics”",
+        "6. Cosmology Extension: Deriving an Effective Friedmann Equation from SSZ Time Dilation",
+        "6.1 FRW with a lapse: the clean insertion point"
+      ],
+      "keyword_hits": {
+        "Xi": 28,
+        "Ξ": 9,
+        "lensing": 1,
+        "Shapiro": 1,
+        "phi": 6,
+        "φ": 7,
+        "test": 6,
+        "validation": 8,
+        "falsification": 3
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/Segment-BasedGroupVelocity.md",
+      "lines": 650,
+      "headings": [],
+      "keyword_hits": {
+        "geodesic": 3,
+        "orbit": 2,
+        "test": 2,
+        "validation": 2,
+        "coherence": 3
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/Segmented Spacetime and ϕ as a Temporal Growth Function.md",
+      "lines": 145,
+      "headings": [],
+      "keyword_hits": {
+        "singular": 1
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/SegmentedSpacetime-AFrequency-BasedFrameworkforGravityLightandBlackHoles.md",
+      "lines": 1855,
+      "headings": [
+        "**Segmented Spacetime - A Frequency-Based Framework for Gravity,** **Light and Black Holes**",
+        "**1. Introduction**",
+        "**Material systems adjust to the local segment structure. Photons do not.**",
+        "**2. Foundations of Segmented Spacetime**",
+        "**2.1 Segment Quantization and Spiral Structure**",
+        "**2.3 Symbol Concordance and Dual-Time Interpretation**",
+        "**3. Energy and segment-based dynamics**",
+        "**4. Schrödinger, equivalence and the next layer**",
+        "**4.1. The Bingsi-Schrödinger Box N – Segmentation as a Structure of Possibility**",
+        "**4.1.1. ϕ and the Natural Clock of the Box**",
+        "**4.1.2. The Box as State Space**",
+        "**5. Mutual Observation: Eigenzeit and Segment Reciprocity**",
+        "**5.2. Segment-Based Group Velocity and Directed Wave Propagation**",
+        "equations and mathematical examples [[3]] . **6. Segment-Based Formulation and the Question of Uncertainty**",
+        "**6.1 Core Definitions**",
+        "**6.2 On the Heisenberg Uncertainty Principle**",
+        "**Uncertainty is a local limitation. Segments are global relations.**",
+        "**7. Application and Implications of Segment-Based Interpretation**",
+        "**8. Segment-Induced Motion: Gravity Without Force**",
+        "**Gravity is not caused by a force acting on mass, but by mass responding to a** **denser structure of time.**"
+      ],
+      "keyword_hits": {
+        "geodesic": 1,
+        "phase": 10,
+        "trajectory": 4,
+        "φ": 4,
+        "test": 1,
+        "coherence": 10,
+        "singular": 12
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/SegmentedSpacetime-ANewPerspectiveonLightGravityandBlackHoles.md",
+      "lines": 741,
+      "headings": [
+        "Parameter der Spirale",
+        "Berechnung der Anzahl der Schritte n entlang der Spirale",
+        "Berechnung der Endsegmentierung bei Radius 1",
+        "Ausgabe der Ergebnisse"
+      ],
+      "keyword_hits": {
+        "phi": 3,
+        "singular": 9
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/SegmentedSpacetime-GeometricResolutionoftheLorentzIndeterminacyatv0.md",
+      "lines": 201,
+      "headings": [],
+      "keyword_hits": {
+        "geodesic": 3,
+        "singular": 4
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/SegmentedSpacetime-InfallingMatterandRadiowaves.md",
+      "lines": 355,
+      "headings": [
+        "**Segmented Spacetime - Infalling Mater and Radiowaves**"
+      ],
+      "keyword_hits": {
+        "Xi": 1,
+        "phase": 2,
+        "test": 3,
+        "singular": 1
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/SegmentedSpacetime-InterpretationofGravitationalRedshift.md",
+      "lines": 205,
+      "headings": [
+        "**Segmented Spacetime - Interpretation of Gravitational Redshift**"
+      ],
+      "keyword_hits": {
+        "geodesic": 2,
+        "trajectory": 2,
+        "orbit": 1,
+        "lensing": 1,
+        "test": 2
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/SegmentedSpacetime-MaxwellWavesasRotatingSpace.md",
+      "lines": 248,
+      "headings": [
+        "**Segmented Spacetime - Maxwell Waves as Rotating Space**"
+      ],
+      "keyword_hits": {
+        "phase": 2,
+        "φ": 2,
+        "test": 1,
+        "validation": 1
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/SegmentedSpacetime-OntheMetricofBlackHoles.md",
+      "lines": 484,
+      "headings": [
+        "**Segmented Spacetime – On the complete metric of Black Holes**",
+        "**1. Segmental linear space with causal limit**",
+        "**2. Spiral curvature - Emergence of gravitational collapse**",
+        "**2.1. Limitations of Relativistic Theories in Describing Small-Scale Structure**",
+        "**2.2. Time axis shift**",
+        "**3. Core density and axial inversion**",
+        "3.1. Substitution of c with 𝒗𝒇𝒂𝒍𝒍 in the Segmental Metric",
+        "𝒄 𝒊𝒔 𝒓𝒆𝒑𝒍𝒂𝒄𝒆𝒔 𝒃𝒚 𝒗𝒇𝒂𝒍𝒍",
+        "**4. Frequency Collapse and structural inversion**",
+        "**5. Jet re-emergence and energy outflow**",
+        "**5.1. Localized Dynamics in Rotated Temporal Axes**",
+        "5.2. Determining 𝑣𝑓𝑎𝑙𝑙",
+        "**5.3. Energy-Dominated Metric Distortions**",
+        "**6. Segmental Echoes and the ANITA Anomaly**",
+        "**7. Beyond the limit - Segmental descent and the misinterpretation of c**",
+        "**References**"
+      ],
+      "keyword_hits": {
+        "geodesic": 1,
+        "phase": 3,
+        "phi": 1,
+        "φ": 8,
+        "singular": 10
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/SegmentedSpacetime-Solutiontotheparadoxofsingularities.md",
+      "lines": 583,
+      "headings": [],
+      "keyword_hits": {
+        "test": 3,
+        "singular": 15
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/SegmentedSpacetimeBoundEnergyandtheStructuralOriginofthefine-structureconstant.md",
+      "lines": 815,
+      "headings": [],
+      "keyword_hits": {
+        "orbit": 2,
+        "singular": 1
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/SegmentedSpacetimeandPi.md",
+      "lines": 550,
+      "headings": [],
+      "keyword_hits": {
+        "φ": 1,
+        "singular": 4
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/SegmentedSpacetimeandasaTemporalGrowthFunction.md",
+      "lines": 181,
+      "headings": [],
+      "keyword_hits": {
+        "singular": 1
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/SegmentedSpacetimeandtheDarkStarProblem.md",
+      "lines": 125,
+      "headings": [
+        "Segmented Spacetime and the Dark Star Problem A Historical and Geometric Reassessment of Light Escape in Strong Gravity",
+        "1. Introduction",
+        "2. Historical Framework - Michell, Laplace and the Dark Star Concept",
+        "3. Geometry of Light Escape",
+        "This is indeed consistent with:",
+        "References"
+      ],
+      "keyword_hits": {
+        "geodesic": 7,
+        "trajectory": 1,
+        "phi": 2,
+        "singular": 11
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/SegmentedSpacetimeandtheNaturalBoundaryofBlackHoles-ImplicationsfortheCosmicCensorshipConjecture.md",
+      "lines": 1535,
+      "headings": [],
+      "keyword_hits": {
+        "phase": 3,
+        "trajectory": 1,
+        "phi": 2,
+        "φ": 2,
+        "test": 1,
+        "singular": 25
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/SegmentedSpacetimeandtheOriginofMolecularZonesinExpandingNebulae.md",
+      "lines": 1626,
+      "headings": [
+        "**Segmented Spacetime and the Origin of Molecular Zones in** **Expanding Nebulae**",
+        "**References**"
+      ],
+      "keyword_hits": {
+        "Xi": 1,
+        "phase": 8,
+        "lensing": 2,
+        "test": 10,
+        "validation": 1,
+        "singular": 7
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/Segmentierte Raumzeit – Ein geometrisch-topologisches Modell.md",
+      "lines": 2194,
+      "headings": [],
+      "keyword_hits": {
+        "orbit": 1,
+        "φ": 4,
+        "test": 14,
+        "singular": 1
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/Ssz_-_Drei_Ausblicke_Als_Eigenes_Paper.md",
+      "lines": 585,
+      "headings": [
+        "**SSZ: Drei nächste Schritte als eigenständiges** **Arbeits‑Paper**",
+        "**r*‑Bestimmung, kosmologische Inhomogenitäts‑Tests, g1/** **g2‑Operationalisierung**",
+        "**Abstract**",
+        "**1. Minimaler SSZ‑Kern**",
+        "2. Schritt 1: Physikalische Fixierung von r \\*",
+        "**3. Schritt 2: Kosmologie als Inhomogenitäts‑Signatur**",
+        "**4. Schritt 3: g1/g2‑Operationalisierung als Algorithmus**",
+        "**5. Repro‑Protokoll**",
+        "**Appendix A: To‑Do als konkrete Deliverables**"
+      ],
+      "keyword_hits": {
+        "Ξ": 47,
+        "lensing": 2,
+        "Shapiro": 1,
+        "φ": 15,
+        "C²": 1,
+        "test": 4
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/Ssz_-_Finales_Paper_wrede_Casu_Akira.md",
+      "lines": 888,
+      "headings": [
+        "**Segmented Spacetime (SSZ)**",
+        "**Eine falsifizierbare φ‑geometrische Erweiterung der ART mit** **Ξ‑Segmentdichte, D_SSZ=1/(1+Ξ) und einem** **no‑free‑parameters ‑Testgerüst für kosmologische Signaturen**",
+        "**1. Notation und Begriffe**",
+        "**2. Axiome und Kernpostulate**",
+        "3. Weak/Strong‑Bridge: explizite Ξ( r ) ‑Formeln",
+        "**4. Anti‑Zirkularität: warum das kein „Curve‑Fit‑Märchen“ ist**",
+        "**5. Kosmologische Erweiterung (Minimal‑Gerüst)**",
+        "6. Das Testgerüst akzeptiert jede Ξ( z ) (ohne Curve‑Fitting)",
+        "7. Konkreter Test: vier Beispiel‑ Ξ( z ) ‑Eingaben",
+        "7.2 Getestete Ξ( z ) ‑Modelle",
+        "**8. Konsequenzen für SSZ‑Kosmologie**",
+        "**9. Falsifizierbare Vorhersagen (kurz)**",
+        "**10. Ausblick: Nächste Schritte (konkret)**",
+        "**Appendix A: Minimal‑Formeln (Kompakt)**"
+      ],
+      "keyword_hits": {
+        "Ξ": 79,
+        "φ": 6,
+        "C²": 1,
+        "test": 6
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/Verification Summary of Segmented Spacetime Repository.md",
+      "lines": 771,
+      "headings": [],
+      "keyword_hits": {
+        "geodesic": 2,
+        "PPN": 4,
+        "orbit": 1,
+        "Shapiro": 1,
+        "phi": 2,
+        "φ": 31,
+        "test": 39,
+        "validation": 3,
+        "singular": 5
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/Von Φ‑segmentierung Zu Euler_ Beweiskette & Ableitung.md",
+      "lines": 647,
+      "headings": [],
+      "keyword_hits": {
+        "phi": 2,
+        "φ": 65,
+        "test": 3
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/paper_01_Radial_Scaling_Gauge_for_Maxwell_Fields.md",
+      "lines": 183,
+      "headings": [
+        "Bibliografische Daten",
+        "Zusammenfassung",
+        "Kernaussagen",
+        "Formeln",
+        "Formel 1: Radiale Skalierungsdefinition",
+        "Formel 2: Skalierungsfunktion in SSZ",
+        "Formel 3: Transformation der Ableitungen",
+        "Formel 4: Elektromagnetische Wellenphase",
+        "Formel 5: Effektive Wellenzahl",
+        "Formel 6: Wellengleichung in r-Koordinaten",
+        "Formel 7: Effektiver Brechungsindex",
+        "Formel 8: Shapiro-Delay",
+        "Formel 9: Phase-Akkumulation",
+        "Verbindung zu anderen Papers",
+        "Physikalische Interpretation",
+        "Testbare Vorhersagen",
+        "Radial Scaling Gauge for Maxwell Fields - Erweiterte Testdokumentation"
+      ],
+      "keyword_hits": {
+        "phase": 2,
+        "Shapiro": 3
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/paper_02_Dual_Velocities_in_Segmented_Spacetime.md",
+      "lines": 171,
+      "headings": [
+        "Bibliografische Daten",
+        "Zusammenfassung",
+        "Kernaussagen",
+        "Formeln",
+        "Formel 1: Newtonsche Fluchtgeschwindigkeit",
+        "Formel 2: GR-Rotverschiebungsfaktor",
+        "Formel 3: Segment-Lorentz-Faktor",
+        "Formel 4: GR-konjugierte Fallgeschwindigkeit",
+        "Formel 5: Kinematische SchlieÃŸung (ZENTRAL!)",
+        "Formel 6: Dualitäts-Interpretation",
+        "Formel 7: Redshift als Geschwindigkeitsverhältnis",
+        "Physikalische Interpretation",
+        "Was ist v_fall?",
+        "Warum c² als Produkt?",
+        "Verbindung zu anderen Papers",
+        "Grenzfälle",
+        "Testbare Vorhersagen"
+      ],
+      "keyword_hits": {
+        "Shapiro": 1
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/paper_03_A_Frequency-Based_Framework_for_Gravity_Light_and_Black_Holes.md",
+      "lines": 171,
+      "headings": [
+        "Bibliografische Daten",
+        "Zusammenfassung",
+        "Kernaussagen",
+        "Formeln",
+        "Formel 1: Newtonsche Fluchtgeschwindigkeit",
+        "Formel 2: GR-Rotverschiebungsfaktor",
+        "Formel 3: Segment-Lorentz-Faktor",
+        "Formel 4: GR-konjugierte Fallgeschwindigkeit",
+        "Formel 5: Kinematische SchlieÃŸung (ZENTRAL!)",
+        "Formel 6: Dualitäts-Interpretation",
+        "Formel 7: Redshift als Geschwindigkeitsverhältnis",
+        "Physikalische Interpretation",
+        "Was ist v_fall?",
+        "Warum c² als Produkt?",
+        "Verbindung zu anderen Papers",
+        "Grenzfälle",
+        "Testbare Vorhersagen"
+      ],
+      "keyword_hits": {
+        "Shapiro": 1
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/paper_04_On_the_Complete_Metric_of_Black_Holes.md",
+      "lines": 177,
+      "headings": [
+        "Bibliografische Daten",
+        "Zusammenfassung",
+        "Kernaussagen",
+        "Formeln",
+        "Formel 1: Segment-Quantisierung",
+        "Formel 2: Grover-Analogie",
+        "Formel 3: Photon-Materie-Asymmetrie",
+        "Formel 4: Wellenfunktion in Energie-Wellenlänge",
+        "Formel 5: Dual-Zeit Wellenfunktion",
+        "Formel 6: Symbol-Konkordanz",
+        "Formel 7: Segment-Dichte und Gravitation",
+        "Formel 8: Lokaler Zeitfluss",
+        "Physikalische Interpretation",
+        "Warum Nâ‚€ = 4?",
+        "Photon vs. Materie",
+        "Verbindung zu anderen Papers",
+        "Kosmologische Implikationen"
+      ],
+      "keyword_hits": {
+        "D(r)": 2
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/paper_05_Infalling_Matter_and_Radiowaves.md",
+      "lines": 176,
+      "headings": [
+        "Bibliografische Daten",
+        "Zusammenfassung",
+        "Kernaussagen",
+        "Formeln",
+        "Formel 1: Newton's Methode und Ï†",
+        "Formel 2: Segmentale Geschwindigkeitsrelation",
+        "Formel 3: Fallgeschwindigkeit",
+        "Formel 4: Zeitachsen-Verschiebung",
+        "Formel 5: Segment-Lorentz-Faktor (v_fall)",
+        "Formel 6: Metrik-Transition",
+        "Formel 7: Horizont-Eigenschaften",
+        "Formel 8: Photon-Rotverschiebung im Inneren",
+        "Physikalische Interpretation",
+        "Warum keine Singularität?",
+        "v_fall > c - Keine Verletzung?",
+        "Verbindung zu anderen Papers",
+        "Visualisierung"
+      ],
+      "keyword_hits": {}
+    },
+    {
+      "path": "09_PAPERS/markdown/paper_06_Von_-Segmentierung_zu_Euler.md",
+      "lines": 143,
+      "headings": [
+        "Bibliografische Daten",
+        "Zusammenfassung",
+        "Kernaussagen",
+        "Formeln",
+        "Formel 1: gâ‚ und gâ‚‚ Regionen",
+        "Formel 2: Totale Geschwindigkeit",
+        "Formel 3: Energie-Absorption",
+        "Formel 4: Birkhoff-Theorem Implikation",
+        "Formel 5: Radiowellen-Emission",
+        "Formel 6: Precursor-Zeitskala",
+        "Beobachtungsdaten",
+        "GX 339-4 (Fender et al. 2009)",
+        "GRS 1915+105 (Mirabel & Rodríguez 1999)",
+        "Testbare Vorhersagen",
+        "Physikalische Interpretation",
+        "Warum nur Radiowellen?",
+        "Informationsgehalt der Radiowellen"
+      ],
+      "keyword_hits": {}
+    },
+    {
+      "path": "09_PAPERS/markdown/paper_07_Kinematische_Schlie_ung_Escape_vs_Fall.md",
+      "lines": 163,
+      "headings": [
+        "Bibliografische Daten",
+        "Zusammenfassung",
+        "Axiome",
+        "A1: Segment-Postulat",
+        "A2: Skalenfaktor",
+        "A3: Winkel-Quantelung",
+        "Formeln",
+        "Formel 1: Rotverschiebungs-Gitter",
+        "Formel 2: Logarithmisches Gitter",
+        "Formel 3: Ganzzahl-Schätzer",
+        "Formel 4: Euler-Einbettung (ZENTRAL!)",
+        "Formel 5: Logarithmische Spirale",
+        "Formel 6: Gruppenhomomorphismus",
+        "Formel 7: Euler-Zerlegung",
+        "Beweiskette (Skizze)",
+        "Testbare Vorhersagen",
+        "1. Ganzzahltest",
+        "2. Î”BIC-Modellvergleich",
+        "3. Periodizität",
+        "Physikalische Interpretation"
+      ],
+      "keyword_hits": {
+        "phi": 3,
+        "test": 1
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/paper_08_Segment-Based_Group_Velocity.md",
+      "lines": 154,
+      "headings": [
+        "Bibliografische Daten",
+        "Zusammenfassung",
+        "Notation",
+        "Formeln",
+        "Formel 1: GR-konjugierter Fallwert",
+        "Formel 2: Produkt (Gleichung 2.1)",
+        "Formel 3: Segmentierte Normierung",
+        "Formel 4: Kinematische SchlieÃŸung (Gleichung 2.3)",
+        "Formel 5: Ï†-Gitter-Variable",
+        "Formel 6: Euler-Hülle",
+        "Formel 7: Kopplungspunkt",
+        "Formel 8: β-Term (nicht PPN!)",
+        "Physikalisches Bild",
+        "Interpretation von v_fall",
+        "Gültigkeitsbereich"
+      ],
+      "keyword_hits": {
+        "PPN": 2,
+        "C²": 1
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/paper_09_The_Dark_Star_Problem.md",
+      "lines": 138,
+      "headings": [
+        "Bibliografische Daten",
+        "Zusammenfassung",
+        "Kernaussagen",
+        "Formeln",
+        "Formel 1: Klassische Gruppengeschwindigkeit",
+        "Formel 2: Segment-basierte Gruppengeschwindigkeit",
+        "Formel 3: Kernprinzip",
+        "Formel 4: Energie-Korrektur",
+        "Formel 5: Wellenfunktion Ψ(E, λ)",
+        "Formel 6: Wellenfunktion Î¨(Ï„, t)",
+        "Formel 7: Redshift aus Segmentierung",
+        "Anwendung: S2-Stern bei Sgr A*",
+        "Beobachtungsdaten",
+        "SSZ-Berechnung",
+        "Paradigmenwechsel",
+        "Testbare Vorhersagen"
+      ],
+      "keyword_hits": {}
+    },
+    {
+      "path": "09_PAPERS/markdown/paper_10_Frequency-Based_Curvature_Detection.md",
+      "lines": 117,
+      "headings": [
+        "Bibliografische Daten",
+        "Zusammenfassung",
+        "Historische Entwicklung",
+        "1783: John Michell",
+        "1915: Einstein/Schwarzschild",
+        "2025: SSZ",
+        "Formeln",
+        "Formel 1: Michells Dark Star Bedingung",
+        "Formel 2: GR-Singularität",
+        "Formel 3: Masse-Wellenlänge-Beziehung",
+        "Formel 4: Extreme Rotverschiebung",
+        "Formel 5: SSZ-Kernstruktur",
+        "Kernfragen",
+        "Vergleich der Modelle",
+        "Einstein vs. Oppenheimer"
+      ],
+      "keyword_hits": {}
+    },
+    {
+      "path": "09_PAPERS/markdown/paper_11_Origin_of_Molecular_Zones_in_Expanding_Nebulae.md",
+      "lines": 143,
+      "headings": [
+        "Bibliografische Daten",
+        "Zusammenfassung",
+        "Kernaussagen",
+        "Formeln",
+        "Formel 1: Konstante Eigenfrequenz",
+        "Formel 2: Log-Frequenz-Verhältnis",
+        "Formel 3: Geschlossene-Schleife Residuum (ZENTRAL!)",
+        "Formel 4: Holonomie-Analogie",
+        "Formel 5: Erste Ordnung (keine Krümmung)",
+        "Formel 6: Zweite Ordnung (Krümmung)",
+        "Formel 7: SSZ-Frequenz-Encoding",
+        "Experimentelle Beispiele",
+        "Gravity Probe A (1976)",
+        "Galileo Redshift Experiments",
+        "Warum sind diese Tests nicht ausreichend?",
+        "Verbindung zu GR"
+      ],
+      "keyword_hits": {
+        "D(r)": 1,
+        "orbit": 1,
+        "test": 1
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/paper_12_SSZ_as_Natural_Regulator_of_Superradiant_Instabilities.md",
+      "lines": 150,
+      "headings": [
+        "Bibliografische Daten",
+        "Zusammenfassung",
+        "Beobachtete Anomalien",
+        "G79.29+0.46 Eigenschaften",
+        "Formeln",
+        "Formel 1: Segment-Dichte Feld",
+        "Formel 2: Zeitfluss-Variation",
+        "Formel 3: Temperatur-Segment-Beziehung",
+        "Formel 4: Geschwindigkeits-Ãœberschuss",
+        "Formel 5: Recoupling-Energie",
+        "Formel 6: Molekulare Stabilität",
+        "Beobachtungsdaten (Rizzo et al. 2014)",
+        "NHâ‚ƒ Komponenten",
+        "SSZ-Erklärung",
+        "Warum Temperatur-Inversion?",
+        "Warum Geschwindigkeits-Ãœberschuss?",
+        "Warum Radio-Molekular-Ãœberlappung?",
+        "Testbare Vorhersagen"
+      ],
+      "keyword_hits": {
+        "D(r)": 1
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/paper_13__and_as_Structural_Constants.md",
+      "lines": 150,
+      "headings": [
+        "Bibliografische Daten",
+        "Zusammenfassung",
+        "Hintergrund: Black-Hole Bomb",
+        "Press-Teukolsky (1972)",
+        "Beobachtung",
+        "Formeln",
+        "Formel 1: Superradianz-Bedingung",
+        "Formel 2: SSZ-Gain-Faktor",
+        "Formel 3: Stabilisierungsindex",
+        "Formel 4: Parameter-Bereiche",
+        "Ergebnisse",
+        "Baseline (ohne Segmentierung)",
+        "Mit Segmentierung",
+        "Optimale Konfiguration",
+        "Korrelationen",
+        "Physikalische Interpretation",
+        "Mechanismus",
+        "Warum keine Black-Hole Bombs?",
+        "Verbindung zu anderen Papers",
+        "Schlussfolgerung"
+      ],
+      "keyword_hits": {}
+    },
+    {
+      "path": "09_PAPERS/markdown/paper_14_Emergent_Spatial_Axes_from_Orthogonal_Temporal_Interference.md",
+      "lines": 145,
+      "headings": [
+        "Bibliografische Daten",
+        "Zusammenfassung",
+        "Kernaussagen",
+        "Formeln",
+        "Formel 1: Ï€ und Ï† Beziehung",
+        "Formel 2: Logarithmische Spirale",
+        "Formel 3: Bogenlänge der Spirale",
+        "Formel 4: Effektives Ï€ in Spirale",
+        "Formel 5: Segmentierungs-Wachstum",
+        "Formel 6: 42-Dezimalstellen-Grenze",
+        "Rollen von Ï€ und Ï†",
+        "Ï€: Divisor",
+        "Ï†: Wachstum",
+        "Bei r = 1",
+        "Event Horizon und Ï€"
+      ],
+      "keyword_hits": {}
+    },
+    {
+      "path": "09_PAPERS/markdown/paper_15_Structural_Origin_of_the_Fine-Structure_Constant.md",
+      "lines": 134,
+      "headings": [
+        "Bibliografische Daten",
+        "Zusammenfassung",
+        "Kernaussagen",
+        "Formeln",
+        "Formel 1: Projektionsfunktion",
+        "Formel 2: Superponiertes Feld",
+        "Formel 3: Richtungsaufteilung",
+        "Formel 4: Zeitachsen-Interpretation",
+        "Formel 5: Quasikristall-Verbindung",
+        "Physikalische Interpretation",
+        "Warum zwei Zeitachsen?",
+        "Bewegung als Modulation",
+        "Ergebnisse",
+        "5 Richtungen",
+        "10 Richtungen",
+        "Verbindung zu anderen Papers",
+        "Implikationen"
+      ],
+      "keyword_hits": {}
+    },
+    {
+      "path": "09_PAPERS/markdown/paper_16_Solution_to_the_Paradox_of_Singularities.md",
+      "lines": 133,
+      "headings": [
+        "Bibliografische Daten",
+        "Zusammenfassung",
+        "Kernaussagen",
+        "Formeln",
+        "Formel 1: Feinstrukturkonstante",
+        "Formel 2: SSZ-Interpretation",
+        "Formel 3: Effektiver Elektron-Radius",
+        "Formel 4: Elektromagnetische Selbstenergie",
+        "Formel 5: Gebundene Energie",
+        "Formel 6: S2-Stern Anwendung",
+        "Physikalische Interpretation",
+        "Warum variiert α?",
+        "Elektron-Confinement",
+        "Verbindung zu Beobachtungen",
+        "S2-Stern bei Sgr A*",
+        "Kosmologische Variation",
+        "Testbare Vorhersagen"
+      ],
+      "keyword_hits": {}
+    },
+    {
+      "path": "09_PAPERS/markdown/paper_17_Natural_Boundary_of_Black_Holes_-_Cosmic_Censorship.md",
+      "lines": 142,
+      "headings": [
+        "Bibliografische Daten",
+        "Zusammenfassung",
+        "Kernaussagen",
+        "Formeln",
+        "Formel 1: Massenverteilung",
+        "Formel 2: Euler-Formel",
+        "Formel 3: Archimedische Spirale",
+        "Formel 4: Normal Clock",
+        "Formel 5: Horizont-Zeitdilatation (SSZ)",
+        "Formel 6: Segment-Dichte am Horizont",
+        "Das Normal Clock Modell",
+        "Konzept",
+        "Formel",
+        "Warum keine Singularität?",
+        "Spiral-Geometrie",
+        "In Galaxien",
+        "In Raumzeit",
+        "Implikationen"
+      ],
+      "keyword_hits": {
+        "singular": 1
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/paper_18__2_and_in_Segmented_Spacetime_-_Calibration.md",
+      "lines": 119,
+      "headings": [
+        "Bibliografische Daten",
+        "Zusammenfassung",
+        "Kernaussagen",
+        "Formeln",
+        "Formel 1: Normal Clock Radius",
+        "Formel 2: Circumferenz-Segmentierung",
+        "Formel 3: Zeitdilatation aus Segmentierung",
+        "Formel 4: Spin-Limit (Kerr)",
+        "Formel 5: Cosmic Censorship (mathematisch)",
+        "Normal Clock Modell",
+        "Aufbau",
+        "Dynamik",
+        "Penrose's Cosmic Censorship",
+        "Weak Version",
+        "Strong Version",
+        "SSZ-Unterstützung",
+        "Verbindung Ï€-Ï†"
+      ],
+      "keyword_hits": {}
+    },
+    {
+      "path": "09_PAPERS/markdown/paper_19_Geometric_Resolution_of_Lorentz_Indeterminacy_at_v_0.md",
+      "lines": 123,
+      "headings": [
+        "Bibliografische Daten",
+        "Zusammenfassung",
+        "Kernaussagen",
+        "Formeln",
+        "Formel 1: Kopplungsradius",
+        "Formel 2: Erweiterte Form",
+        "Formel 3: β-Definition",
+        "Formel 4: Metrik-Stetigkeit",
+        "Formel 5: Kalibrierungsprozedur",
+        "Warum Ï†/2?",
+        "Geometrische Rechtfertigung",
+        "Physikalische Rechtfertigung",
+        "β-Parameter",
+        "Eigenschaften",
+        "Bestimmung",
+        "Anwendung",
+        "S2-Stern"
+      ],
+      "keyword_hits": {
+        "C²": 1,
+        "validation": 1
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/paper_20__as_a_Temporal_Growth_Function.md",
+      "lines": 106,
+      "headings": [
+        "Bibliografische Daten",
+        "Zusammenfassung",
+        "Das Problem",
+        "Standard-Lorentz bei v=0",
+        "Formeln",
+        "Formel 1: Lorentz-Transformation",
+        "Formel 2: SSZ-Auflösung",
+        "Formel 3: Segment-Richtung",
+        "Formel 4: Bewegung als Modulation",
+        "Physikalische Interpretation",
+        "Warum ist das wichtig?",
+        "SSZ-Lösung",
+        "Vergleich"
+      ],
+      "keyword_hits": {}
+    },
+    {
+      "path": "09_PAPERS/markdown/paper_21_Interpretation_of_Gravitational_Redshift.md",
+      "lines": 108,
+      "headings": [
+        "Bibliografische Daten",
+        "Zusammenfassung",
+        "Kernaussagen",
+        "Formeln",
+        "Formel 1: Ï†-Spiral Radius",
+        "Formel 2: Zeit als Logarithmus",
+        "Formel 3: 2D vs 3D Zeit",
+        "Formel 4: Gravitativer Zeitfluss",
+        "Formel 5: Segment-Zeitdilatation",
+        "Physikalische Interpretation",
+        "Zeit als strukturelle GröÃŸe",
+        "Warum Ï†?",
+        "Verbindung zu Gravitation"
+      ],
+      "keyword_hits": {
+        "test": 1
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/paper_22_Maxwell_Waves_as_Rotating_Space.md",
+      "lines": 84,
+      "headings": [
+        "Bibliografische Daten",
+        "Zusammenfassung",
+        "Kernaussagen",
+        "Formeln",
+        "Formel 1: Standard GR-Redshift",
+        "Formel 2: SSZ-Redshift",
+        "Formel 3: Segment-Verhältnis",
+        "Formel 4: Weak-Field Limit",
+        "Physikalische Interpretation",
+        "Photon-Verhalten",
+        "Warum \"Rotverschiebung\"?"
+      ],
+      "keyword_hits": {}
+    },
+    {
+      "path": "09_PAPERS/markdown/paper_23_Additive_Decomposition_of_Light-Travel_Time.md",
+      "lines": 82,
+      "headings": [
+        "Bibliografische Daten",
+        "Zusammenfassung",
+        "Kernaussagen",
+        "Formeln",
+        "Formel 1: Standard Maxwell",
+        "Formel 2: SSZ-Interpretation",
+        "Formel 3: Rotierender Raum",
+        "Formel 4: Spiral-Verbindung",
+        "Physikalische Interpretation",
+        "Licht als aktive Struktur",
+        "Verbindung zu Ï†"
+      ],
+      "keyword_hits": {}
+    },
+    {
+      "path": "09_PAPERS/markdown/paper_24_Transformation-Based_Definition_of_Local_Lorentz_Invariance.md",
+      "lines": 88,
+      "headings": [
+        "Bibliografische Daten",
+        "Zusammenfassung",
+        "Kernaussagen",
+        "Formeln",
+        "Formel 1: Totale Laufzeit",
+        "Formel 2: Geometrische Komponente",
+        "Formel 3: Segment-Komponente",
+        "Formel 4: Totale Form",
+        "Formel 5: Shapiro-Delay",
+        "Anwendungen"
+      ],
+      "keyword_hits": {
+        "Shapiro": 4
+      }
+    },
+    {
+      "path": "09_PAPERS/markdown/paper_25_Irreversible_Coherence-Collapse_Law_g_g_.md",
+      "lines": 85,
+      "headings": [
+        "Bibliografische Daten",
+        "Zusammenfassung",
+        "Kernaussagen",
+        "Formeln",
+        "Formel 1: Standard Lorentz-Transformation",
+        "Formel 2: Lokale Gültigkeit",
+        "Formel 3: Inter-Segment Transformation",
+        "Formel 4: Frame-Dragging aus Segmentierung",
+        "Formel 5: Kerr-Metrik-Verbindung",
+        "Physikalische Interpretation",
+        "Warum bleibt Lorentz-Invarianz?",
+        "Frame-Dragging"
+      ],
+      "keyword_hits": {}
+    },
+    {
+      "path": "09_PAPERS/markdown/Φ_2 And Β In Segmented Spacetime — Derivation, Justification, Calibration (en) (1).md",
+      "lines": 817,
+      "headings": [],
+      "keyword_hits": {
+        "PPN": 11,
+        "orbit": 5,
+        "φ": 60,
+        "blend": 7,
+        "C²": 6,
+        "test": 11,
+        "singular": 1
+      }
+    },
+    {
+      "path": "09_PAPERS/paper_index.md",
+      "lines": 89,
+      "headings": [
+        "SSZ Paper Index",
+        "Primary Papers (01–25)",
+        "Additional Works",
+        "Paper → Documentation Cross-Reference"
+      ],
+      "keyword_hits": {
+        "phi": 3,
+        "φ": 5,
+        "validation": 1,
+        "coherence": 1,
+        "singular": 2
+      }
+    },
+    {
+      "path": "09_PAPERS/preprints.md",
+      "lines": 86,
+      "headings": [
+        "Historical Preprints & Duplicates",
+        "Canonical vs. Preprint Versions",
+        "Paper Mapping",
+        "Additional Papers (Not in 01–25)",
+        "Largest Preprints",
+        "Consolidation Rules"
+      ],
+      "keyword_hits": {}
+    },
+    {
+      "path": "10_REPOSITORIES/ligo_tests_findings.md",
+      "lines": 177,
+      "headings": [
+        "SSZ-LIGO Tests — Repository Findings",
+        "Overview",
+        "Derived V0 Formulas",
+        "deltaPsi_SSZ(f) — DERIVED_V0_PROXY",
+        "deltaA_SSZ(f) — DERIVED_V0_PROXY",
+        "h_SSZ(f) — DERIVED_V0_PROXY",
+        "epsilon_220 Registry — BLOCKED",
+        "Pipeline Run Results (GW240925, H1, 2026-05-18)",
+        "Test Suite",
+        "Locked Constants (from FORMULA_BRANCH_LOCK.md)",
+        "Open Blockers",
+        "Phase 9 — H1/L1 Time-Delay Replication (2026-05-19)",
+        "Method",
+        "Results",
+        "Gate",
+        "Absolute Rules Compliance"
+      ],
+      "keyword_hits": {
+        "Xi": 2,
+        "phase": 2,
+        "φ": 1,
+        "test": 13
+      }
+    },
+    {
+      "path": "10_REPOSITORIES/repo_index.md",
+      "lines": 110,
+      "headings": [
+        "Complete Repository Index",
+        "A) SSZ / Physics Repositories (18)",
+        "B) Mathematics Repositories (2)",
+        "C) Research & Political Repositories (3)",
+        "D) Tools & Applications (3)",
+        "E) Web / Matrix / Mastodon (8)",
+        "SSZ Repository Statistics",
+        "Repo Scope Index (SSZ Method Assignment)"
+      ],
+      "keyword_hits": {
+        "Ξ": 5,
+        "Lagrange": 1,
+        "Geodesic": 1,
+        "PPN": 3,
+        "trajectory": 1,
+        "lensing": 5,
+        "Shapiro": 1,
+        "φ": 2,
+        "blend": 1,
+        "C²": 2,
+        "test": 10,
+        "validation": 5
+      }
+    },
+    {
+      "path": "10_REPOSITORIES/reproducibility.md",
+      "lines": 88,
+      "headings": [
+        "Reproducibility Guide",
+        "Requirements",
+        "How to Reproduce",
+        "1. Clone All Repos",
+        "2. Install Dependencies",
+        "3. Run Tests",
+        "Individual repo",
+        "Or run all tests",
+        "4. Verify Key Results",
+        "Validation Levels",
+        "Unified Test Suite",
+        "Commit Hashes"
+      ],
+      "keyword_hits": {
+        "Ξ": 1,
+        "lensing": 1,
+        "test": 7,
+        "validation": 2
+      }
+    },
+    {
+      "path": "10_REPOSITORIES/test_file_index.md",
+      "lines": 114,
+      "headings": [
+        "Test File Index by Chapter",
+        "Test Mapping: Chapter → Test File → Repository",
+        "Repository Test Counts",
+        "Key Documentation per Repository",
+        "segmented-calculation-suite (Core)",
+        "ssz-qubits",
+        "frequency-curvature-validation",
+        "ssz-lensing",
+        "ssz-metric-pure",
+        "Unified-Results",
+        "GitHub URLs"
+      ],
+      "keyword_hits": {
+        "Ξ": 1,
+        "Lagrange": 1,
+        "PPN": 1,
+        "lensing": 7,
+        "Shapiro": 1,
+        "phi": 1,
+        "φ": 1,
+        "test": 39,
+        "validation": 7
+      }
+    },
+    {
+      "path": "11_GUARDRAILS/confusion_prevention.md",
+      "lines": 66,
+      "headings": [
+        "Confusion Prevention Strategy",
+        "Three-Layer Strategy",
+        "Layer 1: Repo Scope Index",
+        "Layer 2: Method Assignment",
+        "Layer 3: False Alarm Recognition",
+        "Common False Alarms",
+        "1. \"Lensing is 50% too low!\"",
+        "2. \"Two different r* values!\"",
+        "3. \"Ξ values don't match between repos!\"",
+        "4. \"D_SSZ ≠ D_GR everywhere!\"",
+        "5. \"Energy is not conserved!\"",
+        "Prevention Checklist"
+      ],
+      "keyword_hits": {
+        "Xi": 5,
+        "Ξ": 7,
+        "PPN": 3,
+        "lensing": 1,
+        "phi": 2,
+        "blend": 1
+      }
+    },
+    {
+      "path": "11_GUARDRAILS/cross_repo_rules.md",
+      "lines": 77,
+      "headings": [
+        "Cross-Repository Rules",
+        "Core Principle",
+        "Repo Scope Index",
+        "Rules",
+        "Rule 1: Scope Check Before Comparison",
+        "Rule 2: Method Check Before Calculation",
+        "Rule 3: Deprecated Formula Ban",
+        "Rule 4: Regime Boundary Consistency",
+        "Rule 5: r*/r_s Values",
+        "Correct Interpretation"
+      ],
+      "keyword_hits": {
+        "Xi": 2,
+        "Ξ": 4,
+        "PPN": 3,
+        "lensing": 3,
+        "Shapiro": 1,
+        "phi": 2,
+        "φ": 1,
+        "blend": 1,
+        "C²": 1,
+        "test": 3,
+        "validation": 1
+      }
+    },
+    {
+      "path": "11_GUARDRAILS/method_assignment.md",
+      "lines": 66,
+      "headings": [
+        "Method Assignment",
+        "The Assignment Table",
+        "Why This Matters",
+        "PPN Parameters",
+        "Decision Flowchart"
+      ],
+      "keyword_hits": {
+        "Ξ": 15,
+        "geodesic": 1,
+        "PPN": 12,
+        "orbit": 3,
+        "Shapiro": 2
+      }
+    },
+    {
+      "path": "11_GUARDRAILS/prime_directive.md",
+      "lines": 180,
+      "headings": [
+        "Prime Directive",
+        "Interpretation Safety Notes",
+        "0) THE PRIME DIRECTIVE",
+        "1) Observable Classification → Method",
+        "A) NULL / Light-Path Observables",
+        "B) TIMELIKE STATIC / Clock Observables",
+        "C) TIMELIKE ORBIT Observables",
+        "Quick Reference Table",
+        "2) Factor-2 Rule (CRITICAL)",
+        "Why the Factor 2?",
+        "3) Regime Check (MANDATORY)",
+        "4) Wave-Equation Transform (No Numerical Traps)",
+        "5) Shapiro: One-Way vs Round-Trip",
+        "6) Energy Accounting (Critical for QM Link)",
+        "7) Deprecated Ξ Formula BAN",
+        "8) Paper Writing Guardrails",
+        "The Mantra"
+      ],
+      "keyword_hits": {
+        "Xi": 1,
+        "Ξ": 20,
+        "D(r)": 1,
+        "geodesic": 1,
+        "PPN": 9,
+        "orbit": 3,
+        "lensing": 1,
+        "Shapiro": 3,
+        "φ": 1,
+        "blend": 5,
+        "C²": 1
+      }
+    },
+    {
+      "path": "12_GLOSSARY/glossary_de.md",
+      "lines": 92,
+      "headings": [
+        "SSZ Glossar (Deutsch)",
+        "Kernkonzepte",
+        "Regime",
+        "Methoden",
+        "Schlüsselwerte",
+        "Objekte & Experimente",
+        "Mathematische Begriffe",
+        "Veraltet (VERBOTEN)"
+      ],
+      "keyword_hits": {
+        "Xi": 2,
+        "Ξ": 13,
+        "PPN": 3,
+        "Shapiro": 1,
+        "φ": 8,
+        "C²": 2
+      }
+    },
+    {
+      "path": "12_GLOSSARY/glossary_en.md",
+      "lines": 94,
+      "headings": [
+        "SSZ Glossary (English)",
+        "Core Concepts",
+        "Regimes",
+        "Methods",
+        "Key Values",
+        "Objects & Experiments",
+        "Mathematical Terms",
+        "Deprecated"
+      ],
+      "keyword_hits": {
+        "Xi": 2,
+        "Ξ": 13,
+        "PPN": 5,
+        "orbit": 2,
+        "Shapiro": 1,
+        "φ": 8,
+        "C²": 2,
+        "test": 2,
+        "singular": 1
+      }
+    },
+    {
+      "path": "13_FREQUENCY_FRAMEWORK/frequency_curvature.md",
+      "lines": 144,
+      "headings": [
+        "Frequency-Based Curvature Detection",
+        "Concept",
+        "Frequency Gradient",
+        "Frequency Curvature",
+        "SSZ vs GR Frequency Curvature",
+        "Three-Clock Curvature Measurement",
+        "Geodetic Clock Experiment Design",
+        "Connection to LIGO/LISA",
+        "Key Formulas Summary",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "Xi": 7,
+        "D(r)": 4,
+        "geodesic": 1,
+        "test": 1
+      }
+    },
+    {
+      "path": "13_FREQUENCY_FRAMEWORK/future_experimental_prospects.md",
+      "lines": 133,
+      "headings": [
+        "Future Experimental Prospects",
+        "Summary",
+        "SSZ vs GR Prediction Table",
+        "Experimental Timeline",
+        "Now (2024-2026): Optical Clocks",
+        "2025-2030: Event Horizon Telescope (EHT)",
+        "2027-2030: NICER / eXTP (Neutron Stars)",
+        "2030-2035: Einstein Telescope / Cosmic Explorer",
+        "2034-2038: LISA",
+        "2035+: Athena X-ray Observatory",
+        "Falsification Protocol",
+        "Why SSZ Predictions are Conservative",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "PPN": 1,
+        "Shapiro": 1,
+        "blend": 1,
+        "test": 6,
+        "falsification": 2
+      }
+    },
+    {
+      "path": "13_FREQUENCY_FRAMEWORK/holonomy_invariants.md",
+      "lines": 132,
+      "headings": [
+        "Holonomy Invariants in SSZ",
+        "Definition",
+        "Triple-Clock Holonomy",
+        "Non-Trivial Holonomy: Rate of Change",
+        "Frequency-Based Curvature Detection",
+        "Four-Clock Square Loop",
+        "Key Formulas (Chapter 17)",
+        "Connection to Gravitational Waves",
+        "LISA Connection",
+        "Topological Invariance",
+        "Relation to Other Sections"
+      ],
+      "keyword_hits": {
+        "Xi": 3,
+        "D(r)": 4,
+        "phase": 1,
+        "phi": 4,
+        "test": 2
+      }
+    },
+    {
+      "path": "LICENSE.md",
+      "lines": 138,
+      "headings": [
+        "ANTI-CAPITALIST SOFTWARE LICENSE (v 1.4)",
+        "Preamble",
+        "License Terms",
+        "YOU ARE FREE TO:",
+        "UNDER THESE CONDITIONS:",
+        "Permitted Uses",
+        "✓ ALLOWED:",
+        "✗ PROHIBITED:",
+        "Warranty Disclaimer",
+        "Citation Requirement",
+        "Contact",
+        "License History",
+        "Full License Text",
+        "Enforcement"
+      ],
+      "keyword_hits": {}
+    },
+    {
+      "path": "README.md",
+      "lines": 224,
+      "headings": [
+        "Segmented Spacetime (SSZ) — Complete Documentation",
+        "What is SSZ?",
+        "Documentation Structure",
+        "Complete File Index",
+        "01_OVERVIEW",
+        "02_FOUNDATIONS",
+        "03_FORMULAS",
+        "04_KINEMATICS",
+        "05_ELECTROMAGNETISM",
+        "06_STRONG_FIELD",
+        "07_VALIDATION",
+        "08_FALSIFICATION",
+        "09_PAPERS",
+        "10_REPOSITORIES",
+        "11_GUARDRAILS",
+        "12_GLOSSARY",
+        "13_FREQUENCY_FRAMEWORK",
+        "Key Numbers",
+        "Quick Start",
+        "The SSZ Mantra"
+      ],
+      "keyword_hits": {
+        "Xi": 5,
+        "Ξ": 5,
+        "D(r)": 2,
+        "Lagrange": 1,
+        "geodesic": 3,
+        "Geodesic": 1,
+        "PPN": 6,
+        "phase": 1,
+        "orbit": 4,
+        "lensing": 4,
+        "Shapiro": 3,
+        "phi": 11,
+        "φ": 5,
+        "blend": 1,
+        "test": 31,
+        "validation": 4,
+        "falsification": 3,
+        "coherence": 3,
+        "singular": 4
+      }
+    },
+    {
+      "path": "full-segmented-memory.md",
+      "lines": 250,
+      "headings": [
+        "SSZ Complete Documentation — Full Segmented Memory",
+        "1. WHAT IS SSZ?",
+        "2. REPO STRUCTURE (12 sections + BOOKS)",
+        "3. CORE FORMULAS",
+        "Segment Density Ξ(r)",
+        "Time Dilation",
+        "Key Values",
+        "Kinematic Closure",
+        "4. METHOD ASSIGNMENT (PRIME DIRECTIVE)",
+        "5. REGIME DEFINITIONS",
+        "6. STRONG FIELD",
+        "SSZ Metric Tensor",
+        "Singularity Resolution",
+        "Dark Star (replaces Black Hole)",
+        "Cosmic Censorship: Trivially satisfied (no singularities to censor)",
+        "Superradiance: Naturally stabilized (bounded Ξ prevents runaway)",
+        "7. VALIDATION & TESTS",
+        "Weak-Field (SSZ ≡ GR, all PASS)",
+        "Strong-Field Predictions (SSZ ≠ GR)",
+        "Test Infrastructure"
+      ],
+      "keyword_hits": {
+        "Xi": 1,
+        "Ξ": 30,
+        "D(r)": 2,
+        "Lagrange": 1,
+        "Geodesic": 1,
+        "PPN": 8,
+        "trajectory": 1,
+        "lensing": 4,
+        "Shapiro": 4,
+        "phi": 3,
+        "φ": 14,
+        "blend": 1,
+        "C²": 4,
+        "test": 7,
+        "validation": 2,
+        "falsification": 1,
+        "coherence": 1,
+        "singular": 7
+      }
+    }
+  ]
+}

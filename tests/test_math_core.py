@@ -16,6 +16,11 @@ from pardon_math.lagrangian import curve_a, curve_b, nearest_intersections
 from pardon_math.moduli import circle_moduli_points, solution_dimension_label
 from pardon_math.symplectic import polygon_area, rotate
 from pardon_math.ssz_bridge import D_MIN_AT_RS, D_factor, XI_MAX, effective_potential, scale_factor, xi_canonical, xi_strong, xi_weak
+from pardon_math.ssz_state import phi_ladder, regime_label, state_vector
+from pardon_math.method_assignment import assign_method
+from pardon_math.holonomy import dynamic_loop_deviation, triple_clock_product
+import csv
+import json
 from pardon_math.repo_graph import adjacency, load_repo_graph, validate_edges
 
 
@@ -121,11 +126,99 @@ class SSZBridgeTests(unittest.TestCase):
         self.assertAlmostEqual(xi_weak(10.0), 0.05, places=12)
         self.assertAlmostEqual(scale_factor(10.0), 1.05, places=12)
 
-    def test_d_factor_increases_outward(self):
-        xs = np.array([1.0, 1.5, 2.0, 5.0, 10.0])
+    def test_d_factor_recovers_outward_after_blend(self):
+        xs = np.array([2.2, 3.0, 5.0, 10.0])
         d = D_factor(xs)
         self.assertTrue(np.all(np.diff(d) > 0))
+        self.assertAlmostEqual(D_factor(1.0), D_factor(1.5), places=12)
 
     def test_effective_potential_is_positive(self):
         xs = np.linspace(1.0, 10.0, 50)
         self.assertTrue(np.all(effective_potential(xs, ell=2.0) > 0))
+
+
+class SSZStateTests(unittest.TestCase):
+    def test_phi_ladder_self_similarity(self):
+        xs = phi_ladder(-2, 4)
+        ratios = xs[1:] / xs[:-1]
+        self.assertTrue(np.allclose(ratios, ratios[0]))
+
+    def test_state_conversions_are_consistent(self):
+        st = state_vector(1.0)
+        self.assertAlmostEqual(st["s"], 1.0 + st["Xi"], places=12)
+        self.assertAlmostEqual(st["D"], 1.0 / st["s"], places=12)
+        self.assertAlmostEqual(st["N_eff"], 4.0 * st["s"], places=12)
+
+    def test_regime_labels_cover_guardrails(self):
+        self.assertEqual(regime_label(1.0), "g2/very_close")
+        self.assertEqual(regime_label(2.0), "blend")
+        self.assertEqual(regime_label(2.6), "photon_sphere")
+        self.assertEqual(regime_label(5.0), "strong_context/g1_formula")
+        self.assertEqual(regime_label(20.0), "weak")
+
+
+class MethodAssignmentTests(unittest.TestCase):
+    def test_prime_directive_routing(self):
+        self.assertEqual(assign_method("redshift"), "Xi/D direct")
+        self.assertEqual(assign_method("lensing"), "PPN (1+gamma)")
+        self.assertIn("Hamilton", assign_method("geodesic"))
+
+    def test_unknown_observable_fails_closed(self):
+        with self.assertRaises(KeyError):
+            assign_method("everything")
+
+
+class HolonomyTests(unittest.TestCase):
+    def test_static_triple_clock_product_telescopes(self):
+        self.assertAlmostEqual(triple_clock_product((1.2, 2.5, 8.0)), 1.0, places=12)
+
+    def test_dynamic_loop_deviation_has_shape(self):
+        t = np.linspace(0, 2*np.pi, 50)
+        y = dynamic_loop_deviation(t)
+        self.assertEqual(y.shape, t.shape)
+        self.assertGreater(float(y.max() - y.min()), 0.01)
+
+
+class SSZDocIndexTests(unittest.TestCase):
+    def test_full_ssz_index_scanned_many_files(self):
+        data = json.loads((ROOT / "data" / "ssz_doc_index.json").read_text(encoding="utf-8"))
+        self.assertGreaterEqual(data["file_count"], 150)
+        self.assertIn("11_GUARDRAILS", data["section_counts"])
+
+    def test_evidence_ledger_has_claim_scopes(self):
+        with (ROOT / "data" / "evidence_ledger.csv").open() as handle:
+            rows = list(csv.DictReader(handle))
+        self.assertGreaterEqual(len(rows), 10)
+        self.assertTrue(all(row["claim_scope"] for row in rows))
+
+class VisualizationOutputTests(unittest.TestCase):
+    EXPECTED_STEMS = (
+        "symplectic_area_preservation",
+        "phase_space_energy",
+        "symplectic_vs_euler",
+        "holomorphic_curve_residual",
+        "lagrangian_intersections",
+        "moduli_space_toy",
+        "knot_distortion",
+        "repo_interplay_map",
+        "ssz_symplectic_bridge",
+        "regime_blend_map",
+        "holonomy_loop",
+        "method_assignment_flow",
+        "phi_ladder_state",
+        "ssz_doc_audit",
+    )
+
+    def test_all_visualization_pairs_exist(self):
+        for stem in self.EXPECTED_STEMS:
+            with self.subTest(stem=stem):
+                self.assertTrue((ROOT / "outputs" / f"{stem}.gif").is_file())
+                self.assertTrue((ROOT / "outputs" / f"{stem}.png").is_file())
+
+    def test_readme_embeds_every_animation(self):
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        for stem in self.EXPECTED_STEMS:
+            with self.subTest(stem=stem):
+                self.assertIn(f"outputs/{stem}.gif", readme)
+                self.assertIn(f"outputs/{stem}.png", readme)
+

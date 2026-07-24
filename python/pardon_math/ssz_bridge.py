@@ -17,7 +17,12 @@ def xi_weak(x: np.ndarray | float) -> np.ndarray | float:
 
 
 def xi_strong(x: np.ndarray | float) -> np.ndarray | float:
-    return 1.0 - np.exp(-PHI / np.asarray(x))
+    """Canonical operative g2 saturation form: min(1-exp(-phi*x), Xi_max)."""
+    arr = np.asarray(x, dtype=float)
+    result = np.minimum(1.0 - np.exp(-PHI * arr), XI_MAX)
+    if np.isscalar(x):
+        return float(result)
+    return result
 
 
 def xi_canonical(x: np.ndarray | float) -> np.ndarray | float:
