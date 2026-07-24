@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document explains how the toy models in this repository can improve the numerical and conceptual discipline of Segmented Spacetime (SSZ) work under `/home/error/physics/`.
+This document explains how the toy models in this repository can improve numerical and conceptual discipline across the public Segmented Spacetime (SSZ) repositories.
 
 ## Relevant Local Repositories
 

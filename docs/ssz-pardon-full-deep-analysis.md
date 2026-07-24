@@ -5,14 +5,10 @@
 This analysis uses two source layers:
 
 1. External Pardon/Fields Medal sources listed in `SOURCES.md`, including the IMU/Stanford/Princeton/Simons/Clay/Spektrum/Quanta/Nature source family.
-2. The local canonical SSZ documentation tree at `/home/error/physics/ssz-complete-documentation`.
+2. The public canonical [SSZ documentation repository](https://github.com/error-wtf/ssz-complete-documentation).
 
-A machine index of the SSZ documentation was generated in `data/ssz_doc_index.json` and summarized in `docs/ssz-complete-documentation-index-audit.md`.
+The local SSZ documentation review covered:
 
-The local SSZ documentation scan covered:
-
-- 170 Markdown files,
-- 39,409 lines,
 - all numbered sections from overview through frequency framework,
 - papers, validation docs, guardrails, glossary and repository index.
 
@@ -176,27 +172,27 @@ frequency ratio loops -> holonomy diagnostic -> phase/symplectic transport analo
 
 A next visualization should animate a triangular loop with clock ratios on edges and show when the product is trivial and when dynamic perturbations create a deviation.
 
-## 11. Formula Conflict / Guardrail Note
+## 11. Explicit SSZ Source Profile
 
-The full documentation contains historical/complementary strong-field expressions and the operative discrete formulation. The discrete SSZ state reference explicitly marks the operative g2 saturation form for recursions:
+The documentation corpus contains both a local saturation expression and a complementary decay expression for the inner field. They agree at `x=1` but differ away from that point. This lab therefore fixes one named source profile instead of silently mixing them:
 
 ```text
 Xi_g2(x) = min(1 - exp(-phi*x), Xi_max)
 ```
 
-Some older/other docs also discuss the decay form:
+The complementary decay form remains implemented for explicit comparisons:
 
 ```text
 1 - exp(-phi/x)
 ```
 
-The correct way to handle this in the lab is not to hide it. It must be a guardrail:
+The guardrail is:
 
-- saturation form: operative for discrete φ-ladder recursion in this repo;
-- decay form: historical/complementary/didactic unless a specific source scope declares it;
+- saturation form: operative under `local_saturation_c2_blend_v1` in this repo;
+- decay form: available as a complementary documented source context, never substituted implicitly;
 - every test must state which form is used.
 
-The local `pardon_math.ssz_bridge` module now uses the operative saturation form.
+The local `pardon_math.ssz_bridge` module exposes both functions but routes every generated SSZ artifact through the declared profile.
 
 ## 12. Where This Leads
 

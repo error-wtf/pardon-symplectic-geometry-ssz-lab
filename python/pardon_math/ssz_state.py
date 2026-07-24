@@ -2,7 +2,16 @@ from __future__ import annotations
 
 import numpy as np
 
-from .ssz_bridge import PHI, D_factor, scale_factor, xi_canonical
+from .ssz_bridge import (
+    BLEND_END,
+    BLEND_START,
+    PHI,
+    PHOTON_SPHERE_END,
+    STRONG_CONTEXT_END,
+    D_factor,
+    scale_factor,
+    xi_canonical,
+)
 
 
 def phi_ladder(k_min: int = -3, k_max: int = 6) -> np.ndarray:
@@ -22,12 +31,12 @@ def state_vector(x: np.ndarray | float) -> dict[str, np.ndarray | float]:
 
 
 def regime_label(x: float) -> str:
-    if x < 1.8:
+    if x < BLEND_START:
         return "g2/very_close"
-    if x <= 2.2:
+    if x <= BLEND_END:
         return "blend"
-    if x <= 3.0:
+    if x <= PHOTON_SPHERE_END:
         return "photon_sphere"
-    if x <= 10.0:
+    if x <= STRONG_CONTEXT_END:
         return "strong_context/g1_formula"
     return "weak"

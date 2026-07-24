@@ -3,22 +3,22 @@
   "command": "python -m unittest discover -s tests",
   "claim_boundary": "Passing tests establish internal implementation consistency only; they do not prove Pardon's theorems or physically validate SSZ.",
   "summary": {
-    "total": 43,
-    "passed": 43,
+    "total": 49,
+    "passed": 49,
     "failed": 0,
     "skipped": 0,
     "successful": true
   },
   "layers": {
     "Mathematical invariants": {
-      "total": 13,
-      "passed": 13,
+      "total": 14,
+      "passed": 14,
       "failed": 0,
       "skipped": 0
     },
     "Numerical regression": {
-      "total": 11,
-      "passed": 11,
+      "total": 15,
+      "passed": 15,
       "failed": 0,
       "skipped": 0
     },
@@ -29,8 +29,8 @@
       "skipped": 0
     },
     "Artifact and traceability": {
-      "total": 13,
-      "passed": 13,
+      "total": 14,
+      "passed": 14,
       "failed": 0,
       "skipped": 0
     }
@@ -58,9 +58,30 @@
       "status": "passed"
     },
     {
+      "id": "test_math_core.DocumentationHardeningTests.test_readme_links_hardening_docs",
+      "class": "DocumentationHardeningTests",
+      "name": "test_readme_links_hardening_docs",
+      "layer": "Artifact and traceability",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.DocumentationHardeningTests.test_relative_markdown_links_resolve",
+      "class": "DocumentationHardeningTests",
+      "name": "test_relative_markdown_links_resolve",
+      "layer": "Artifact and traceability",
+      "status": "passed"
+    },
+    {
       "id": "test_math_core.DocumentationHardeningTests.test_source_to_code_traceability_mentions_every_visual_stem",
       "class": "DocumentationHardeningTests",
       "name": "test_source_to_code_traceability_mentions_every_visual_stem",
+      "layer": "Artifact and traceability",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.EvidenceLedgerTests.test_evidence_ledger_has_claim_scopes",
+      "class": "EvidenceLedgerTests",
+      "name": "test_evidence_ledger_has_claim_scopes",
       "layer": "Artifact and traceability",
       "status": "passed"
     },
@@ -135,6 +156,13 @@
       "status": "passed"
     },
     {
+      "id": "test_math_core.LagrangianTests.test_intersection_candidates_are_clustered",
+      "class": "LagrangianTests",
+      "name": "test_intersection_candidates_are_clustered",
+      "layer": "Mathematical invariants",
+      "status": "passed"
+    },
+    {
       "id": "test_math_core.LagrangianTests.test_intersections_return_two_columns",
       "class": "LagrangianTests",
       "name": "test_intersections_return_two_columns",
@@ -177,20 +205,6 @@
       "status": "passed"
     },
     {
-      "id": "test_math_core.PhysicsRepoAuditTests.test_public_audit_excludes_private_unpublished_material",
-      "class": "PhysicsRepoAuditTests",
-      "name": "test_public_audit_excludes_private_unpublished_material",
-      "layer": "Artifact and traceability",
-      "status": "passed"
-    },
-    {
-      "id": "test_math_core.PhysicsRepoAuditTests.test_readme_links_hardening_docs",
-      "class": "PhysicsRepoAuditTests",
-      "name": "test_readme_links_hardening_docs",
-      "layer": "Artifact and traceability",
-      "status": "passed"
-    },
-    {
       "id": "test_math_core.RegimeGuardrailTests.test_forbidden_formula_routes_fail_closed",
       "class": "RegimeGuardrailTests",
       "name": "test_forbidden_formula_routes_fail_closed",
@@ -212,17 +226,24 @@
       "status": "passed"
     },
     {
-      "id": "test_math_core.RepoGraphTests.test_repo_graph_connects_pardon_to_ssz",
-      "class": "RepoGraphTests",
-      "name": "test_repo_graph_connects_pardon_to_ssz",
-      "layer": "Artifact and traceability",
+      "id": "test_math_core.SSZBridgeTests.test_blend_is_c1_at_both_formula_boundaries",
+      "class": "SSZBridgeTests",
+      "name": "test_blend_is_c1_at_both_formula_boundaries",
+      "layer": "Numerical regression",
       "status": "passed"
     },
     {
-      "id": "test_math_core.RepoGraphTests.test_repo_graph_edges_are_valid",
-      "class": "RepoGraphTests",
-      "name": "test_repo_graph_edges_are_valid",
-      "layer": "Artifact and traceability",
+      "id": "test_math_core.SSZBridgeTests.test_blend_is_c2_at_both_formula_boundaries",
+      "class": "SSZBridgeTests",
+      "name": "test_blend_is_c2_at_both_formula_boundaries",
+      "layer": "Numerical regression",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.SSZBridgeTests.test_blend_joins_the_declared_source_branches",
+      "class": "SSZBridgeTests",
+      "name": "test_blend_joins_the_declared_source_branches",
+      "layer": "Numerical regression",
       "status": "passed"
     },
     {
@@ -240,6 +261,13 @@
       "status": "passed"
     },
     {
+      "id": "test_math_core.SSZBridgeTests.test_declared_profile_and_alternative_are_explicit",
+      "class": "SSZBridgeTests",
+      "name": "test_declared_profile_and_alternative_are_explicit",
+      "layer": "Numerical regression",
+      "status": "passed"
+    },
+    {
       "id": "test_math_core.SSZBridgeTests.test_effective_potential_is_positive",
       "class": "SSZBridgeTests",
       "name": "test_effective_potential_is_positive",
@@ -251,20 +279,6 @@
       "class": "SSZBridgeTests",
       "name": "test_weak_branch_matches_documentation",
       "layer": "Numerical regression",
-      "status": "passed"
-    },
-    {
-      "id": "test_math_core.SSZDocIndexTests.test_evidence_ledger_has_claim_scopes",
-      "class": "SSZDocIndexTests",
-      "name": "test_evidence_ledger_has_claim_scopes",
-      "layer": "Artifact and traceability",
-      "status": "passed"
-    },
-    {
-      "id": "test_math_core.SSZDocIndexTests.test_full_ssz_index_scanned_many_files",
-      "class": "SSZDocIndexTests",
-      "name": "test_full_ssz_index_scanned_many_files",
-      "layer": "Artifact and traceability",
       "status": "passed"
     },
     {
@@ -324,16 +338,44 @@
       "status": "passed"
     },
     {
-      "id": "test_math_core.VisualizationOutputTests.test_readme_embeds_every_animation",
+      "id": "test_math_core.VisualizationOutputTests.test_readme_embeds_only_key_diagnostics",
       "class": "VisualizationOutputTests",
-      "name": "test_readme_embeds_every_animation",
+      "name": "test_readme_embeds_only_key_diagnostics",
       "layer": "Artifact and traceability",
       "status": "passed"
     },
     {
-      "id": "test_math_core.VisualizationScopeTests.test_doc_audit_visualization_is_not_gallery_output",
+      "id": "test_math_core.VisualizationOutputTests.test_visualization_index_catalogs_every_animation",
+      "class": "VisualizationOutputTests",
+      "name": "test_visualization_index_catalogs_every_animation",
+      "layer": "Artifact and traceability",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.VisualizationQualityTests.test_all_visualizations_share_stable_dimensions",
+      "class": "VisualizationQualityTests",
+      "name": "test_all_visualizations_share_stable_dimensions",
+      "layer": "Artifact and traceability",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.VisualizationQualityTests.test_animations_contain_visible_motion",
+      "class": "VisualizationQualityTests",
+      "name": "test_animations_contain_visible_motion",
+      "layer": "Artifact and traceability",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.VisualizationQualityTests.test_static_frames_are_not_blank",
+      "class": "VisualizationQualityTests",
+      "name": "test_static_frames_are_not_blank",
+      "layer": "Artifact and traceability",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.VisualizationScopeTests.test_meta_dashboards_are_not_gallery_outputs",
       "class": "VisualizationScopeTests",
-      "name": "test_doc_audit_visualization_is_not_gallery_output",
+      "name": "test_meta_dashboards_are_not_gallery_outputs",
       "layer": "Artifact and traceability",
       "status": "passed"
     }

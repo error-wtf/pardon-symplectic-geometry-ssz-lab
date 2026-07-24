@@ -2,6 +2,8 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+from .ssz_bridge import BLEND_END, BLEND_START, PHOTON_SPHERE_END, STRONG_CONTEXT_END
+
 
 @dataclass(frozen=True)
 class RegimeRoute:
@@ -24,13 +26,13 @@ def physical_regime(x: float) -> str:
     value = float(x)
     if value <= 0.0:
         raise ValueError("x = r/r_s must be positive")
-    if value < 1.8:
+    if value < BLEND_START:
         return "very_close/g2_context"
-    if value <= 2.2:
+    if value <= BLEND_END:
         return "transition_blend"
-    if value <= 3.0:
+    if value <= PHOTON_SPHERE_END:
         return "photon_sphere_context"
-    if value <= 10.0:
+    if value <= STRONG_CONTEXT_END:
         return "strong_context/g1_formula"
     return "weak_field"
 
@@ -39,9 +41,9 @@ def formula_domain(x: float) -> str:
     value = float(x)
     if value <= 0.0:
         raise ValueError("x = r/r_s must be positive")
-    if value < 1.8:
+    if value < BLEND_START:
         return "g2_saturation"
-    if value <= 2.2:
+    if value <= BLEND_END:
         return "c2_smootherstep_blend"
     return "g1_weak_branch"
 

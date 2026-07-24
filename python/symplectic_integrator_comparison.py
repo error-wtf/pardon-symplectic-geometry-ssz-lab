@@ -5,73 +5,89 @@ from pathlib import Path
 import sys
 
 import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation, PillowWriter
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "python"))
+
 from pardon_math.integrators import explicit_euler, harmonic_energy, leapfrog, symplectic_euler
+from pardon_math.plot_style import BLUE, GREEN, MUTED, RED, add_footer, add_header, configure, finish_layout, save_animation, style_axes
 
 OUT = ROOT / "outputs"
 
 
 def main() -> None:
+    configure()
     OUT.mkdir(exist_ok=True)
-    dt = 0.08
-    steps = 420
-    euler = explicit_euler(1.0, 0.0, dt, steps)
-    symp = symplectic_euler(1.0, 0.0, dt, steps)
-    leap = leapfrog(1.0, 0.0, dt, steps)
+    dt, steps = 0.08, 420
+    trajectories = {
+        "explicit Euler": (explicit_euler(1.0, 0.0, dt, steps), RED),
+        "symplectic Euler": (symplectic_euler(1.0, 0.0, dt, steps), BLUE),
+        "leapfrog": (leapfrog(1.0, 0.0, dt, steps), GREEN),
+    }
     h0 = 0.5
+    errors = {
+        name: np.maximum(np.abs(harmonic_energy(path[:, 0], path[:, 1]) - h0), 1e-15)
+        for name, (path, _) in trajectories.items()
+    }
+    frame_values = np.unique(np.linspace(1, steps + 1, 120, dtype=int))
+    phase_limit = 1.1 * max(float(np.abs(path).max()) for path, _ in trajectories.values())
 
-    fig, (ax0, ax1) = plt.subplots(1, 2, figsize=(11, 5))
-    for ax in (ax0,):
-        ax.set_aspect("equal")
-        ax.set_xlim(-3.0, 3.0)
-        ax.set_ylim(-3.0, 3.0)
-        ax.set_xlabel("q")
-        ax.set_ylabel("p")
-        ax.grid(True, alpha=0.25)
-    ax0.set_title("Integrator trajectories")
-    ax1.set_title("Energy error |H-H0|")
-    ax1.set_xlabel("step")
-    ax1.set_ylabel("absolute energy error")
-    ax1.set_yscale("log")
-    ax1.grid(True, which="both", alpha=0.25)
+    fig, (ax_phase, ax_error) = plt.subplots(1, 2)
+    add_header(
+        fig,
+        "Naive vs structure-preserving integration",
+        f"The same oscillator is integrated by three methods (dt={dt}, {steps} steps).",
+    )
+    add_footer(fig, "Interpretation: bounded error is a numerical property of the method, not evidence for a physical model.")
 
-    le, = ax0.plot([], [], color="#d62728", label="explicit Euler")
-    ls, = ax0.plot([], [], color="#1f77b4", label="symplectic Euler")
-    ll, = ax0.plot([], [], color="#2ca02c", label="leapfrog")
-    ax0.legend(loc="upper right")
-    ee, = ax1.plot([], [], color="#d62728")
-    es, = ax1.plot([], [], color="#1f77b4")
-    el, = ax1.plot([], [], color="#2ca02c")
+    style_axes(ax_phase, "Phase-space trajectories")
+    ax_phase.set_aspect("equal")
+    ax_phase.set_xlim(-phase_limit, phase_limit)
+    ax_phase.set_ylim(-phase_limit, phase_limit)
+    ax_phase.set_xlabel("q")
+    ax_phase.set_ylabel("p")
+    orbit = np.linspace(0, 2 * np.pi, 360)
+    ax_phase.plot(np.cos(orbit), np.sin(orbit), color=MUTED, ls="--", lw=1.2, label="exact energy contour")
 
-    def errors(traj):
-        return np.abs(harmonic_energy(traj[:, 0], traj[:, 1]) - h0) + 1e-14
+    style_axes(ax_error, "Energy error by step")
+    ax_error.set_xlabel("step")
+    ax_error.set_ylabel("|H_n - H_0|")
+    ax_error.set_yscale("log")
+    ax_error.set_xlim(0, steps)
+    ax_error.set_ylim(5e-16, max(float(values.max()) for values in errors.values()) * 1.4)
 
-    err_e = errors(euler)
-    err_s = errors(symp)
-    err_l = errors(leap)
-    ax1.set_xlim(0, steps)
-    ax1.set_ylim(1e-14, max(err_e) * 1.2)
+    phase_lines = {}
+    error_lines = {}
+    for name, (path, color) in trajectories.items():
+        phase_lines[name], = ax_phase.plot([], [], color=color, label=name)
+        error_lines[name], = ax_error.plot([], [], color=color, label=name)
+    ax_phase.legend(loc="upper left")
+    ax_error.legend(loc="lower right")
+    summary = ax_error.text(
+        0.03,
+        0.96,
+        "",
+        transform=ax_error.transAxes,
+        va="top",
+        fontsize=8.5,
+        bbox={"boxstyle": "round,pad=0.4", "facecolor": "white", "edgecolor": "#c9d4de"},
+    )
 
-    def update(frame: int):
-        n = frame + 1
+    def update(n: int):
         x = np.arange(n)
-        le.set_data(euler[:n, 0], euler[:n, 1])
-        ls.set_data(symp[:n, 0], symp[:n, 1])
-        ll.set_data(leap[:n, 0], leap[:n, 1])
-        ee.set_data(x, err_e[:n])
-        es.set_data(x, err_s[:n])
-        el.set_data(x, err_l[:n])
-        return le, ls, ll, ee, es, el
+        lines = []
+        rows = []
+        for name, (path, _) in trajectories.items():
+            phase_lines[name].set_data(path[:n, 0], path[:n, 1])
+            error_lines[name].set_data(x, errors[name][:n])
+            rows.append(f"{name}: {errors[name][n - 1]:.2e}")
+            lines.extend([phase_lines[name], error_lines[name]])
+        summary.set_text("current |H-H0|\n" + "\n".join(rows))
+        return (*lines, summary)
 
-    update(0)
-    fig.tight_layout()
-    fig.savefig(OUT / "symplectic_vs_euler.png", dpi=160)
-    FuncAnimation(fig, update, frames=steps + 1, interval=20).save(OUT / "symplectic_vs_euler.gif", writer=PillowWriter(fps=30))
-    plt.close(fig)
+    finish_layout(fig)
+    save_animation(fig, update, frame_values, OUT, "symplectic_vs_euler", fps=18)
     print("wrote integrator comparison visualizations")
 
 

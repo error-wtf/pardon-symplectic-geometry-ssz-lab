@@ -11,7 +11,7 @@ This repository is deliberately conservative about what each artifact can show.
 | SSZ bridge | A validation style: observable routing, formula-domain guardrails, invariant checks and explicit limitations | Endorsement by John Pardon or proof that SSZ follows from Pardon's work |
 | Visualizations | Intuition, diagnostics and reproducible outputs from local scripts | Evidence by themselves; every image depends on code and assumptions |
 | Tests | Consistency checks for the included toy models and routing rules | External validation of the underlying physics or mathematical research program |
-| Local repo scan | A map of public/non-private local physics repositories and useful expansion axes | A full audit of unpublished/private material |
+| SSZ source profile | Deterministic calculations under `local_saturation_c2_blend_v1`, plus an explicit complementary decay function | A claim that every historical SSZ document uses the same inner profile |
 
 ## Practical Rule
 

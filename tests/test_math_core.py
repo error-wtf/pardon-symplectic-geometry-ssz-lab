@@ -1,28 +1,44 @@
 from __future__ import annotations
 
+import csv
+import json
+import re
 import sys
 import unittest
+import urllib.parse
 from pathlib import Path
 
 import numpy as np
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "python"))
 
 from pardon_math.cr_residual import cauchy_riemann_residual
 from pardon_math.integrators import explicit_euler, harmonic_energy, leapfrog, symplectic_euler
+from pardon_math.holonomy import dynamic_loop_deviation, triple_clock_product
 from pardon_math.knot import cumulative_lengths, distortion_sample, trefoil
 from pardon_math.lagrangian import curve_a, curve_b, nearest_intersections
-from pardon_math.moduli import circle_moduli_points, solution_dimension_label
-from pardon_math.symplectic import polygon_area, rotate
-from pardon_math.ssz_bridge import D_MIN_AT_RS, D_factor, XI_MAX, effective_potential, scale_factor, xi_canonical, xi_strong, xi_weak
-from pardon_math.ssz_state import phi_ladder, regime_label, state_vector
 from pardon_math.method_assignment import ROUTES, assign_method, route_observable
-from pardon_math.holonomy import dynamic_loop_deviation, triple_clock_product
+from pardon_math.moduli import circle_moduli_points, solution_dimension_label
 from pardon_math.regime_guardrails import assert_formula_allowed, formula_domain, physical_regime, route_regime
-import csv
-import json
-from pardon_math.repo_graph import adjacency, load_repo_graph, validate_edges
+from pardon_math.symplectic import polygon_area, rotate
+from pardon_math.ssz_bridge import (
+    BLEND_END,
+    BLEND_START,
+    D_MIN_AT_RS,
+    PHI,
+    SSZ_PROFILE,
+    XI_MAX,
+    D_factor,
+    effective_potential,
+    scale_factor,
+    xi_canonical,
+    xi_decay,
+    xi_strong,
+    xi_weak,
+)
+from pardon_math.ssz_state import phi_ladder, regime_label, state_vector
 
 
 class SymplecticTests(unittest.TestCase):
@@ -70,6 +86,14 @@ class LagrangianTests(unittest.TestCase):
         hits = nearest_intersections(curve_a(120), curve_b(0.0, 120), threshold=0.03)
         self.assertEqual(hits.shape[1], 2)
 
+    def test_intersection_candidates_are_clustered(self):
+        counts = [
+            len(nearest_intersections(curve_a(500), curve_b(phase, 500)))
+            for phase in np.linspace(0.0, 0.9, 10)
+        ]
+        self.assertGreater(max(counts), 0)
+        self.assertLessEqual(max(counts), 4)
+
 
 class ModuliTests(unittest.TestCase):
     def test_moduli_labels(self):
@@ -100,23 +124,6 @@ class KnotTests(unittest.TestCase):
         self.assertNotEqual(i, j)
 
 
-if __name__ == "__main__":
-    unittest.main()
-
-
-class RepoGraphTests(unittest.TestCase):
-    def test_repo_graph_edges_are_valid(self):
-        graph = load_repo_graph(ROOT / "data" / "repo_links.json")
-        self.assertTrue(validate_edges(graph))
-
-    def test_repo_graph_connects_pardon_to_ssz(self):
-        graph = load_repo_graph(ROOT / "data" / "repo_links.json")
-        adj = adjacency(graph)
-        self.assertIn("symplectic", adj["pardon"])
-        self.assertIn("ssz_lagrange", adj["symplectic"])
-        self.assertIn("ssz_trajectories", adj["symplectic"])
-
-
 class SSZBridgeTests(unittest.TestCase):
     def test_canonical_values_at_rs_are_finite(self):
         self.assertAlmostEqual(xi_strong(1.0), XI_MAX, places=12)
@@ -136,6 +143,37 @@ class SSZBridgeTests(unittest.TestCase):
     def test_effective_potential_is_positive(self):
         xs = np.linspace(1.0, 10.0, 50)
         self.assertTrue(np.all(effective_potential(xs, ell=2.0) > 0))
+
+    def test_declared_profile_and_alternative_are_explicit(self):
+        self.assertEqual(SSZ_PROFILE, "local_saturation_c2_blend_v1")
+        self.assertAlmostEqual(xi_decay(1.0), xi_strong(1.0), places=12)
+        self.assertNotAlmostEqual(xi_decay(PHI), xi_strong(PHI), places=3)
+
+    def test_blend_joins_the_declared_source_branches(self):
+        self.assertAlmostEqual(xi_canonical(BLEND_START), xi_strong(BLEND_START), places=12)
+        self.assertAlmostEqual(xi_canonical(BLEND_END), xi_weak(BLEND_END), places=12)
+
+    def test_blend_is_c1_at_both_formula_boundaries(self):
+        h = 1e-5
+        for boundary in (BLEND_START, BLEND_END):
+            left = (xi_canonical(boundary) - xi_canonical(boundary - h)) / h
+            right = (xi_canonical(boundary + h) - xi_canonical(boundary)) / h
+            self.assertAlmostEqual(left, right, delta=2e-5)
+
+    def test_blend_is_c2_at_both_formula_boundaries(self):
+        h = 1e-5
+        for boundary in (BLEND_START, BLEND_END):
+            left = (
+                xi_canonical(boundary)
+                - 2.0 * xi_canonical(boundary - h)
+                + xi_canonical(boundary - 2.0 * h)
+            ) / h**2
+            right = (
+                xi_canonical(boundary + 2.0 * h)
+                - 2.0 * xi_canonical(boundary + h)
+                + xi_canonical(boundary)
+            ) / h**2
+            self.assertAlmostEqual(left, right, delta=1e-2)
 
 
 class SSZStateTests(unittest.TestCase):
@@ -208,12 +246,7 @@ class HolonomyTests(unittest.TestCase):
         self.assertGreater(float(y.max() - y.min()), 0.01)
 
 
-class SSZDocIndexTests(unittest.TestCase):
-    def test_full_ssz_index_scanned_many_files(self):
-        data = json.loads((ROOT / "data" / "ssz_doc_index.json").read_text(encoding="utf-8"))
-        self.assertGreaterEqual(data["file_count"], 150)
-        self.assertIn("11_GUARDRAILS", data["section_counts"])
-
+class EvidenceLedgerTests(unittest.TestCase):
     def test_evidence_ledger_has_claim_scopes(self):
         with (ROOT / "data" / "evidence_ledger.csv").open() as handle:
             rows = list(csv.DictReader(handle))
@@ -229,38 +262,93 @@ class VisualizationOutputTests(unittest.TestCase):
         "lagrangian_intersections",
         "moduli_space_toy",
         "knot_distortion",
-        "repo_interplay_map",
         "ssz_symplectic_bridge",
         "regime_blend_map",
         "holonomy_loop",
         "method_assignment_flow",
         "phi_ladder_state",
         "hamiltonian_drift_report",
-        "test_validation_matrix",
     )
 
     def test_all_visualization_pairs_exist(self):
+        expected = set(self.EXPECTED_STEMS)
+        actual_gifs = {path.stem for path in (ROOT / "outputs").glob("*.gif")}
+        actual_pngs = {path.stem for path in (ROOT / "outputs").glob("*.png")}
+        self.assertEqual(actual_gifs, expected)
+        self.assertEqual(actual_pngs, expected)
         for stem in self.EXPECTED_STEMS:
             with self.subTest(stem=stem):
                 self.assertTrue((ROOT / "outputs" / f"{stem}.gif").is_file())
                 self.assertTrue((ROOT / "outputs" / f"{stem}.png").is_file())
 
-    def test_readme_embeds_every_animation(self):
-        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    KEY_README_STEMS = (
+        "symplectic_vs_euler",
+        "hamiltonian_drift_report",
+        "ssz_symplectic_bridge",
+        "regime_blend_map",
+        "method_assignment_flow",
+        "holonomy_loop",
+    )
+
+    def test_visualization_index_catalogs_every_animation(self):
+        index = (ROOT / "VISUALIZATION_INDEX.md").read_text(encoding="utf-8")
         for stem in self.EXPECTED_STEMS:
+            with self.subTest(stem=stem):
+                self.assertIn(f"outputs/{stem}.gif", index)
+                self.assertIn(f"outputs/{stem}.png", index)
+
+    def test_readme_embeds_only_key_diagnostics(self):
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        for stem in self.KEY_README_STEMS:
             with self.subTest(stem=stem):
                 self.assertIn(f"outputs/{stem}.gif", readme)
                 self.assertIn(f"outputs/{stem}.png", readme)
+        for stem in set(self.EXPECTED_STEMS) - set(self.KEY_README_STEMS):
+            with self.subTest(stem=stem):
+                self.assertNotIn(f"outputs/{stem}.gif", readme)
 
 
 
 class VisualizationScopeTests(unittest.TestCase):
-    def test_doc_audit_visualization_is_not_gallery_output(self):
+    def test_meta_dashboards_are_not_gallery_outputs(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
-        self.assertNotIn("ssz_doc_audit.gif", readme)
-        self.assertNotIn("ssz_doc_audit.png", readme)
-        self.assertFalse((ROOT / "outputs" / "ssz_doc_audit.gif").exists())
-        self.assertFalse((ROOT / "outputs" / "ssz_doc_audit.png").exists())
+        for stem in ("ssz_doc_audit", "repo_interplay_map", "test_validation_matrix"):
+            with self.subTest(stem=stem):
+                self.assertNotIn(f"{stem}.gif", readme)
+                self.assertNotIn(f"{stem}.png", readme)
+                self.assertFalse((ROOT / "outputs" / f"{stem}.gif").exists())
+                self.assertFalse((ROOT / "outputs" / f"{stem}.png").exists())
+
+
+class VisualizationQualityTests(unittest.TestCase):
+    def test_all_visualizations_share_stable_dimensions(self):
+        for stem in VisualizationOutputTests.EXPECTED_STEMS:
+            with self.subTest(stem=stem, kind="png"):
+                with Image.open(ROOT / "outputs" / f"{stem}.png") as image:
+                    self.assertEqual(image.size, (1920, 1080))
+            with self.subTest(stem=stem, kind="gif"):
+                with Image.open(ROOT / "outputs" / f"{stem}.gif") as image:
+                    self.assertEqual(image.size, (1280, 720))
+
+    def test_static_frames_are_not_blank(self):
+        for stem in VisualizationOutputTests.EXPECTED_STEMS:
+            with self.subTest(stem=stem):
+                with Image.open(ROOT / "outputs" / f"{stem}.png") as image:
+                    pixels = np.asarray(image.convert("L"), dtype=float)
+                self.assertGreater(float(pixels.std()), 5.0)
+
+    def test_animations_contain_visible_motion(self):
+        for stem in VisualizationOutputTests.EXPECTED_STEMS:
+            with self.subTest(stem=stem):
+                with Image.open(ROOT / "outputs" / f"{stem}.gif") as image:
+                    self.assertGreaterEqual(image.n_frames, 2)
+                    self.assertLessEqual(image.n_frames, 180)
+                    image.seek(0)
+                    first = np.asarray(image.convert("RGB"), dtype=np.int16)
+                    image.seek(image.n_frames // 2)
+                    middle = np.asarray(image.convert("RGB"), dtype=np.int16)
+                mean_change = float(np.abs(middle - first).mean())
+                self.assertGreater(mean_change, 0.05)
 
 
 class DocumentationHardeningTests(unittest.TestCase):
@@ -275,21 +363,26 @@ class DocumentationHardeningTests(unittest.TestCase):
         for stem in VisualizationOutputTests.EXPECTED_STEMS:
             with self.subTest(stem=stem):
                 self.assertIn(stem, text)
-        self.assertIn("documentation-audit image is intentionally absent", text)
-
-
-class PhysicsRepoAuditTests(unittest.TestCase):
-    def test_public_audit_excludes_private_unpublished_material(self):
-        data = json.loads((ROOT / "data" / "physics_repo_audit.json").read_text(encoding="utf-8"))
-        encoded = json.dumps(data).lower()
-        private_marker = "ji" + "f"
-        self.assertNotIn(private_marker, encoded)
-        self.assertGreaterEqual(data.get("repo_count", 0), 20)
+        self.assertIn("meta-dashboard images are intentionally absent", text)
 
     def test_readme_links_hardening_docs(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         self.assertIn("docs/claim-boundaries.md", readme)
         self.assertIn("docs/source-to-code-traceability.md", readme)
+
+    def test_relative_markdown_links_resolve(self):
+        pattern = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
+        markdown_files = list(ROOT.glob("*.md")) + list((ROOT / "docs").rglob("*.md"))
+        missing = []
+        for markdown in markdown_files:
+            for target in pattern.findall(markdown.read_text(encoding="utf-8")):
+                target = target.strip().strip("<>")
+                if not target or target.startswith(("http://", "https://", "mailto:", "#")):
+                    continue
+                relative = urllib.parse.unquote(target.split("#", 1)[0])
+                if relative and not (markdown.parent / relative).resolve().exists():
+                    missing.append(f"{markdown.relative_to(ROOT)} -> {target}")
+        self.assertEqual(missing, [])
 
 
 class HamiltonianDriftTests(unittest.TestCase):
@@ -315,7 +408,7 @@ class HamiltonianDriftTests(unittest.TestCase):
 class TestValidationReportTests(unittest.TestCase):
     def test_report_is_machine_readable_and_bounded(self):
         data = json.loads((ROOT / "data" / "test_validation_report.json").read_text(encoding="utf-8"))
-        self.assertGreaterEqual(data["summary"]["total"], 41)
+        self.assertGreaterEqual(data["summary"]["total"], 49)
         self.assertIn("internal implementation consistency", data["claim_boundary"])
         self.assertIn("Mathematical invariants", data["layers"])
 
@@ -325,3 +418,7 @@ class TestValidationReportTests(unittest.TestCase):
         self.assertIn("SymplecticTests", classes)
         self.assertIn("RegimeGuardrailTests", classes)
         self.assertIn("VisualizationOutputTests", classes)
+
+
+if __name__ == "__main__":
+    unittest.main()
