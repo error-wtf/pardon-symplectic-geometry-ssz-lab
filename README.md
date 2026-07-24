@@ -26,9 +26,11 @@ It does **not** claim to reproduce Pardon's proofs, virtual fundamental cycle ma
 
 The mathematical achievements belong to **John Pardon** and his collaborators. The International Mathematical Union credits Pardon for achievements in symplectic geometry, including new approaches to virtual fundamental cycles, Fukaya categories of certain manifolds and counting holomorphic curves, and for contributions to group actions on 3-manifolds and knot theory.
 
-Repository structure, educational notes, tests, and code: **Lino Casu**.
+SSZ framework and documentation used for the methodological bridge are credited to **Carmen N. Wrede** and **Lino P. Casu**, as documented in the local `ssz-complete-documentation` source tree.
 
-No affiliation with or endorsement by John Pardon, Stony Brook University, the Simons Center for Geometry and Physics, Princeton University, Stanford University, the IMU, Spektrum, Quanta, Nature, or any cited publisher is implied.
+Repository structure, educational integration, Python toy models, visualizations, tests, and code in this repository: **Lino Casu**.
+
+No affiliation with or endorsement by John Pardon, Carmen N. Wrede, Stony Brook University, the Simons Center for Geometry and Physics, Princeton University, Stanford University, the IMU, Spektrum, Quanta, Nature, or any cited publisher is implied.
 
 ## Related SSZ Context
 
@@ -41,6 +43,9 @@ This repository connects conceptually to the local SSZ physics suite under `/hom
 
 See `docs/ssz-bridge.md` for the detailed bridge. This bridge is methodological, not a claim that Pardon's theorems validate SSZ.
 
+- `docs/physics-repo-expansion-audit.md` explains the non-private physics-repo scan and concrete next expansion axes.
+- `docs/claim-boundaries.md` and `docs/source-to-code-traceability.md` define what each artifact can and cannot support.
+
 ## Repository Map
 
 ```text
@@ -48,11 +53,18 @@ pardon-symplectic-geometry-ssz-lab/
 ├── README.md
 ├── CREDITS.md
 ├── SOURCES.md
+├── VISUALIZATION_INDEX.md
 ├── LICENSE
 ├── requirements.txt
 ├── data/
 │   ├── sources.json
-│   └── repo_links.json
+│   ├── repo_links.json
+│   ├── ssz_doc_index.json
+│   ├── evidence_ledger.csv
+│   ├── observable_routing_matrix.json
+│   ├── hamiltonian_drift_report.csv
+│   ├── test_validation_report.json
+│   └── physics_repo_audit.json
 ├── docs/
 │   ├── how-to-run.md
 │   ├── math-map.md
@@ -61,7 +73,16 @@ pardon-symplectic-geometry-ssz-lab/
 │   ├── ssz-bridge.md
 │   ├── segmented-spacetime-application-notes.md
 │   ├── cross-repo-synthesis.md
-│   └── deep-synthesis-and-roadmap.md
+│   ├── deep-synthesis-and-roadmap.md
+│   ├── ssz-complete-documentation-index-audit.md
+│   ├── ssz-pardon-full-deep-analysis.md
+│   ├── internal-quality-hardening-notes.md
+│   ├── physics-repo-expansion-audit.md
+│   ├── claim-boundaries.md
+│   ├── source-to-code-traceability.md
+│   ├── observable-routing-matrix.md
+│   ├── test-validation-report.md
+│   └── hamiltonian-drift-report.md
 ├── python/
 │   ├── run_all.py
 │   ├── symplectic_lab.py
@@ -73,7 +94,17 @@ pardon-symplectic-geometry-ssz-lab/
 │   ├── knot_distortion.py
 │   ├── repo_interplay_map.py
 │   ├── ssz_symplectic_bridge.py
+│   ├── regime_blend_map.py
+│   ├── holonomy_loop_visualization.py
+│   ├── method_assignment_flow.py
+│   ├── phi_ladder_state_visualization.py
+│   ├── observable_routing_matrix.py
+│   ├── hamiltonian_drift_report.py
+│   ├── hamiltonian_drift_visualization.py
+│   ├── test_validation_visualization.py
 │   └── pardon_math/
+├── outputs/
+│   └── 15 GIF animations + 15 PNG snapshots
 └── tests/
     └── test_math_core.py
 ```
@@ -90,6 +121,34 @@ python -m unittest discover -s tests
 ```
 
 Generated PNG/GIF files appear in `outputs/`.
+
+## Key Visual Diagnostics
+
+These are the most important visuals to inspect first. They carry actual methodological information rather than just orientation.
+
+| Diagnostic | Why it matters |
+|---|---|
+| `outputs/test_validation_matrix.gif` | Shows which invariants, numerical regressions, fail-closed rules and artifact checks actually execute. |
+| `outputs/symplectic_vs_euler.gif` | Shows why structure-preserving integration matters for Hamiltonian systems. |
+| `outputs/hamiltonian_drift_report.gif` | Turns the SSZ effective-potential bridge into a numeric QA check. |
+| `outputs/regime_blend_map.gif` | Prevents the common mistake of confusing physical regimes with formula domains. |
+| `outputs/method_assignment_flow.gif` | Encodes the SSZ prime directive: observable first, method second. |
+| `outputs/holonomy_loop.gif` | Separates static telescoping sanity checks from dynamic loop diagnostics. |
+| `outputs/repo_interplay_map.gif` | Useful orientation map across the local public physics repos; not a mathematical proof. |
+
+![Executable test validation matrix](outputs/test_validation_matrix.gif)
+
+![Symplectic integrator comparison](outputs/symplectic_vs_euler.gif)
+
+![Hamiltonian drift report](outputs/hamiltonian_drift_report.gif)
+
+![Regime blend map](outputs/regime_blend_map.gif)
+
+![Method assignment flow](outputs/method_assignment_flow.gif)
+
+![Holonomy loop](outputs/holonomy_loop.gif)
+
+![Repository interplay map](outputs/repo_interplay_map.gif)
 
 ## Visualization Gallery
 
@@ -110,7 +169,8 @@ Every visualization is generated locally by `python python/run_all.py`. GIFs sho
 | `holonomy_loop_visualization.py` | `outputs/holonomy_loop.gif` | `outputs/holonomy_loop.png` | Closed-loop frequency-ratio/holonomy toy model. |
 | `method_assignment_flow.py` | `outputs/method_assignment_flow.gif` | `outputs/method_assignment_flow.png` | Prime Directive observable routing. |
 | `phi_ladder_state_visualization.py` | `outputs/phi_ladder_state.gif` | `outputs/phi_ladder_state.png` | Full phi-ladder state vector details. |
-| `ssz_doc_audit_visualization.py` | `outputs/ssz_doc_audit.gif` | `outputs/ssz_doc_audit.png` | Full SSZ documentation audit overview. |
+| `hamiltonian_drift_visualization.py` | `outputs/hamiltonian_drift_report.gif` | `outputs/hamiltonian_drift_report.png` | Hamiltonian drift QA for a toy SSZ effective potential. |
+| `test_validation_visualization.py` | `outputs/test_validation_matrix.gif` | `outputs/test_validation_matrix.png` | Executed test coverage and explicit validation boundaries. |
 
 ### Symplectic Area Preservation
 
@@ -190,11 +250,23 @@ Every visualization is generated locally by `python python/run_all.py`. GIFs sho
 
 [Static PNG](outputs/phi_ladder_state.png)
 
-### SSZ Documentation Audit
+### Hamiltonian Drift Report
 
-![SSZ documentation audit](outputs/ssz_doc_audit.gif)
+![Hamiltonian drift report](outputs/hamiltonian_drift_report.gif)
 
-[Static PNG](outputs/ssz_doc_audit.png)
+[Static PNG](outputs/hamiltonian_drift_report.png)
+
+### Executable Test Validation Matrix
+
+This visualization is generated from the actual `unittest` discovery run. It
+separates mathematical invariants, numerical regression checks, fail-closed
+guardrails and artifact/traceability checks. A green result establishes internal
+consistency for the tested implementation; it does not prove Pardon's theorems
+or physically validate SSZ.
+
+![Executable test validation matrix](outputs/test_validation_matrix.gif)
+
+[Static PNG](outputs/test_validation_matrix.png)
 
 ## Scientific Status
 
@@ -205,11 +277,19 @@ Every visualization is generated locally by `python python/run_all.py`. GIFs sho
 | Mathematical implementation | toy models only |
 | Tests | local unittest suite |
 | Visual output | generated by `python/run_all.py` |
+| Routing matrix | generated in `data/observable_routing_matrix.json` and `docs/observable-routing-matrix.md` |
+| Hamiltonian drift QA | generated in `data/hamiltonian_drift_report.csv` and `docs/hamiltonian-drift-report.md` |
+| Executable test map | generated in `data/test_validation_report.json`, `docs/test-validation-report.md` and `outputs/test_validation_matrix.gif` |
 | SSZ relation | methodological bridge in `docs/ssz-bridge.md` |
+| Physics repo audit | non-private local expansion scan in `docs/physics-repo-expansion-audit.md` |
+| Claim boundaries | explicit in `docs/claim-boundaries.md` |
+| Traceability | artifact-to-code-to-test map in `docs/source-to-code-traceability.md` |
 
 ## Why This Is Honest
 
 Pardon's research is frontier mathematics. The demos here are not substitutes for his papers. They are controlled toy models that explain background intuitions: symplectic preservation, holomorphic-equation residuals, intersection patterns, virtual-method motivation, and knot distortion.
+
+The SSZ bridge is methodological. It uses SSZ documentation as a local comparison target for validation discipline, regime guardrails, observable routing and invariant checks. It does not claim that Pardon's theorems prove or endorse SSZ.
 
 ## License
 

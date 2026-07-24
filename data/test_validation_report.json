@@ -1,0 +1,341 @@
+{
+  "runner": "python unittest discovery",
+  "command": "python -m unittest discover -s tests",
+  "claim_boundary": "Passing tests establish internal implementation consistency only; they do not prove Pardon's theorems or physically validate SSZ.",
+  "summary": {
+    "total": 43,
+    "passed": 43,
+    "failed": 0,
+    "skipped": 0,
+    "successful": true
+  },
+  "layers": {
+    "Mathematical invariants": {
+      "total": 13,
+      "passed": 13,
+      "failed": 0,
+      "skipped": 0
+    },
+    "Numerical regression": {
+      "total": 11,
+      "passed": 11,
+      "failed": 0,
+      "skipped": 0
+    },
+    "Fail-closed guardrails": {
+      "total": 6,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0
+    },
+    "Artifact and traceability": {
+      "total": 13,
+      "passed": 13,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "tests": [
+    {
+      "id": "test_math_core.CauchyRiemannTests.test_holomorphic_residual_small",
+      "class": "CauchyRiemannTests",
+      "name": "test_holomorphic_residual_small",
+      "layer": "Mathematical invariants",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.CauchyRiemannTests.test_nonholomorphic_residual_positive",
+      "class": "CauchyRiemannTests",
+      "name": "test_nonholomorphic_residual_positive",
+      "layer": "Mathematical invariants",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.DocumentationHardeningTests.test_claim_boundaries_are_explicit",
+      "class": "DocumentationHardeningTests",
+      "name": "test_claim_boundaries_are_explicit",
+      "layer": "Artifact and traceability",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.DocumentationHardeningTests.test_source_to_code_traceability_mentions_every_visual_stem",
+      "class": "DocumentationHardeningTests",
+      "name": "test_source_to_code_traceability_mentions_every_visual_stem",
+      "layer": "Artifact and traceability",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.HamiltonianDriftTests.test_drift_report_outputs_exist_and_are_nontrivial",
+      "class": "HamiltonianDriftTests",
+      "name": "test_drift_report_outputs_exist_and_are_nontrivial",
+      "layer": "Numerical regression",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.HamiltonianDriftTests.test_observable_routing_export_matches_routes",
+      "class": "HamiltonianDriftTests",
+      "name": "test_observable_routing_export_matches_routes",
+      "layer": "Numerical regression",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.HolonomyTests.test_dynamic_loop_deviation_has_shape",
+      "class": "HolonomyTests",
+      "name": "test_dynamic_loop_deviation_has_shape",
+      "layer": "Mathematical invariants",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.HolonomyTests.test_static_triple_clock_product_telescopes",
+      "class": "HolonomyTests",
+      "name": "test_static_triple_clock_product_telescopes",
+      "layer": "Mathematical invariants",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.IntegratorTests.test_euler_energy_drift_worse_than_leapfrog",
+      "class": "IntegratorTests",
+      "name": "test_euler_energy_drift_worse_than_leapfrog",
+      "layer": "Numerical regression",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.IntegratorTests.test_symplectic_euler_bounded_for_short_run",
+      "class": "IntegratorTests",
+      "name": "test_symplectic_euler_bounded_for_short_run",
+      "layer": "Numerical regression",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.KnotTests.test_distortion_ratio_positive",
+      "class": "KnotTests",
+      "name": "test_distortion_ratio_positive",
+      "layer": "Mathematical invariants",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.KnotTests.test_lengths_positive",
+      "class": "KnotTests",
+      "name": "test_lengths_positive",
+      "layer": "Mathematical invariants",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.KnotTests.test_trefoil_shape",
+      "class": "KnotTests",
+      "name": "test_trefoil_shape",
+      "layer": "Mathematical invariants",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.LagrangianTests.test_curves_have_shape",
+      "class": "LagrangianTests",
+      "name": "test_curves_have_shape",
+      "layer": "Mathematical invariants",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.LagrangianTests.test_intersections_return_two_columns",
+      "class": "LagrangianTests",
+      "name": "test_intersections_return_two_columns",
+      "layer": "Mathematical invariants",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.MethodAssignmentTests.test_full_route_contains_guardrails",
+      "class": "MethodAssignmentTests",
+      "name": "test_full_route_contains_guardrails",
+      "layer": "Fail-closed guardrails",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.MethodAssignmentTests.test_prime_directive_routing",
+      "class": "MethodAssignmentTests",
+      "name": "test_prime_directive_routing",
+      "layer": "Fail-closed guardrails",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.MethodAssignmentTests.test_unknown_observable_fails_closed",
+      "class": "MethodAssignmentTests",
+      "name": "test_unknown_observable_fails_closed",
+      "layer": "Fail-closed guardrails",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.ModuliTests.test_moduli_labels",
+      "class": "ModuliTests",
+      "name": "test_moduli_labels",
+      "layer": "Mathematical invariants",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.ModuliTests.test_moduli_point_counts",
+      "class": "ModuliTests",
+      "name": "test_moduli_point_counts",
+      "layer": "Mathematical invariants",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.PhysicsRepoAuditTests.test_public_audit_excludes_private_unpublished_material",
+      "class": "PhysicsRepoAuditTests",
+      "name": "test_public_audit_excludes_private_unpublished_material",
+      "layer": "Artifact and traceability",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.PhysicsRepoAuditTests.test_readme_links_hardening_docs",
+      "class": "PhysicsRepoAuditTests",
+      "name": "test_readme_links_hardening_docs",
+      "layer": "Artifact and traceability",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.RegimeGuardrailTests.test_forbidden_formula_routes_fail_closed",
+      "class": "RegimeGuardrailTests",
+      "name": "test_forbidden_formula_routes_fail_closed",
+      "layer": "Fail-closed guardrails",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.RegimeGuardrailTests.test_physical_regime_and_formula_domain_are_separate",
+      "class": "RegimeGuardrailTests",
+      "name": "test_physical_regime_and_formula_domain_are_separate",
+      "layer": "Fail-closed guardrails",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.RegimeGuardrailTests.test_regime_boundaries_match_ssz_state_labels",
+      "class": "RegimeGuardrailTests",
+      "name": "test_regime_boundaries_match_ssz_state_labels",
+      "layer": "Fail-closed guardrails",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.RepoGraphTests.test_repo_graph_connects_pardon_to_ssz",
+      "class": "RepoGraphTests",
+      "name": "test_repo_graph_connects_pardon_to_ssz",
+      "layer": "Artifact and traceability",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.RepoGraphTests.test_repo_graph_edges_are_valid",
+      "class": "RepoGraphTests",
+      "name": "test_repo_graph_edges_are_valid",
+      "layer": "Artifact and traceability",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.SSZBridgeTests.test_canonical_values_at_rs_are_finite",
+      "class": "SSZBridgeTests",
+      "name": "test_canonical_values_at_rs_are_finite",
+      "layer": "Numerical regression",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.SSZBridgeTests.test_d_factor_recovers_outward_after_blend",
+      "class": "SSZBridgeTests",
+      "name": "test_d_factor_recovers_outward_after_blend",
+      "layer": "Numerical regression",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.SSZBridgeTests.test_effective_potential_is_positive",
+      "class": "SSZBridgeTests",
+      "name": "test_effective_potential_is_positive",
+      "layer": "Numerical regression",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.SSZBridgeTests.test_weak_branch_matches_documentation",
+      "class": "SSZBridgeTests",
+      "name": "test_weak_branch_matches_documentation",
+      "layer": "Numerical regression",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.SSZDocIndexTests.test_evidence_ledger_has_claim_scopes",
+      "class": "SSZDocIndexTests",
+      "name": "test_evidence_ledger_has_claim_scopes",
+      "layer": "Artifact and traceability",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.SSZDocIndexTests.test_full_ssz_index_scanned_many_files",
+      "class": "SSZDocIndexTests",
+      "name": "test_full_ssz_index_scanned_many_files",
+      "layer": "Artifact and traceability",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.SSZStateTests.test_phi_ladder_self_similarity",
+      "class": "SSZStateTests",
+      "name": "test_phi_ladder_self_similarity",
+      "layer": "Numerical regression",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.SSZStateTests.test_regime_labels_cover_guardrails",
+      "class": "SSZStateTests",
+      "name": "test_regime_labels_cover_guardrails",
+      "layer": "Numerical regression",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.SSZStateTests.test_state_conversions_are_consistent",
+      "class": "SSZStateTests",
+      "name": "test_state_conversions_are_consistent",
+      "layer": "Numerical regression",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.SymplecticTests.test_rotation_preserves_area",
+      "class": "SymplecticTests",
+      "name": "test_rotation_preserves_area",
+      "layer": "Mathematical invariants",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.SymplecticTests.test_rotation_preserves_radius",
+      "class": "SymplecticTests",
+      "name": "test_rotation_preserves_radius",
+      "layer": "Mathematical invariants",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.TestValidationReportTests.test_report_covers_every_discovered_test_class",
+      "class": "TestValidationReportTests",
+      "name": "test_report_covers_every_discovered_test_class",
+      "layer": "Artifact and traceability",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.TestValidationReportTests.test_report_is_machine_readable_and_bounded",
+      "class": "TestValidationReportTests",
+      "name": "test_report_is_machine_readable_and_bounded",
+      "layer": "Artifact and traceability",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.VisualizationOutputTests.test_all_visualization_pairs_exist",
+      "class": "VisualizationOutputTests",
+      "name": "test_all_visualization_pairs_exist",
+      "layer": "Artifact and traceability",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.VisualizationOutputTests.test_readme_embeds_every_animation",
+      "class": "VisualizationOutputTests",
+      "name": "test_readme_embeds_every_animation",
+      "layer": "Artifact and traceability",
+      "status": "passed"
+    },
+    {
+      "id": "test_math_core.VisualizationScopeTests.test_doc_audit_visualization_is_not_gallery_output",
+      "class": "VisualizationScopeTests",
+      "name": "test_doc_audit_visualization_is_not_gallery_output",
+      "layer": "Artifact and traceability",
+      "status": "passed"
+    }
+  ]
+}

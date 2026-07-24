@@ -17,8 +17,9 @@ from pardon_math.moduli import circle_moduli_points, solution_dimension_label
 from pardon_math.symplectic import polygon_area, rotate
 from pardon_math.ssz_bridge import D_MIN_AT_RS, D_factor, XI_MAX, effective_potential, scale_factor, xi_canonical, xi_strong, xi_weak
 from pardon_math.ssz_state import phi_ladder, regime_label, state_vector
-from pardon_math.method_assignment import assign_method
+from pardon_math.method_assignment import ROUTES, assign_method, route_observable
 from pardon_math.holonomy import dynamic_loop_deviation, triple_clock_product
+from pardon_math.regime_guardrails import assert_formula_allowed, formula_domain, physical_regime, route_regime
 import csv
 import json
 from pardon_math.repo_graph import adjacency, load_repo_graph, validate_edges
@@ -163,9 +164,37 @@ class MethodAssignmentTests(unittest.TestCase):
         self.assertEqual(assign_method("lensing"), "PPN (1+gamma)")
         self.assertIn("Hamilton", assign_method("geodesic"))
 
+    def test_full_route_contains_guardrails(self):
+        self.assertGreaterEqual(len(ROUTES), 15)
+        lensing = route_observable("shapiro delay")
+        self.assertEqual(lensing.observable, "shapiro")
+        self.assertIn("spatial", lensing.guardrail)
+        self.assertIn("methodological", route_observable("vlbi-delay").claim_boundary)
+
     def test_unknown_observable_fails_closed(self):
         with self.assertRaises(KeyError):
             assign_method("everything")
+
+
+class RegimeGuardrailTests(unittest.TestCase):
+    def test_physical_regime_and_formula_domain_are_separate(self):
+        self.assertEqual(physical_regime(2.6), "photon_sphere_context")
+        self.assertEqual(formula_domain(2.6), "g1_weak_branch")
+        self.assertIn("photon-sphere context", route_regime(2.6).guardrail)
+
+    def test_regime_boundaries_match_ssz_state_labels(self):
+        self.assertEqual(physical_regime(1.0), "very_close/g2_context")
+        self.assertEqual(formula_domain(1.0), "g2_saturation")
+        self.assertEqual(physical_regime(2.0), "transition_blend")
+        self.assertEqual(formula_domain(2.0), "c2_smootherstep_blend")
+        self.assertEqual(physical_regime(20.0), "weak_field")
+
+    def test_forbidden_formula_routes_fail_closed(self):
+        assert_formula_allowed("g2_saturation")
+        with self.assertRaises(ValueError):
+            assert_formula_allowed("single method for all observables")
+        with self.assertRaises(ValueError):
+            assert_formula_allowed("universal-xi-only-null")
 
 
 class HolonomyTests(unittest.TestCase):
@@ -206,7 +235,8 @@ class VisualizationOutputTests(unittest.TestCase):
         "holonomy_loop",
         "method_assignment_flow",
         "phi_ladder_state",
-        "ssz_doc_audit",
+        "hamiltonian_drift_report",
+        "test_validation_matrix",
     )
 
     def test_all_visualization_pairs_exist(self):
@@ -222,3 +252,76 @@ class VisualizationOutputTests(unittest.TestCase):
                 self.assertIn(f"outputs/{stem}.gif", readme)
                 self.assertIn(f"outputs/{stem}.png", readme)
 
+
+
+class VisualizationScopeTests(unittest.TestCase):
+    def test_doc_audit_visualization_is_not_gallery_output(self):
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        self.assertNotIn("ssz_doc_audit.gif", readme)
+        self.assertNotIn("ssz_doc_audit.png", readme)
+        self.assertFalse((ROOT / "outputs" / "ssz_doc_audit.gif").exists())
+        self.assertFalse((ROOT / "outputs" / "ssz_doc_audit.png").exists())
+
+
+class DocumentationHardeningTests(unittest.TestCase):
+    def test_claim_boundaries_are_explicit(self):
+        text = (ROOT / "docs" / "claim-boundaries.md").read_text(encoding="utf-8")
+        self.assertIn("Pardon mathematics", text)
+        self.assertIn("SSZ bridge", text)
+        self.assertIn("weakest category controls", text)
+
+    def test_source_to_code_traceability_mentions_every_visual_stem(self):
+        text = (ROOT / "docs" / "source-to-code-traceability.md").read_text(encoding="utf-8")
+        for stem in VisualizationOutputTests.EXPECTED_STEMS:
+            with self.subTest(stem=stem):
+                self.assertIn(stem, text)
+        self.assertIn("documentation-audit image is intentionally absent", text)
+
+
+class PhysicsRepoAuditTests(unittest.TestCase):
+    def test_public_audit_excludes_private_unpublished_material(self):
+        data = json.loads((ROOT / "data" / "physics_repo_audit.json").read_text(encoding="utf-8"))
+        encoded = json.dumps(data).lower()
+        private_marker = "ji" + "f"
+        self.assertNotIn(private_marker, encoded)
+        self.assertGreaterEqual(data.get("repo_count", 0), 20)
+
+    def test_readme_links_hardening_docs(self):
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        self.assertIn("docs/claim-boundaries.md", readme)
+        self.assertIn("docs/source-to-code-traceability.md", readme)
+
+
+class HamiltonianDriftTests(unittest.TestCase):
+    def test_drift_report_outputs_exist_and_are_nontrivial(self):
+        csv_path = ROOT / "data" / "hamiltonian_drift_report.csv"
+        md_path = ROOT / "docs" / "hamiltonian-drift-report.md"
+        self.assertTrue(csv_path.is_file())
+        self.assertTrue(md_path.is_file())
+        with csv_path.open() as handle:
+            rows = list(csv.DictReader(handle))
+        self.assertEqual({row["method"] for row in rows}, {"explicit_euler", "rk4", "symplectic_euler", "leapfrog"})
+        drift = {row["method"]: float(row["absolute_drift"]) for row in rows}
+        self.assertGreater(drift["explicit_euler"], drift["leapfrog"] * 100.0)
+
+    def test_observable_routing_export_matches_routes(self):
+        data = json.loads((ROOT / "data" / "observable_routing_matrix.json").read_text(encoding="utf-8"))
+        self.assertEqual(data["count"], len(ROUTES))
+        methods = {row["observable"]: row["method"] for row in data["routes"]}
+        self.assertEqual(methods["lensing"], "PPN (1+gamma)")
+        self.assertEqual(methods["redshift"], "Xi/D direct")
+
+
+class TestValidationReportTests(unittest.TestCase):
+    def test_report_is_machine_readable_and_bounded(self):
+        data = json.loads((ROOT / "data" / "test_validation_report.json").read_text(encoding="utf-8"))
+        self.assertGreaterEqual(data["summary"]["total"], 41)
+        self.assertIn("internal implementation consistency", data["claim_boundary"])
+        self.assertIn("Mathematical invariants", data["layers"])
+
+    def test_report_covers_every_discovered_test_class(self):
+        data = json.loads((ROOT / "data" / "test_validation_report.json").read_text(encoding="utf-8"))
+        classes = {row["class"] for row in data["tests"]}
+        self.assertIn("SymplecticTests", classes)
+        self.assertIn("RegimeGuardrailTests", classes)
+        self.assertIn("VisualizationOutputTests", classes)

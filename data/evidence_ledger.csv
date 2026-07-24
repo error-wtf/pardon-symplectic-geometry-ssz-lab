@@ -8,8 +8,13 @@ moduli_space_toy.gif,python/moduli_space_toy.py,educational_toy_model,ModuliTest
 knot_distortion.gif,python/knot_distortion.py,educational_toy_model,KnotTests,Finite sampled approximation only
 repo_interplay_map.gif,python/repo_interplay_map.py,methodological_bridge,RepoGraphTests,Concept map only
 ssz_symplectic_bridge.gif,python/ssz_symplectic_bridge.py,methodological_bridge,SSZBridgeTests,Toy radial Hamiltonian only
-ssz_doc_audit.gif,python/ssz_doc_audit_visualization.py,external_source_summary,SSZDocIndexTests,Keyword index not semantic proof
+ssz_doc_index.json,python-generated local scan,external_source_summary,SSZDocIndexTests,Keyword index not semantic proof
 phi_ladder_state.gif,python/phi_ladder_state_visualization.py,derived_identity,SSZStateTests,Uses simplified operative bridge module
 method_assignment_flow.gif,python/method_assignment_flow.py,derived_identity,MethodAssignmentTests,Decision chart only
 holonomy_loop.gif,python/holonomy_loop_visualization.py,educational_toy_model,HolonomyTests,Dynamic curve is illustrative only
 regime_blend_map.gif,python/regime_blend_map.py,derived_identity,SSZBridgeTests,Simplified blend implementation
+hamiltonian_drift_report.gif,python/hamiltonian_drift_visualization.py,methodological_bridge,IntegratorTests;HamiltonianDriftTests,Toy radial Hamiltonian diagnostic only
+observable_routing_matrix.json,python/observable_routing_matrix.py,derived_identity,MethodAssignmentTests,Routing table generated from local guardrail code
+hamiltonian_drift_report.csv,python/hamiltonian_drift_report.py,methodological_bridge,HamiltonianDriftTests,Numeric QA table not physical validation
+test_validation_matrix.gif,python/test_validation_visualization.py,internal_validation,VisualizationOutputTests;TestValidationReportTests,Passing tests do not prove external mathematics or physical claims
+test_validation_report.json,python/test_validation_visualization.py,internal_validation,TestValidationReportTests,Machine-readable internal test result only

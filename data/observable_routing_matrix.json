@@ -1,0 +1,118 @@
+{
+  "source": "ssz method assignment guardrail",
+  "count": 16,
+  "routes": [
+    {
+      "observable": "clock",
+      "method": "Xi/D direct",
+      "domain": "timelike local clock comparison",
+      "guardrail": "do not reuse this route for null-ray lensing or Shapiro delay",
+      "claim_boundary": "toy bridge to SSZ clock formulas, not a proof of the physical model"
+    },
+    {
+      "observable": "frame_dragging",
+      "method": "PPN beta/gamma",
+      "domain": "rotating-source orbital observable",
+      "guardrail": "requires spin/metric data beyond scalar Xi",
+      "claim_boundary": "methodological bridge only"
+    },
+    {
+      "observable": "frequency_shift",
+      "method": "Xi/D direct",
+      "domain": "timelike frequency comparison",
+      "guardrail": "closed static products telescope unless dynamics/non-sphericity is present",
+      "claim_boundary": "methodological bridge only"
+    },
+    {
+      "observable": "geodesic",
+      "method": "Lagrange/Hamilton geodesic equations",
+      "domain": "phase-space trajectory",
+      "guardrail": "validate invariants before interpreting coordinate plots",
+      "claim_boundary": "toy validation pattern only"
+    },
+    {
+      "observable": "gps",
+      "method": "Xi/D direct plus operational frame corrections",
+      "domain": "timelike clock network",
+      "guardrail": "do not collapse real GPS modelling to a single scalar",
+      "claim_boundary": "routing sanity check only"
+    },
+    {
+      "observable": "holonomy_dynamic",
+      "method": "dynamic loop diagnostic",
+      "domain": "time-dependent or non-spherical loop",
+      "guardrail": "only deviations with stated dynamics are physically interesting",
+      "claim_boundary": "illustrative diagnostic only"
+    },
+    {
+      "observable": "holonomy_static",
+      "method": "static telescoping identity",
+      "domain": "closed static frequency product",
+      "guardrail": "closed product should return 1 in the static toy model",
+      "claim_boundary": "sanity check, not a physical anomaly"
+    },
+    {
+      "observable": "lensing",
+      "method": "PPN (1+gamma)",
+      "domain": "null ray observable",
+      "guardrail": "Xi-only is temporal contribution only; spatial curvature completion is required",
+      "claim_boundary": "methodological bridge only"
+    },
+    {
+      "observable": "null",
+      "method": "PPN (1+gamma)",
+      "domain": "generic null observable",
+      "guardrail": "must not be evaluated with a timelike-only shortcut",
+      "claim_boundary": "methodological bridge only"
+    },
+    {
+      "observable": "orbit",
+      "method": "PPN beta/gamma or Hamiltonian orbit machinery",
+      "domain": "timelike trajectory",
+      "guardrail": "check energy/angular-momentum drift and regime domain",
+      "claim_boundary": "toy validation pattern only"
+    },
+    {
+      "observable": "pound_rebka",
+      "method": "Xi/D direct",
+      "domain": "laboratory gravitational redshift",
+      "guardrail": "keep height/weak-field approximation explicit",
+      "claim_boundary": "routing sanity check only"
+    },
+    {
+      "observable": "precession",
+      "method": "PPN beta/gamma",
+      "domain": "timelike orbital correction",
+      "guardrail": "do not infer from a static redshift formula alone",
+      "claim_boundary": "methodological bridge only"
+    },
+    {
+      "observable": "redshift",
+      "method": "Xi/D direct",
+      "domain": "timelike frequency ratio",
+      "guardrail": "source/observer convention must be stated",
+      "claim_boundary": "derived identity inside the simplified bridge module"
+    },
+    {
+      "observable": "shapiro",
+      "method": "PPN (1+gamma)",
+      "domain": "null delay observable",
+      "guardrail": "Xi-only route is incomplete for full delay; spatial curvature contribution is required",
+      "claim_boundary": "methodological bridge only"
+    },
+    {
+      "observable": "time_dilation",
+      "method": "Xi/D direct",
+      "domain": "timelike proper-time comparison",
+      "guardrail": "no photon proper-time interpretation",
+      "claim_boundary": "derived identity inside the simplified bridge module"
+    },
+    {
+      "observable": "vlbi",
+      "method": "PPN (1+gamma)",
+      "domain": "null timing/angle observable",
+      "guardrail": "requires spatial contribution and measurement geometry",
+      "claim_boundary": "methodological bridge only"
+    }
+  ]
+}
