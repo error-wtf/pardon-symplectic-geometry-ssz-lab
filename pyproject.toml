@@ -1,0 +1,20 @@
+[project]
+name = "pardon-symplectic-geometry-ssz-lab"
+version = "0.1.0"
+description = "Educational symplectic geometry and SSZ validation lab inspired by John Pardon's Fields Medal mathematics"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Lino Casu" }]
+license = { text = "Anti-Capitalist Software License v1.4" }
+dependencies = [
+  "numpy>=1.24",
+  "matplotlib>=3.7",
+  "pillow>=10.0"
+]
+
+[tool.setuptools]
+package-dir = {"" = "python"}
+
+[tool.setuptools.packages.find]
+where = ["python"]
+include = ["pardon_math*"]

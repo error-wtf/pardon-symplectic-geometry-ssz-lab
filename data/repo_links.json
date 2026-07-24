@@ -1,0 +1,26 @@
+{
+  "nodes": [
+    {"id": "pardon", "label": "Pardon geometry", "role": "research context"},
+    {"id": "symplectic", "label": "Symplectic/Hamiltonian tests", "role": "method"},
+    {"id": "vfc", "label": "Virtual-counting caution", "role": "method"},
+    {"id": "ssz_docs", "label": "ssz-complete-documentation", "role": "single source"},
+    {"id": "ssz_lagrange", "label": "ssz-lagrange", "role": "Hamilton/Lagrange anchor"},
+    {"id": "ssz_trajectories", "label": "ssz-trajectories", "role": "geodesic integration"},
+    {"id": "galactic_year", "label": "galactic-year", "role": "orbit visualization"},
+    {"id": "chord_partition", "label": "chord-partition", "role": "phi eigenmodes"},
+    {"id": "claudes_cycles", "label": "claudes-cycles", "role": "discrete cycle verification"}
+  ],
+  "edges": [
+    ["pardon", "symplectic", "geometry supplies phase-space language"],
+    ["pardon", "vfc", "curve-counting needs degeneracy discipline"],
+    ["symplectic", "ssz_lagrange", "Hamiltonian flow tests"],
+    ["symplectic", "ssz_trajectories", "structure-preserving geodesics"],
+    ["symplectic", "galactic_year", "stable orbit integration"],
+    ["vfc", "ssz_docs", "document limits and singular regimes"],
+    ["ssz_docs", "ssz_lagrange", "canonical formulas"],
+    ["ssz_docs", "ssz_trajectories", "canonical formulas"],
+    ["chord_partition", "ssz_docs", "phi constants and eigenmode tests"],
+    ["claudes_cycles", "chord_partition", "discrete cycles and closure verification"],
+    ["claudes_cycles", "ssz_trajectories", "cycle/trajectory verification style"]
+  ]
+}
