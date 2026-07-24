@@ -4,7 +4,7 @@
 
 This analysis uses two source layers:
 
-1. External Pardon/Fields Medal sources listed in `SOURCES.md`, including the IMU/EMS/Stanford/Princeton/Simons/Clay/Spektrum/Quanta/Nature source family.
+1. External Pardon/Fields Medal sources listed in `SOURCES.md`, including the IMU/Stanford/Princeton/Simons/Clay/Spektrum/Quanta/Nature source family.
 2. The local canonical SSZ documentation tree at `/home/error/physics/ssz-complete-documentation`.
 
 A machine index of the SSZ documentation was generated in `data/ssz_doc_index.json` and summarized in `docs/ssz-complete-documentation-index-audit.md`.
